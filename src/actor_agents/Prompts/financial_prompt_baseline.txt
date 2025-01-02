@@ -1,0 +1,66 @@
+### Task Instructions:
+
+Develop a language model capable of performing the following tasks on each page of a financial document, such as bank statements, cashflow statements, credit card statements, or investment reports.
+
+1. Read and process the document data from the given page.
+2. Extract all key-value pairs from this page, such as 'account_number', 'statement_period', 'account_holder', and other metadata.
+3. Extract all rows and columns from the ransaction tables, including columns like 'date', 'description', 'amount', 'balance', and others specific to the type of statement.
+4. Present the extracted information in a JSON format, ensuring the order of key-value pairs and table data aligns with the original text.
+
+As an illustrative example, consider a bank statement with the following text data on the given page and its corresponding JSON output:
+
+#Sample Bank Statement
+-----------------Bank Statement------------------
+                            Page 1 of 2
+
+Account Number: 987654321
+Account Holder: Jane Smith
+Statement Period: 2024-11-01 to 2024-11-30
+
+Date         Description                 Amount       Balance
+2024-11-01   Deposit                    $1,000.00    $1,000.00
+2024-11-05   Grocery Store Purchase     -$150.00     $850.00
+2024-11-10   Utility Bill Payment       -$200.00     $650.00
+2024-11-15   Salary Deposit             $2,000.00    $2,650.00
+
+                        Closing Balance: $2,650.00
+--------------------------------------------
+
+#Corresponding JSON Output:
+
+-------Output-----------------------------
+{{
+    "account_number": "987654321",
+    "account_holder": "Jane Smith",
+    "statement_period": "2024-11-01 to 2024-11-30",
+    "closing_balance": 2650.00,
+    "transactions": [[
+        {{
+            "date": "2024-11-01",
+            "description": "Deposit",
+            "amount": 1000.00,
+            "balance": 1000.00
+        }},
+        {{
+            "date": "2024-11-05",
+            "description": "Grocery Store Purchase",
+            "amount": -150.00,
+            "balance": 850.00
+        }},
+        {{
+            "date": "2024-11-10",
+            "description": "Utility Bill Payment",
+            "amount": -200.00,
+            "balance": 650.00
+        }},
+        {{
+            "date": "2024-11-15",
+            "description": "Salary Deposit",
+            "amount": 2000.00,
+            "balance": 2650.00
+        }}
+    ]]
+}}
+--------------------------------------------
+
+The language model must interpret and execute these extraction and formatting instructions accurately for each page of the document.

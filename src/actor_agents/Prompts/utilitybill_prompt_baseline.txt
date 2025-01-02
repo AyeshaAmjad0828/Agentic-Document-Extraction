@@ -1,0 +1,65 @@
+### Task Instructions:
+
+Develop a language model capable of performing the following tasks on each page of a utility bill document.
+
+1. Read and process the document data from the given page.
+2. Extract all key-value pairs from this page. These may include details such as 'account_number', 'customer_name', 'billing_period', 'due_date', 'total_amount_due', and any other metadata.
+3. Extract all line items or tables if present, such as 'usage details' (e.g., electricity, water, gas consumption), 'rates', 'charges', and other breakdowns.
+4. Present the extracted information in a JSON format, ensuring the order of key-value pairs and table data aligns with the original text.
+
+As an illustrative example, consider a utility bill with the following text data on the given page and its corresponding JSON output:
+
+#Sample Utility Bill Document
+-----------------Utility Bill------------------
+                            Page 1 of 2
+
+Account Number: 123456789
+Customer Name: John Doe
+Billing Period: 2024-11-01 to 2024-11-30
+Due Date: 2024-12-15
+
+Utility       Usage       Rate       Total
+Electricity   500 kWh    $0.15/kWh  $75.00
+Water         10 m³      $2.00/m³   $20.00
+Gas           50 m³      $1.50/m³   $75.00
+
+                      Subtotal: $170.00
+                      Tax: $15.00
+                      Total Amount Due: $185.00
+--------------------------------------------
+
+#Corresponding JSON Output:
+
+-------Output-----------------------------
+{{
+    "account_number": "123456789",
+    "customer_name": "John Doe",
+    "billing_period": "2024-11-01 to 2024-11-30",
+    "due_date": "2024-12-15",
+    "subtotal": 170.00,
+    "tax": 15.00,
+    "total_amount_due": 185.00,
+    "line_items": [[
+        {{
+            "utility": "Electricity",
+            "usage": "500 kWh",
+            "rate": "$0.15/kWh",
+            "total": 75.00
+        }},
+        {{
+            "utility": "Water",
+            "usage": "10 m³",
+            "rate": "$2.00/m³",
+            "total": 20.00
+        }},
+        {{
+            "utility": "Gas",
+            "usage": "50 m³",
+            "rate": "$1.50/m³",
+            "total": 75.00
+        }}
+    ]]
+}}
+--------------------------------------------
+
+The language model must interpret and execute these extraction and formatting instructions accurately for each page of the document.

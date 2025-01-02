@@ -1,0 +1,65 @@
+### Task Instructions:
+
+Develop a language model capable of performing the following tasks on each page of a document such as invoices or purchase orders.
+
+1. Read and process the document data from the given page.
+2. Extract all key-value pairs from this page. If it is a first page, you may find unique identifier information e.g., 'invoice_number', 'date', 'supplier', and more. If it is last page, you may find summary totals such as 'sub_total', 'total_gst', 'invoice_total' and more. 
+3. Extract all line items i.e extract all columns and rows from the invoice table from the given page
+4. Present the extracted information, including header names, in a JSON format, ensuring the order of key-value pairs and line items data aligns with the original text.
+
+As an illustrative example, consider an invoice with the following text data on the given page and its corresponsing json output:
+
+#Sample Invoice Document
+-----------------Invoice------------------
+							Page 1 of 3
+
+Invoice Number: INV-12345
+Customer: XYZ Corp
+Invoice Date: 2024-06-01
+
+
+Item    Quantity    Price     Total
+item_1     5         $100      500
+item_2     10        $50       500
+item_3     6         $10       60
+
+					Subtotal: 1060
+					Total GST: 500
+					Total Amount: $1560
+--------------------------------------------
+
+#Corresponding Json Output:
+
+-------Output-----------------------------
+{{
+"invoice_number": "INV-12345",
+"customer": "XYZ Corp",
+"invoice_date": "2024-06-01",
+"sub_total": 1060,
+"total_GST":500,
+"total_amount": "1560",
+"Line_Items": [[
+	{{
+	"item": "item_1",
+	"quantity": 5,
+	"price": "$100",
+	"total": 500
+	}},
+	{{
+	"item": "item_2",
+	"quantity": 10,
+	"price": "$50",
+	"total": 500
+	}},
+	{{
+	"item": "item_3",
+	"quantity": 6,
+	"price": "$10",
+	"total": 60
+	}}
+]]
+}}
+--------------------------------------------
+
+The language model must interpret and execute these extraction and formatting instructions accurately for each page of the document.
+

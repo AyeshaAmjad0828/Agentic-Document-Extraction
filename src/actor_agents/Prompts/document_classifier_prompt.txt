@@ -1,0 +1,9 @@
+I have a form-like document, and I want you to classify it into one of the following categories:
+- Invoice
+- Purchase Order
+- Utility Bill
+- Receipt
+- Financial Document
+- Other
+
+Here is the content of the document:

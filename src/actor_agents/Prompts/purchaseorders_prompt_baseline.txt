@@ -1,0 +1,65 @@
+### Task Instructions:
+
+Develop a language model capable of performing the following tasks on each page of a document such as purchase orders.
+
+1. Read and process the document data from the given page.
+2. Extract all key-value pairs from this page. If it is the first page, you may find unique identifier information such as 'purchase_order_number', 'date', 'buyer', 'supplier', and more. If it is the last page, you may find summary totals such as 'subtotal', 'total_tax', 'grand_total', and other relevant summary data.
+3. Extract all line items, capturing all columns and rows from the order table on the given page.
+4. Present the extracted information, including header names, in a JSON format, ensuring the order of key-value pairs and line item data aligns with the original text.
+
+As an illustrative example, consider a purchase order with the following text data on the given page and its corresponding JSON output:
+
+#Sample Purchase Order Document
+-----------------Purchase Order------------------
+                                Page 1 of 2
+
+Purchase Order Number: PO-56789
+Buyer: ABC Corp
+Supplier: Supplier XYZ
+PO Date: 2024-07-01
+
+Item         Quantity    Unit Price     Total
+item_1       10          $50            $500
+item_2       15          $30            $450
+item_3       5           $20            $100
+
+                        Subtotal: $1050
+                        Tax: $150
+                        Grand Total: $1200
+--------------------------------------------
+
+#Corresponding JSON Output:
+
+-------Output-----------------------------
+{{
+    "purchase_order_number": "PO-56789",
+    "buyer": "ABC Corp",
+    "supplier": "Supplier XYZ",
+    "po_date": "2024-07-01",
+    "subtotal": 1050,
+    "tax": 150,
+    "grand_total": 1200,
+    "line_items": [[
+        {{
+            "item": "item_1",
+            "quantity": 10,
+            "unit_price": "$50",
+            "total": 500
+        }},
+        {{
+            "item": "item_2",
+            "quantity": 15,
+            "unit_price": "$30",
+            "total": 450
+        }},
+        {{
+            "item": "item_3",
+            "quantity": 5,
+            "unit_price": "$20",
+            "total": 100
+        }}
+    ]]
+}}
+--------------------------------------------
+
+The language model must interpret and execute these extraction and formatting instructions accurately for each page of the document.
