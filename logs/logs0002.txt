@@ -1,0 +1,181 @@
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+Score: 0.95
+
+Current Prompt:
+ 
+### Instructions:
+You are a data extraction tool capable of extracting data from each page of an invoice.
+
+1. Please extract the data in this invoice and format it to the given output JSON schema.
+
+2. Extract all key-value pairs from the invoice.
+
+3. If there are tables in the invoice, capture all of the rows and columns in the JSON object. 
+Even if a column is blank, include it as a key in the JSON object with a null value.
+
+4. If a row is blank denote missing fields with "null" values.
+
+5. If the page contains no charge data, please output an empty JSON object and don't make up any data.
+
+6. Don't interpolate or make up data.
+
+7. Please maintain the table structure of the charges, i.e. capture all of the rows and columns in the JSON object.
+
+8. Ensuring the order of key-value pairs and tabular data aligns with the original text.
+
+
+The language model must interpret and execute these extraction and formatting instructions accurately.
+
+Perform the task as per above instructions on the following invoice document:
+	
+	
+### INPUT invoice:
+	
+
+-----------------Invoice------------------
+                              Page 1 of 3
+
+Invoice Number: INV-12345
+Customer: XYZ Corp
+Invoice Date: 2024-06-01
+
+
+Item    Quantity    Price     Total
+item_1     5         $100      500
+item_2     10        $50       500
+item_3     6         $10       60
+
+					Subtotal: 1060
+					Total GST: 500
+					Total Amount: $1560
+--------------------------------------------
+
+	
+### OUTPUT JSON SCHEMA:
+
+
+	
+{'invoice_number': 'string', 'customer': 'string', 'invoice_date': 'yyyy-mm-dd', 'sub_total': 'number', 'total_GST': 'number', 'total_amount': 'number', 'Line_Items': [{'item': 'string', 'quantity': 'number', 'price': 'number', 'total': 'number'}]}
+
+	
+
+Last Output:
+ {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+Score: 0.95
+
+Current State:
+Exact Match: 0.9474
+Similarity: 0.9793
+C:\Users\ayesha.amjad\AppData\Local\Temp\ipykernel_48840\1662946048.py:48: LangChainDeprecationWarning: The method `BaseChatModel.__call__` was deprecated in langchain-core 0.1.7 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = self.model([
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+Score: 0.95
+
+Updated Prompt: 
+Please extract the required fields with utmost clarity. Ensure no fields are missed and maintain the output structure.
+	
+	
+### INPUT invoice:
+	
+
+-----------------Invoice------------------
+                              Page 1 of 3
+
+Invoice Number: INV-12345
+Customer: XYZ Corp
+Invoice Date: 2024-06-01
+
+
+Item    Quantity    Price     Total
+item_1     5         $100      500
+item_2     10        $50       500
+item_3     6         $10       60
+
+					Subtotal: 1060
+					Total GST: 500
+					Total Amount: $1560
+--------------------------------------------
+
+	
+### OUTPUT JSON SCHEMA:
+
+
+	
+{'invoice_number': 'string', 'customer': 'string', 'invoice_date': 'yyyy-mm-dd', 'sub_total': 'number', 'total_GST': 'number', 'total_amount': 'number', 'Line_Items': [{'item': 'string', 'quantity': 'number', 'price': 'number', 'total': 'number'}]}
+
+	
+State: [0.94736844 0.97925204]
+Last_output: {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Action taken: 4
+Reward: 0.8277
+
+Terminated: True
+Total Return: 0.8277
+Metrics: {}
+
+Task completed successfully!

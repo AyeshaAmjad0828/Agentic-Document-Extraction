@@ -1,0 +1,504 @@
+Start Prompt:
+ 
+### Instructions:
+You are a data extraction tool capable of extracting data from each page of an invoice.
+
+1. Please extract the data in this invoice and format it to the given output JSON schema.
+
+2. Extract all key-value pairs from the invoice.
+
+3. If there are tables in the invoice, capture all of the rows and columns in the JSON object. 
+Even if a column is blank, include it as a key in the JSON object with a null value.
+
+4. If a row is blank denote missing fields with "null" values.
+
+5. If the page contains no charge data, please output an empty JSON object and don't make up any data.
+
+6. Don't interpolate or make up data.
+
+7. Please maintain the table structure of the charges, i.e. capture all of the rows and columns in the JSON object.
+
+8. Ensuring the order of key-value pairs and tabular data aligns with the original text.
+
+
+The language model must interpret and execute these extraction and formatting instructions accurately.
+
+Perform the task as per above instructions on the following invoice document:
+	
+	
+### INPUT invoice:
+	
+
+-----------------Invoice------------------
+                              Page 1 of 3
+
+Invoice Number: INV-12345
+Customer: XYZ Corp
+Invoice Date: 2024-06-01
+
+
+Item    Quantity    Price     Total
+item_1     5         $100      500
+item_2     10        $50       500
+item_3     6         $10       60
+
+					Subtotal: 1060
+					Total GST: 500
+					Total Amount: $1560
+--------------------------------------------
+
+	
+### OUTPUT JSON SCHEMA:
+
+
+	
+{'invoice_number': 'string', 'customer': 'string', 'invoice_date': 'yyyy-mm-dd', 'sub_total': 'number', 'total_GST': 'number', 'total_amount': 'number', 'Line_Items': [{'item': 'string', 'quantity': 'number', 'price': 'number', 'total': 'number'}]}
+
+	
+Start Output:
+ {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+
+Current State:
+Exact Match: 0.9474
+Similarity: 0.9793
+C:\Users\ayesha.amjad\AppData\Local\Temp\ipykernel_36464\1662946048.py:48: LangChainDeprecationWarning: The method `BaseChatModel.__call__` was deprecated in langchain-core 0.1.7 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = self.model([
+
+.............................NEW ITERATION BEGINS.....................................
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+
+Updated Prompt: 
+### Revised Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract data from each page of an invoice and format it according to a specified JSON schema.
+
+1. **Output Format**: Please extract the data from the invoice and format it as a JSON object. Ensure that all keys and string values are enclosed in double quotes, as required by JSON syntax.
+
+2. **Key-Value Pairs**: Extract all key-value pairs from the invoice. Maintain the exact structure and order of these pairs as they appear in the invoice.
+
+3. **Table Data Extraction**: If the invoice contains tables, capture all rows and columns in the JSON object. Even if a column is blank, include it as a key in the JSON object with a value of `null`. For example:
+   ```json
+   {
+       "charges": [
+           {
+               "item": "Service A",
+               "amount": 100,
+               "description": null
+           },
+           {
+               "item": null,
+               "amount": null,
+               "description": null
+           }
+       ]
+   }
+   ```
+
+4. **Handling Blank Rows and Columns**: Define a "blank" row as one where all fields are empty. For such rows, denote missing fields with `null` values. For columns that are blank, include them with `null` values in the output.
+
+5. **No Charge Data**: If the page contains no charge data, please output an empty JSON object: `{}`. Do not fabricate or interpolate any data.
+
+6. **Data Type Consistency**: Ensure that numerical values are represented as numbers (not strings) and that all data types are consistent with the expected output.
+
+7. **Exactness in Output**: The output must match the expected ground truth exactly, including punctuation, formatting, and structure. Pay close attention to detail.
+
+8. **Sample JSON Structure**: Refer to the following sample JSON structure for guidance:
+   ```json
+   {
+       "invoice_number": "12345",
+       "date": "2023-10-01",
+       "charges": [
+           {
+               "item": "Service A",
+               "amount": 100,
+               "description": "Description of Service A"
+           },
+           {
+               "item": "Service B",
+               "amount": 200,
+               "description": "Description of Service B"
+           }
+       ]
+   }
+   ```
+
+9. **Examples**: Here are a couple of examples of invoices and their expected JSON outputs:
+   - **Example Invoice 1**:
+     - Invoice contains two charge items.
+     - Expected Output:
+       ```json
+       {
+           "invoice_number": "001",
+           "date": "2023-10-01",
+           "charges": [
+               {
+                   "item": "Consulting",
+                   "amount": 150,
+                   "description": "Consulting services"
+               },
+               {
+                   "item": "Travel",
+                   "amount": 50,
+                   "description": null
+               }
+           ]
+       }
+       ```
+
+   - **Example Invoice 2**:
+     - Invoice contains no charge data.
+     - Expected Output:
+       ```json
+       {}
+       ```
+
+Please perform the task as per the above instructions on the following invoice document.
+	
+	
+### INPUT invoice:
+	
+
+-----------------Invoice------------------
+                              Page 1 of 3
+
+Invoice Number: INV-12345
+Customer: XYZ Corp
+Invoice Date: 2024-06-01
+
+
+Item    Quantity    Price     Total
+item_1     5         $100      500
+item_2     10        $50       500
+item_3     6         $10       60
+
+					Subtotal: 1060
+					Total GST: 500
+					Total Amount: $1560
+--------------------------------------------
+
+	
+### OUTPUT JSON SCHEMA:
+
+
+	
+{'invoice_number': 'string', 'customer': 'string', 'invoice_date': 'yyyy-mm-dd', 'sub_total': 'number', 'total_GST': 'number', 'total_amount': 'number', 'Line_Items': [{'item': 'string', 'quantity': 'number', 'price': 'number', 'total': 'number'}]}
+
+	
+State: [0.94736844 0.97925204]
+Last_output: {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Action taken: 3
+Reward: 0.8777
+
+Terminated: False
+Total Return: 0.8777
+Metrics: {'exact_match': 0.9473684210526315, 'similarity': 0.9792520626545262, 'State': array([0.94736844, 0.97925204], dtype=float32), 'Updated Prompt': '\n### Revised Instruction Prompt:\n\n### Instructions:\nYou are a data extraction tool designed to extract data from each page of an invoice and format it according to a specified JSON schema.\n\n1. **Output Format**: Please extract the data from the invoice and format it as a JSON object. Ensure that all keys and string values are enclosed in double quotes, as required by JSON syntax.\n\n2. **Key-Value Pairs**: Extract all key-value pairs from the invoice. Maintain the exact structure and order of these pairs as they appear in the invoice.\n\n3. **Table Data Extraction**: If the invoice contains tables, capture all rows and columns in the JSON object. Even if a column is blank, include it as a key in the JSON object with a value of `null`. For example:\n   ```json\n   {\n       "charges": [\n           {\n               "item": "Service A",\n               "amount": 100,\n               "description": null\n           },\n           {\n               "item": null,\n               "amount": null,\n               "description": null\n           }\n       ]\n   }\n   ```\n\n4. **Handling Blank Rows and Columns**: Define a "blank" row as one where all fields are empty. For such rows, denote missing fields with `null` values. For columns that are blank, include them with `null` values in the output.\n\n5. **No Charge Data**: If the page contains no charge data, please output an empty JSON object: `{}`. Do not fabricate or interpolate any data.\n\n6. **Data Type Consistency**: Ensure that numerical values are represented as numbers (not strings) and that all data types are consistent with the expected output.\n\n7. **Exactness in Output**: The output must match the expected ground truth exactly, including punctuation, formatting, and structure. Pay close attention to detail.\n\n8. **Sample JSON Structure**: Refer to the following sample JSON structure for guidance:\n   ```json\n   {\n       "invoice_number": "12345",\n       "date": "2023-10-01",\n       "charges": [\n           {\n               "item": "Service A",\n               "amount": 100,\n               "description": "Description of Service A"\n           },\n           {\n               "item": "Service B",\n               "amount": 200,\n               "description": "Description of Service B"\n           }\n       ]\n   }\n   ```\n\n9. **Examples**: Here are a couple of examples of invoices and their expected JSON outputs:\n   - **Example Invoice 1**:\n     - Invoice contains two charge items.\n     - Expected Output:\n       ```json\n       {\n           "invoice_number": "001",\n           "date": "2023-10-01",\n           "charges": [\n               {\n                   "item": "Consulting",\n                   "amount": 150,\n                   "description": "Consulting services"\n               },\n               {\n                   "item": "Travel",\n                   "amount": 50,\n                   "description": null\n               }\n           ]\n       }\n       ```\n\n   - **Example Invoice 2**:\n     - Invoice contains no charge data.\n     - Expected Output:\n       ```json\n       {}\n       ```\n\nPlease perform the task as per the above instructions on the following invoice document.\n\t\n\t\n### INPUT invoice:\n\t\n\n-----------------Invoice------------------\n                              Page 1 of 3\n\nInvoice Number: INV-12345\nCustomer: XYZ Corp\nInvoice Date: 2024-06-01\n\n\nItem    Quantity    Price     Total\nitem_1     5         $100      500\nitem_2     10        $50       500\nitem_3     6         $10       60\n\n\t\t\t\t\tSubtotal: 1060\n\t\t\t\t\tTotal GST: 500\n\t\t\t\t\tTotal Amount: $1560\n--------------------------------------------\n\n\t\n### OUTPUT JSON SCHEMA:\n\n\n\t\n{\'invoice_number\': \'string\', \'customer\': \'string\', \'invoice_date\': \'yyyy-mm-dd\', \'sub_total\': \'number\', \'total_GST\': \'number\', \'total_amount\': \'number\', \'Line_Items\': [{\'item\': \'string\', \'quantity\': \'number\', \'price\': \'number\', \'total\': \'number\'}]}\n\n\t', 'Updated Output': '{\n  "invoice_number": "INV-12345",\n  "customer": "XYZ Corp",\n  "invoice_date": "2024-06-01",\n  "sub_total": 1060,\n  "total_GST": 500,\n  "total_amount": 1560,\n  "Line_Items": [\n    {\n      "item": "item_1",\n      "quantity": 5,\n      "price": 100,\n      "total": 500\n    },\n    {\n      "item": "item_2",\n      "quantity": 10,\n      "price": 50,\n      "total": 500\n    },\n    {\n      "item": "item_3",\n      "quantity": 6,\n      "price": 10,\n      "total": 60\n    }\n  ]\n}'}
+
+Current State:
+Exact Match: 0.9474
+Similarity: 0.9793
+
+.............................NEW ITERATION BEGINS.....................................
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+
+Updated Prompt: 
+### Revised Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract data from each page of an invoice and format it according to the specified JSON schema.
+
+1. **Output Format**: Please extract the data from the invoice and format it as a JSON object. Ensure that all keys and string values are enclosed in double quotes, adhering to standard JSON formatting rules.
+
+2. **Key-Value Pairs**: Extract all key-value pairs from the invoice. The order of these pairs must match the order in which they appear in the invoice document.
+
+3. **Table Data**: If there are tables in the invoice, capture all rows and columns in the JSON object. Include all columns, even if they are blank, by representing them as keys with null values. For any blank rows, denote missing fields with "null" values.
+
+4. **Empty Data Handling**: If the page contains no charge data, output an empty JSON object (`{}`) and do not fabricate any data.
+
+5. **No Data Interpolation**: Ensure that all extracted data is directly from the invoice without any assumptions or modifications. Do not interpolate or make up data.
+
+6. **Maintain Structure**: Preserve the table structure of the charges, ensuring that all rows and columns are accurately represented in the JSON object.
+
+7. **Consistency**: Maintain consistency in the output format throughout the extraction process. 
+
+8. **Example Output**: For reference, here is an example of the expected output format:
+   ```json
+   {
+       "invoice_number": "12345",
+       "date": "2023-10-01",
+       "charges": [
+           {
+               "description": "Service A",
+               "amount": 100.00,
+               "quantity": 1
+           },
+           {
+               "description": "Service B",
+               "amount": 50.00,
+               "quantity": null
+           }
+       ]
+   }
+   ```
+
+Perform the task as per the above instructions on the following invoice document:
+	
+	
+### INPUT invoice:
+	
+
+-----------------Invoice------------------
+                              Page 1 of 3
+
+Invoice Number: INV-12345
+Customer: XYZ Corp
+Invoice Date: 2024-06-01
+
+
+Item    Quantity    Price     Total
+item_1     5         $100      500
+item_2     10        $50       500
+item_3     6         $10       60
+
+					Subtotal: 1060
+					Total GST: 500
+					Total Amount: $1560
+--------------------------------------------
+
+	
+### OUTPUT JSON SCHEMA:
+
+
+	
+{'invoice_number': 'string', 'customer': 'string', 'invoice_date': 'yyyy-mm-dd', 'sub_total': 'number', 'total_GST': 'number', 'total_amount': 'number', 'Line_Items': [{'item': 'string', 'quantity': 'number', 'price': 'number', 'total': 'number'}]}
+
+	
+State: [0.94736844 0.97925204]
+Last_output: {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Action taken: 3
+Reward: 0.8777
+
+Terminated: False
+Total Return: 1.7554
+Metrics: {'exact_match': 0.9473684210526315, 'similarity': 0.9792520626545262, 'State': array([0.94736844, 0.97925204], dtype=float32), 'Updated Prompt': '\n### Revised Instruction Prompt:\n\n### Instructions:\nYou are a data extraction tool designed to extract data from each page of an invoice and format it according to the specified JSON schema.\n\n1. **Output Format**: Please extract the data from the invoice and format it as a JSON object. Ensure that all keys and string values are enclosed in double quotes, adhering to standard JSON formatting rules.\n\n2. **Key-Value Pairs**: Extract all key-value pairs from the invoice. The order of these pairs must match the order in which they appear in the invoice document.\n\n3. **Table Data**: If there are tables in the invoice, capture all rows and columns in the JSON object. Include all columns, even if they are blank, by representing them as keys with null values. For any blank rows, denote missing fields with "null" values.\n\n4. **Empty Data Handling**: If the page contains no charge data, output an empty JSON object (`{}`) and do not fabricate any data.\n\n5. **No Data Interpolation**: Ensure that all extracted data is directly from the invoice without any assumptions or modifications. Do not interpolate or make up data.\n\n6. **Maintain Structure**: Preserve the table structure of the charges, ensuring that all rows and columns are accurately represented in the JSON object.\n\n7. **Consistency**: Maintain consistency in the output format throughout the extraction process. \n\n8. **Example Output**: For reference, here is an example of the expected output format:\n   ```json\n   {\n       "invoice_number": "12345",\n       "date": "2023-10-01",\n       "charges": [\n           {\n               "description": "Service A",\n               "amount": 100.00,\n               "quantity": 1\n           },\n           {\n               "description": "Service B",\n               "amount": 50.00,\n               "quantity": null\n           }\n       ]\n   }\n   ```\n\nPerform the task as per the above instructions on the following invoice document:\n\t\n\t\n### INPUT invoice:\n\t\n\n-----------------Invoice------------------\n                              Page 1 of 3\n\nInvoice Number: INV-12345\nCustomer: XYZ Corp\nInvoice Date: 2024-06-01\n\n\nItem    Quantity    Price     Total\nitem_1     5         $100      500\nitem_2     10        $50       500\nitem_3     6         $10       60\n\n\t\t\t\t\tSubtotal: 1060\n\t\t\t\t\tTotal GST: 500\n\t\t\t\t\tTotal Amount: $1560\n--------------------------------------------\n\n\t\n### OUTPUT JSON SCHEMA:\n\n\n\t\n{\'invoice_number\': \'string\', \'customer\': \'string\', \'invoice_date\': \'yyyy-mm-dd\', \'sub_total\': \'number\', \'total_GST\': \'number\', \'total_amount\': \'number\', \'Line_Items\': [{\'item\': \'string\', \'quantity\': \'number\', \'price\': \'number\', \'total\': \'number\'}]}\n\n\t', 'Updated Output': '{\n  "invoice_number": "INV-12345",\n  "customer": "XYZ Corp",\n  "invoice_date": "2024-06-01",\n  "sub_total": 1060,\n  "total_GST": 500,\n  "total_amount": 1560,\n  "Line_Items": [\n    {\n      "item": "item_1",\n      "quantity": 5,\n      "price": 100,\n      "total": 500\n    },\n    {\n      "item": "item_2",\n      "quantity": 10,\n      "price": 50,\n      "total": 500\n    },\n    {\n      "item": "item_3",\n      "quantity": 6,\n      "price": 10,\n      "total": 60\n    }\n  ]\n}'}
+
+Current State:
+Exact Match: 0.9474
+Similarity: 0.9793
+
+.............................NEW ITERATION BEGINS.....................................
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+
+Updated Prompt: 
+### Revised Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to accurately extract data from each page of an invoice and format it according to the specified JSON schema.
+
+1. **Output Format**: Please extract the data from the invoice and format it as a valid JSON object. Ensure that all keys and string values are enclosed in double quotes (e.g., `"key": "value"`), and numeric values are represented as numbers without quotes (e.g., `"amount": 100.00`).
+
+2. **Key-Value Pairs**: Extract all key-value pairs from the invoice. Each key should correspond to a specific piece of information found in the invoice.
+
+3. **Table Data**: If the invoice contains tables, capture all rows and columns in the JSON object. Maintain the original table structure, ensuring that each row is represented as an array of objects. Even if a column is blank, include it as a key in the JSON object with a null value (e.g., `"column_name": null`).
+
+4. **Handling Missing Data**: If a row is blank, denote missing fields with `"null"` values. For any optional fields that are not present in the invoice, do not include them in the output.
+
+5. **No Charge Data**: If the page contains no charge data, please output an empty JSON object (`{}`) and do not fabricate any data.
+
+6. **Data Integrity**: Do not interpolate or make up data. Only extract information that is explicitly present in the invoice.
+
+7. **Order and Structure**: Ensure that the order of key-value pairs and tabular data aligns with the original text of the invoice. The output should accurately reflect the structure of the invoice.
+
+8. **Example Output**: Here is an example of the expected output format:
+   ```json
+   {
+       "invoice_number": "12345",
+       "date": "2023-10-01",
+       "charges": [
+           {
+               "description": "Service A",
+               "amount": 100.00,
+               "quantity": 1,
+               "total": 100.00
+           },
+           {
+               "description": "Service B",
+               "amount": 50.00,
+               "quantity": 2,
+               "total": 100.00
+           }
+       ],
+       "total_amount": 200.00
+   }
+   ```
+
+Please perform the task as per the above instructions on the following invoice document.
+	
+	
+### INPUT invoice:
+	
+
+-----------------Invoice------------------
+                              Page 1 of 3
+
+Invoice Number: INV-12345
+Customer: XYZ Corp
+Invoice Date: 2024-06-01
+
+
+Item    Quantity    Price     Total
+item_1     5         $100      500
+item_2     10        $50       500
+item_3     6         $10       60
+
+					Subtotal: 1060
+					Total GST: 500
+					Total Amount: $1560
+--------------------------------------------
+
+	
+### OUTPUT JSON SCHEMA:
+
+
+	
+{'invoice_number': 'string', 'customer': 'string', 'invoice_date': 'yyyy-mm-dd', 'sub_total': 'number', 'total_GST': 'number', 'total_amount': 'number', 'Line_Items': [{'item': 'string', 'quantity': 'number', 'price': 'number', 'total': 'number'}]}
+
+	
+State: [0.94736844 0.97925204]
+Last_output: {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Action taken: 3
+Reward: 0.8777
+
+Terminated: False
+Total Return: 2.6331
+Metrics: {'exact_match': 0.9473684210526315, 'similarity': 0.9792520626545262, 'State': array([0.94736844, 0.97925204], dtype=float32), 'Updated Prompt': '\n### Revised Instruction Prompt:\n\n### Instructions:\nYou are a data extraction tool designed to accurately extract data from each page of an invoice and format it according to the specified JSON schema.\n\n1. **Output Format**: Please extract the data from the invoice and format it as a valid JSON object. Ensure that all keys and string values are enclosed in double quotes (e.g., `"key": "value"`), and numeric values are represented as numbers without quotes (e.g., `"amount": 100.00`).\n\n2. **Key-Value Pairs**: Extract all key-value pairs from the invoice. Each key should correspond to a specific piece of information found in the invoice.\n\n3. **Table Data**: If the invoice contains tables, capture all rows and columns in the JSON object. Maintain the original table structure, ensuring that each row is represented as an array of objects. Even if a column is blank, include it as a key in the JSON object with a null value (e.g., `"column_name": null`).\n\n4. **Handling Missing Data**: If a row is blank, denote missing fields with `"null"` values. For any optional fields that are not present in the invoice, do not include them in the output.\n\n5. **No Charge Data**: If the page contains no charge data, please output an empty JSON object (`{}`) and do not fabricate any data.\n\n6. **Data Integrity**: Do not interpolate or make up data. Only extract information that is explicitly present in the invoice.\n\n7. **Order and Structure**: Ensure that the order of key-value pairs and tabular data aligns with the original text of the invoice. The output should accurately reflect the structure of the invoice.\n\n8. **Example Output**: Here is an example of the expected output format:\n   ```json\n   {\n       "invoice_number": "12345",\n       "date": "2023-10-01",\n       "charges": [\n           {\n               "description": "Service A",\n               "amount": 100.00,\n               "quantity": 1,\n               "total": 100.00\n           },\n           {\n               "description": "Service B",\n               "amount": 50.00,\n               "quantity": 2,\n               "total": 100.00\n           }\n       ],\n       "total_amount": 200.00\n   }\n   ```\n\nPlease perform the task as per the above instructions on the following invoice document.\n\t\n\t\n### INPUT invoice:\n\t\n\n-----------------Invoice------------------\n                              Page 1 of 3\n\nInvoice Number: INV-12345\nCustomer: XYZ Corp\nInvoice Date: 2024-06-01\n\n\nItem    Quantity    Price     Total\nitem_1     5         $100      500\nitem_2     10        $50       500\nitem_3     6         $10       60\n\n\t\t\t\t\tSubtotal: 1060\n\t\t\t\t\tTotal GST: 500\n\t\t\t\t\tTotal Amount: $1560\n--------------------------------------------\n\n\t\n### OUTPUT JSON SCHEMA:\n\n\n\t\n{\'invoice_number\': \'string\', \'customer\': \'string\', \'invoice_date\': \'yyyy-mm-dd\', \'sub_total\': \'number\', \'total_GST\': \'number\', \'total_amount\': \'number\', \'Line_Items\': [{\'item\': \'string\', \'quantity\': \'number\', \'price\': \'number\', \'total\': \'number\'}]}\n\n\t', 'Updated Output': '{\n  "invoice_number": "INV-12345",\n  "customer": "XYZ Corp",\n  "invoice_date": "2024-06-01",\n  "sub_total": 1060,\n  "total_GST": 500,\n  "total_amount": 1560,\n  "Line_Items": [\n    {\n      "item": "item_1",\n      "quantity": 5,\n      "price": 100,\n      "total": 500\n    },\n    {\n      "item": "item_2",\n      "quantity": 10,\n      "price": 50,\n      "total": 500\n    },\n    {\n      "item": "item_3",\n      "quantity": 6,\n      "price": 10,\n      "total": 60\n    }\n  ]\n}'}
+
+Current State:
+Exact Match: 0.9474
+Similarity: 0.9793
+
+.............................NEW ITERATION BEGINS.....................................

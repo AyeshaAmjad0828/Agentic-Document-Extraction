@@ -1,0 +1,105 @@
+
+Last Output:
+ {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+
+Last Output:
+ {
+  "invoice_number": "INV-12345",
+  "customer": "XYZ Corp",
+  "invoice_date": "2024-06-01",
+  "sub_total": 1060,
+  "total_GST": 500,
+  "total_amount": 1560,
+  "Line_Items": [
+    {
+      "item": "item_1",
+      "quantity": 5,
+      "price": 100,
+      "total": 500
+    },
+    {
+      "item": "item_2",
+      "quantity": 10,
+      "price": 50,
+      "total": 500
+    },
+    {
+      "item": "item_3",
+      "quantity": 6,
+      "price": 10,
+      "total": 60
+    }
+  ]
+}
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+
+Current State:
+Exact Match: 0.9474
+Similarity: 0.9793
+C:\Users\ayesha.amjad\AppData\Local\Temp\ipykernel_43228\1662946048.py:48: LangChainDeprecationWarning: The method `BaseChatModel.__call__` was deprecated in langchain-core 0.1.7 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = self.model([
+
+Exact Match Details:
+Total fields: 19
+Matched fields: 18
+
+Step 1
+Current Scores - Exact Match: 0.9474, Similarity: 0.9793
+Best Scores    - Exact Match: 0.9474, Similarity: 0.9793
+
+Action taken: 3
+Reward: 0.0000
+
+Terminated: False
+Total Return: 0.0000
+Metrics: {'exact_match': 0.9473684210526315, 'similarity': 0.9792520626545262, 'best_exact_match': 0.9473684210526315, 'best_similarity': 0.9792520626545262, 'improved': False, 'non_improvement_count': 1, 'steps': 1}
+
+Current State:
+Exact Match: 0.9474
+Similarity: 0.9793
+Missing key in generated output: invoice_date
+Missing key in generated output: item
+Missing key in generated output: item
+Missing key in generated output: item
+
+Exact Match Details:
+...
+Total Return: -0.2117
+Metrics: {'exact_match': 0.7368421052631579, 'similarity': 0.9781137820913973, 'best_exact_match': 0.9473684210526315, 'best_similarity': 0.9792520626545262, 'improved': False, 'non_improvement_count': 2, 'steps': 2}
+
+Task completed successfully!
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
