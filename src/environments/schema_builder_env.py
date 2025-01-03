@@ -13,7 +13,7 @@ sys.path.append(project_root)
 
 import gymnasium as gym
 import numpy as np
-from actor_agents.schema_builder import schema_building_with_llm
+from src.actor_agents.schema_builder import schema_building_with_llm
 from src.action_space.meta_prompting_agent import adjust_prompt
 
 
