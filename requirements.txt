@@ -75,6 +75,10 @@ virtualenv==20.28.0
 wget==3.2
 yarl==1.18.3
 
+# Jupyter/IPython
+ipython
+jupyter
+
 # PDF processing
 pdfplumber
 PyPDF2
