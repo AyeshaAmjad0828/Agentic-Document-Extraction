@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: update-requirements
+        name: Update requirements.txt
+        entry: python -m pip freeze > requirements.txt
+        language: system
+        always_run: true
