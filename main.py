@@ -24,7 +24,7 @@ from src.rl_agents.gymnasium_extraction_agent import GymnasiumAgent as Extractio
 import pandas as pd
 from datetime import datetime
 
-def update_metrics_excel(metrics_dict: dict, excel_path: str = "extraction_metrics.xlsx"):
+def update_metrics_excel(metrics_dict: dict, excel_path: str = "output\extraction_metrics.xlsx"):
     """
     Update or create Excel file with document processing metrics
     """
