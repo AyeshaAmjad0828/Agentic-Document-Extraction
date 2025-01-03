@@ -26,6 +26,7 @@ def schema_building_with_llm(baseprompt, document_text):
         document_text=document_text,)
     try:
         response = get_completion_gpt4([{"role": "user", "content": prompt}],
+                                       response_format={ "type": "json_object" },
                                        logprobs=True,
                                        )
         logprobs = [token.logprob for token in response.choices[0].logprobs.content]
