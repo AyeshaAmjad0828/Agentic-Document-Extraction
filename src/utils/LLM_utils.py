@@ -1,5 +1,6 @@
 from openai import OpenAI
 import os
+import json
 from dotenv import load_dotenv
 
 
@@ -38,18 +39,22 @@ def get_completion_gpt4(
     return completion
 
 
-def openai_embedding(text: str) -> list:
-    """
-    Get embeddings using OpenAI's embedding model
-    
-    Args:
-        text (str): The text to get embeddings for
+def openai_embedding(text):
+    """Get OpenAI embedding for text"""
+    if not text or not isinstance(text, str):
+        print("Warning: Empty or invalid text provided for embedding")
+        return None
         
-    Returns:
-        list: The embedding vector
-    """
-    response = client.embeddings.create(
-        model="text-embedding-ada-002",
-        input=text
-    )
-    return response.data[0].embedding
+    # Convert to string if it's a dictionary/list
+    if isinstance(text, (dict, list)):
+        text = json.dumps(text)
+        
+    try:
+        response = client.embeddings.create(
+            input=text,
+            model="text-embedding-ada-002"
+        )
+        return response.data[0].embedding
+    except Exception as e:
+        print(f"Error getting embedding: {e}")
+        return None
