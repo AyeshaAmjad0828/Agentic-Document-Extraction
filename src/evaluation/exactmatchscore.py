@@ -122,31 +122,31 @@ def debug_exact_match(generated_output, groundtruth):
     return
 
 
-def check_values_in_text(generated, original):
-    found_values = {}
+# def check_values_in_text(generated, original):
+#     found_values = {}
 
-    if isinstance(original, dict):
-        original = json.dumps(original)
+#     if isinstance(original, dict):
+#         original = json.dumps(original)
 
-    for key, value in generated.items():
-        if isinstance(value, list):
-            # Handle the collection of child items (Line_Items)
-            for idx, item in enumerate(value):
-                for sub_key, sub_value in item.items():
-                    sub_value_str = str(sub_value)
-                    if sub_value_str in original:
-                        found_values[f"Line_Item_{idx}_{sub_key}"] = True
-                    else:
-                        found_values[f"Line_Item_{idx}_{sub_key}"] = False
-        else:
-            # Handle parent-level values
-            value_str = str(value)
-            if value_str in original:
-                found_values[key] = True
-            else:
-                found_values[key] = False
+#     for key, value in generated.items():
+#         if isinstance(value, list):
+#             # Handle the collection of child items (Line_Items)
+#             for idx, item in enumerate(value):
+#                 for sub_key, sub_value in item.items():
+#                     sub_value_str = str(sub_value)
+#                     if sub_value_str in original:
+#                         found_values[f"Line_Item_{idx}_{sub_key}"] = True
+#                     else:
+#                         found_values[f"Line_Item_{idx}_{sub_key}"] = False
+#         else:
+#             # Handle parent-level values
+#             value_str = str(value)
+#             if value_str in original:
+#                 found_values[key] = True
+#             else:
+#                 found_values[key] = False
 
-    return found_values
+#     return found_values
 
 
 
