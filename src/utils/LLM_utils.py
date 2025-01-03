@@ -10,6 +10,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def get_completion_gpt4(
     messages: list[dict[str, str]],
+    response_format=None,
     model: str = "gpt-4o-mini",
     max_tokens=16000,
     temperature=0.1,
@@ -22,6 +23,7 @@ def get_completion_gpt4(
     params = {
         "model": model,
         "messages": messages,
+        "response_format": response_format,
         "max_tokens": max_tokens,
         "temperature": temperature,
         "stop": stop,
