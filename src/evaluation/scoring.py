@@ -13,7 +13,7 @@ sys.path.append(project_root)
 
 import json
 from collections import Counter
-from src.evaluation.exactmatchscore import calculate_match_score, check_values_in_text, fuzzy_match_in_text
+from src.evaluation.exactmatchscore import calculate_match_score
 from src.evaluation.cosinesimilarityscore import compute_cosine_similarity
 
 import re

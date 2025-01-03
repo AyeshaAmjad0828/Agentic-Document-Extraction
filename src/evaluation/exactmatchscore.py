@@ -1,6 +1,6 @@
 import re
 import json
-from fuzzywuzzy import fuzz
+#from fuzzywuzzy import fuzz
 
 
 #load data
@@ -151,26 +151,26 @@ def check_values_in_text(generated, original):
 
 
 
-def fuzzy_match_in_text(generated, original, threshold=90):
-    found_values = {}
+# def fuzzy_match_in_text(generated, original, threshold=90):
+#     found_values = {}
 
-    if isinstance(original, dict):
-        original = json.dumps(original)
+#     if isinstance(original, dict):
+#         original = json.dumps(original)
 
-    for key, value in generated.items():
-        if isinstance(value, list):
-            # Handle the collection of child items (Line_Items)
-            for idx, item in enumerate(value):
-                for sub_key, sub_value in item.items():
-                    sub_value_str = str(sub_value)
-                    match_score = fuzz.partial_ratio(sub_value_str.lower(), original.lower())
-                    found_values[f"Line_Item_{idx}_{sub_key}"] = match_score >= threshold
-        else:
-            # Handle parent-level values
-            value_str = str(value)
-            match_score = fuzz.partial_ratio(value_str.lower(), original.lower())
-            found_values[key] = match_score >= threshold
+#     for key, value in generated.items():
+#         if isinstance(value, list):
+#             # Handle the collection of child items (Line_Items)
+#             for idx, item in enumerate(value):
+#                 for sub_key, sub_value in item.items():
+#                     sub_value_str = str(sub_value)
+#                     match_score = fuzz.partial_ratio(sub_value_str.lower(), original.lower())
+#                     found_values[f"Line_Item_{idx}_{sub_key}"] = match_score >= threshold
+#         else:
+#             # Handle parent-level values
+#             value_str = str(value)
+#             match_score = fuzz.partial_ratio(value_str.lower(), original.lower())
+#             found_values[key] = match_score >= threshold
 
-    return found_values
+#     return found_values
 
 
