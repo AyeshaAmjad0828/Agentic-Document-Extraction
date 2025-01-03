@@ -39,7 +39,7 @@ Based on the content, which category does this document belong to? Please reply 
     try:
         response = get_completion_gpt4([{"role": "user", "content": prompt}],
                                        logprobs=True,
-                                       top_logprobs=2,
+                                       top_logprobs=1,
                                        )
         top_two_logprobs = response.choices[0].logprobs.content[0].top_logprobs
         html_content = ""
@@ -57,7 +57,7 @@ Based on the content, which category does this document belong to? Please reply 
 
         
         if classification in CLASSES:
-            return prompt, classification, linear_probability
+            return classification, linear_probability
         else:
             return "Unknown"  # Return "Unknown" if response is unexpected
 
