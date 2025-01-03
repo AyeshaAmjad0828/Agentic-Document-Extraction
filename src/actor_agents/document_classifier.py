@@ -11,7 +11,7 @@ import numpy as np
 from IPython.display import display, HTML
 
 
-CLASSES = ["Invoice", "Purchase Order", "Bill", "Receipt", "Financial Document", "Other"]
+CLASSES = ["Invoice", "Purchase Order", "Bill", "Receipt", "Financial Document", "Salary Slip"]
 
 def classify_document_with_llm(document_text):
     CLASSIFICATION_PROMPT = PromptTemplate(
@@ -22,7 +22,7 @@ I have a form-like document, and I want you to classify it into one of the follo
 - Utility Bill
 - Receipt
 - Financial Document
-- Other
+- Salary Slip
 
 Here is the content of the document:
 
