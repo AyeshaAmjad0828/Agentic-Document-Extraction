@@ -1,3 +1,5 @@
+### Document Reader (Reads from pdf, scanned pdf, txt, doc, docx, .png, .jpg, .jpeg, .tiff, .bmp)
+
 #pip install pdfplumber PyPDF2 paddleocr python-docx docx2txt pillow opencv-python paddlepaddle PyMuPDF
 
 import os
