@@ -62,7 +62,8 @@ class DataExtractionEnvBase(gym.Env):
 
 
         # Generate new output using the updated prompt
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],).choices[0].message.content)
+        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],
+                                                                response_format={ "type": "json_object" },).choices[0].message.content)
         
         print(f"\nUpdated Prompt: {resolved_updated_prompt}")
         print("Updated Output:", self.last_output)
@@ -102,7 +103,8 @@ class DataExtractionEnvBase(gym.Env):
         self.current_prompt = self.baseprompt
         self.resolved_current_prompt = document_extractor_agent(self.current_prompt, self.document_type, self.document, self.schema)
 
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],).choices[0].message.content)
+        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],
+                                                                response_format={ "type": "json_object" },).choices[0].message.content)
         print(f"Start Prompt:\n {self.resolved_current_prompt}")
         print(f"Start Output:\n {self.last_output}")
         
@@ -177,9 +179,8 @@ class DataExtractionEnvIterative(gym.Env):
                                                            self.document, self.schema)
 
         # Generate new output
-        self.last_output = clean_llm_output(get_completion_gpt4(
-            [{"role": "user", "content": resolved_updated_prompt}]
-        ).choices[0].message.content)
+        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],
+                                                                response_format={ "type": "json_object" },).choices[0].message.content)
 
         print(f"\nStep {self.current_step}")
         print(f"\nUpdated Prompt: {resolved_updated_prompt}")
@@ -252,8 +253,8 @@ class DataExtractionEnvIterative(gym.Env):
         self.resolved_current_prompt = document_extractor_agent(self.current_prompt, self.document_type, self.document, self.schema)
         
         # Generate initial output
-        self.last_output = clean_llm_output(get_completion_gpt4(
-            [{"role": "user", "content": self.resolved_current_prompt}]).choices[0].message.content)
+        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],
+                                                                response_format={ "type": "json_object" },).choices[0].message.content)
 
         print(f"Start Prompt:\n {self.resolved_current_prompt}")
         print(f"Start Output:\n {self.last_output}")
@@ -335,7 +336,8 @@ class DataExtractionEnvStepCount(gym.Env):
 
 
         # Generate new output using the updated prompt
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],).choices[0].message.content)
+        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],
+                                                                response_format={ "type": "json_object" },).choices[0].message.content)
 
         print(f"\nStep {self.current_step}/{self.max_steps}")
         print(f"\nUpdated Prompt: {resolved_updated_prompt}")
@@ -384,7 +386,8 @@ class DataExtractionEnvStepCount(gym.Env):
         self.current_prompt = self.baseprompt
         self.resolved_current_prompt = document_extractor_agent(self.current_prompt, self.document_type, self.document, self.schema)
 
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],).choices[0].message.content)
+        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],
+                                                                response_format={ "type": "json_object" },).choices[0].message.content)
         print(f"Start Prompt:\n {self.resolved_current_prompt}")
         print(f"Start Output:\n {self.last_output}")
 
