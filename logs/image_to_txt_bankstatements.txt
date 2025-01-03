@@ -1,0 +1,812 @@
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\1.jpg
+[2025/01/03 19:34:44] ppocr DEBUG: dt_boxes num : 124, elapsed : 0.41594886779785156
+[2025/01/03 19:34:44] ppocr DEBUG: cls num  : 124, elapsed : 0.18183541297912598
+[2025/01/03 19:34:50] ppocr DEBUG: rec_res num  : 124, elapsed : 6.214409589767456
+Processed 1.jpg -> 1.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\10.jpg
+[2025/01/03 19:34:51] ppocr DEBUG: dt_boxes num : 69, elapsed : 0.469956636428833
+[2025/01/03 19:34:51] ppocr DEBUG: cls num  : 69, elapsed : 0.16890668869018555
+[2025/01/03 19:34:54] ppocr DEBUG: rec_res num  : 69, elapsed : 3.0758373737335205
+Processed 10.jpg -> 10.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\11.jpg
+[2025/01/03 19:34:54] ppocr DEBUG: dt_boxes num : 205, elapsed : 0.14840030670166016
+[2025/01/03 19:34:54] ppocr DEBUG: cls num  : 205, elapsed : 0.2668955326080322
+[2025/01/03 19:35:08] ppocr DEBUG: rec_res num  : 205, elapsed : 13.966942310333252
+Processed 11.jpg -> 11.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\12.jpg
+[2025/01/03 19:35:08] ppocr DEBUG: dt_boxes num : 42, elapsed : 0.185899019241333
+[2025/01/03 19:35:09] ppocr DEBUG: cls num  : 42, elapsed : 0.10898494720458984
+[2025/01/03 19:35:11] ppocr DEBUG: rec_res num  : 42, elapsed : 2.5760226249694824
+Processed 12.jpg -> 12.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\13.jpg
+[2025/01/03 19:35:12] ppocr DEBUG: dt_boxes num : 39, elapsed : 0.5514287948608398
+[2025/01/03 19:35:12] ppocr DEBUG: cls num  : 39, elapsed : 0.1954338550567627
+[2025/01/03 19:35:15] ppocr DEBUG: rec_res num  : 39, elapsed : 2.849047899246216
+Processed 13.jpg -> 13.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\14.jpg
+[2025/01/03 19:35:16] ppocr DEBUG: dt_boxes num : 207, elapsed : 0.7143573760986328
+[2025/01/03 19:35:16] ppocr DEBUG: cls num  : 207, elapsed : 0.5655665397644043
+[2025/01/03 19:35:29] ppocr DEBUG: rec_res num  : 207, elapsed : 13.118709325790405
+Processed 14.jpg -> 14.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\15.jpg
+[2025/01/03 19:35:30] ppocr DEBUG: dt_boxes num : 111, elapsed : 0.20680785179138184
+[2025/01/03 19:35:30] ppocr DEBUG: cls num  : 111, elapsed : 0.41002941131591797
+[2025/01/03 19:35:38] ppocr DEBUG: rec_res num  : 111, elapsed : 7.608370065689087
+Processed 15.jpg -> 15.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\16.jpg
+[2025/01/03 19:35:38] ppocr DEBUG: dt_boxes num : 80, elapsed : 0.4631059169769287
+[2025/01/03 19:35:38] ppocr DEBUG: cls num  : 80, elapsed : 0.2057809829711914
+[2025/01/03 19:35:44] ppocr DEBUG: rec_res num  : 80, elapsed : 5.430660009384155
+Processed 16.jpg -> 16.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\17.jpg
+[2025/01/03 19:35:44] ppocr DEBUG: dt_boxes num : 88, elapsed : 0.471299409866333
+[2025/01/03 19:35:44] ppocr DEBUG: cls num  : 88, elapsed : 0.27019739151000977
+[2025/01/03 19:35:51] ppocr DEBUG: rec_res num  : 88, elapsed : 6.033454656600952
+Processed 17.jpg -> 17.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\18.jpg
+[2025/01/03 19:35:51] ppocr DEBUG: dt_boxes num : 72, elapsed : 0.11451411247253418
+[2025/01/03 19:35:51] ppocr DEBUG: cls num  : 72, elapsed : 0.13648319244384766
+[2025/01/03 19:35:56] ppocr DEBUG: rec_res num  : 72, elapsed : 5.031198740005493
+Processed 18.jpg -> 18.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\19.jpg
+[2025/01/03 19:35:56] ppocr DEBUG: dt_boxes num : 156, elapsed : 0.4663078784942627
+[2025/01/03 19:35:57] ppocr DEBUG: cls num  : 156, elapsed : 0.3682560920715332
+[2025/01/03 19:36:07] ppocr DEBUG: rec_res num  : 156, elapsed : 10.121918201446533
+Processed 19.jpg -> 19.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\2.jpg
+[2025/01/03 19:36:08] ppocr DEBUG: dt_boxes num : 5, elapsed : 0.23987412452697754
+[2025/01/03 19:36:08] ppocr DEBUG: cls num  : 5, elapsed : 0.0775306224822998
+[2025/01/03 19:36:09] ppocr DEBUG: rec_res num  : 5, elapsed : 0.8713357448577881
+Processed 2.jpg -> 2.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\20.jpg
+[2025/01/03 19:36:09] ppocr DEBUG: dt_boxes num : 232, elapsed : 0.6709878444671631
+[2025/01/03 19:36:10] ppocr DEBUG: cls num  : 232, elapsed : 0.8167328834533691
+[2025/01/03 19:36:26] ppocr DEBUG: rec_res num  : 232, elapsed : 15.64980673789978
+Processed 20.jpg -> 20.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\21.jpg
+[2025/01/03 19:36:27] ppocr DEBUG: dt_boxes num : 102, elapsed : 0.5074136257171631
+[2025/01/03 19:36:27] ppocr DEBUG: cls num  : 102, elapsed : 0.23086118698120117
+[2025/01/03 19:36:35] ppocr DEBUG: rec_res num  : 102, elapsed : 8.065868377685547
+Processed 21.jpg -> 21.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\22.jpg
+[2025/01/03 19:36:35] ppocr DEBUG: dt_boxes num : 109, elapsed : 0.48124241828918457
+[2025/01/03 19:36:36] ppocr DEBUG: cls num  : 109, elapsed : 0.27005958557128906
+[2025/01/03 19:36:44] ppocr DEBUG: rec_res num  : 109, elapsed : 8.229342937469482
+Processed 22.jpg -> 22.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\23.jpg
+[2025/01/03 19:36:45] ppocr DEBUG: dt_boxes num : 85, elapsed : 0.6934511661529541
+[2025/01/03 19:36:45] ppocr DEBUG: cls num  : 85, elapsed : 0.18993234634399414
+[2025/01/03 19:36:52] ppocr DEBUG: rec_res num  : 85, elapsed : 7.400054931640625
+Processed 23.jpg -> 23.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\24.jpg
+[2025/01/03 19:36:53] ppocr DEBUG: dt_boxes num : 59, elapsed : 0.6173045635223389
+[2025/01/03 19:36:53] ppocr DEBUG: cls num  : 59, elapsed : 0.2536163330078125
+[2025/01/03 19:36:58] ppocr DEBUG: rec_res num  : 59, elapsed : 4.751326560974121
+Processed 24.jpg -> 24.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\25.jpg
+[2025/01/03 19:36:59] ppocr DEBUG: dt_boxes num : 90, elapsed : 0.5904865264892578
+[2025/01/03 19:36:59] ppocr DEBUG: cls num  : 90, elapsed : 0.20655584335327148
+[2025/01/03 19:37:06] ppocr DEBUG: rec_res num  : 90, elapsed : 7.597849130630493
+Processed 25.jpg -> 25.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\26.jpg
+[2025/01/03 19:37:07] ppocr DEBUG: dt_boxes num : 141, elapsed : 0.1845560073852539
+[2025/01/03 19:37:07] ppocr DEBUG: cls num  : 141, elapsed : 0.4234802722930908
+[2025/01/03 19:37:20] ppocr DEBUG: rec_res num  : 141, elapsed : 12.76612401008606
+Processed 26.jpg -> 26.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\27.jpg
+[2025/01/03 19:37:20] ppocr DEBUG: dt_boxes num : 172, elapsed : 0.6247878074645996
+[2025/01/03 19:37:21] ppocr DEBUG: cls num  : 172, elapsed : 0.4098856449127197
+[2025/01/03 19:37:33] ppocr DEBUG: rec_res num  : 172, elapsed : 11.854694128036499
+Processed 27.jpg -> 27.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\28.jpg
+[2025/01/03 19:37:33] ppocr DEBUG: dt_boxes num : 96, elapsed : 0.1929624080657959
+[2025/01/03 19:37:33] ppocr DEBUG: cls num  : 96, elapsed : 0.31578803062438965
+[2025/01/03 19:37:41] ppocr DEBUG: rec_res num  : 96, elapsed : 7.363659858703613
+Processed 28.jpg -> 28.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\29.jpg
+[2025/01/03 19:37:41] ppocr DEBUG: dt_boxes num : 97, elapsed : 0.6869118213653564
+[2025/01/03 19:37:42] ppocr DEBUG: cls num  : 97, elapsed : 0.24383163452148438
+[2025/01/03 19:37:52] ppocr DEBUG: rec_res num  : 97, elapsed : 10.362804889678955
+Processed 29.jpg -> 29.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\3.jpg
+[2025/01/03 19:37:53] ppocr DEBUG: dt_boxes num : 141, elapsed : 0.6300308704376221
+[2025/01/03 19:37:53] ppocr DEBUG: cls num  : 141, elapsed : 0.42598700523376465
+[2025/01/03 19:38:05] ppocr DEBUG: rec_res num  : 141, elapsed : 11.93347978591919
+Processed 3.jpg -> 3.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\30.jpg
+[2025/01/03 19:38:06] ppocr DEBUG: dt_boxes num : 74, elapsed : 0.5344676971435547
+[2025/01/03 19:38:06] ppocr DEBUG: cls num  : 74, elapsed : 0.31693577766418457
+[2025/01/03 19:38:21] ppocr DEBUG: rec_res num  : 74, elapsed : 14.536320924758911
+Processed 30.jpg -> 30.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\31.jpg
+[2025/01/03 19:38:21] ppocr DEBUG: dt_boxes num : 81, elapsed : 0.6931099891662598
+[2025/01/03 19:38:22] ppocr DEBUG: cls num  : 81, elapsed : 0.5142183303833008
+[2025/01/03 19:38:37] ppocr DEBUG: rec_res num  : 81, elapsed : 14.766414642333984
+Processed 31.jpg -> 31.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\32.jpg
+[2025/01/03 19:38:40] ppocr DEBUG: dt_boxes num : 245, elapsed : 3.1436071395874023
+[2025/01/03 19:38:41] ppocr DEBUG: cls num  : 245, elapsed : 0.6971335411071777
+[2025/01/03 19:39:17] ppocr DEBUG: rec_res num  : 245, elapsed : 35.983579874038696
+Processed 32.jpg -> 32.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\33.jpg
+[2025/01/03 19:39:18] ppocr DEBUG: dt_boxes num : 41, elapsed : 1.6277942657470703
+[2025/01/03 19:39:18] ppocr DEBUG: cls num  : 41, elapsed : 0.09450459480285645
+[2025/01/03 19:39:25] ppocr DEBUG: rec_res num  : 41, elapsed : 6.344762086868286
+Processed 33.jpg -> 33.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\34.jpg
+[2025/01/03 19:39:26] ppocr DEBUG: dt_boxes num : 143, elapsed : 0.9327747821807861
+[2025/01/03 19:39:27] ppocr DEBUG: cls num  : 143, elapsed : 0.9099276065826416
+[2025/01/03 19:39:51] ppocr DEBUG: rec_res num  : 143, elapsed : 24.510002851486206
+Processed 34.jpg -> 34.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\35.jpg
+[2025/01/03 19:39:54] ppocr DEBUG: dt_boxes num : 86, elapsed : 2.3333992958068848
+[2025/01/03 19:39:54] ppocr DEBUG: cls num  : 86, elapsed : 0.27344274520874023
+[2025/01/03 19:40:12] ppocr DEBUG: rec_res num  : 86, elapsed : 18.108364820480347
+Processed 35.jpg -> 35.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\37.jpg
+[2025/01/03 19:40:13] ppocr DEBUG: dt_boxes num : 90, elapsed : 0.952080249786377
+[2025/01/03 19:40:15] ppocr DEBUG: cls num  : 90, elapsed : 1.8715085983276367
+[2025/01/03 19:40:31] ppocr DEBUG: rec_res num  : 90, elapsed : 15.799031019210815
+Processed 37.jpg -> 37.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\39.jpg
+[2025/01/03 19:40:32] ppocr DEBUG: dt_boxes num : 88, elapsed : 0.9470014572143555
+[2025/01/03 19:40:32] ppocr DEBUG: cls num  : 88, elapsed : 0.48061203956604004
+[2025/01/03 19:40:47] ppocr DEBUG: rec_res num  : 88, elapsed : 14.478363037109375
+Processed 39.jpg -> 39.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\41.jpg
+[2025/01/03 19:40:48] ppocr DEBUG: dt_boxes num : 33, elapsed : 1.2821922302246094
+[2025/01/03 19:40:49] ppocr DEBUG: cls num  : 33, elapsed : 0.32581424713134766
+[2025/01/03 19:40:55] ppocr DEBUG: rec_res num  : 33, elapsed : 6.136157751083374
+Processed 41.jpg -> 41.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\42.jpg
+[2025/01/03 19:40:58] ppocr DEBUG: dt_boxes num : 78, elapsed : 3.4301207065582275
+[2025/01/03 19:40:59] ppocr DEBUG: cls num  : 78, elapsed : 0.24561738967895508
+[2025/01/03 19:41:25] ppocr DEBUG: rec_res num  : 78, elapsed : 26.212413549423218
+Processed 42.jpg -> 42.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\43.jpg
+[2025/01/03 19:41:25] ppocr DEBUG: dt_boxes num : 139, elapsed : 0.26865196228027344
+[2025/01/03 19:41:26] ppocr DEBUG: cls num  : 139, elapsed : 0.5898661613464355
+[2025/01/03 19:41:38] ppocr DEBUG: rec_res num  : 139, elapsed : 12.344242334365845
+Processed 43.jpg -> 43.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\44.jpg
+[2025/01/03 19:41:39] ppocr DEBUG: dt_boxes num : 94, elapsed : 0.9094052314758301
+[2025/01/03 19:41:40] ppocr DEBUG: cls num  : 94, elapsed : 0.3374054431915283
+[2025/01/03 19:41:49] ppocr DEBUG: rec_res num  : 94, elapsed : 9.758184432983398
+Processed 44.jpg -> 44.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\45.jpg
+[2025/01/03 19:41:50] ppocr DEBUG: dt_boxes num : 81, elapsed : 0.46521615982055664
+[2025/01/03 19:41:51] ppocr DEBUG: cls num  : 81, elapsed : 0.7297763824462891
+[2025/01/03 19:41:59] ppocr DEBUG: rec_res num  : 81, elapsed : 8.52060079574585
+Processed 45.jpg -> 45.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\46.jpg
+[2025/01/03 19:42:00] ppocr DEBUG: dt_boxes num : 113, elapsed : 0.7582333087921143
+[2025/01/03 19:42:01] ppocr DEBUG: cls num  : 113, elapsed : 0.4386725425720215
+[2025/01/03 19:42:10] ppocr DEBUG: rec_res num  : 113, elapsed : 9.366351842880249
+Processed 46.jpg -> 46.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\47.jpg
+[2025/01/03 19:42:11] ppocr DEBUG: dt_boxes num : 112, elapsed : 0.6152629852294922
+[2025/01/03 19:42:11] ppocr DEBUG: cls num  : 112, elapsed : 0.4057118892669678
+[2025/01/03 19:42:19] ppocr DEBUG: rec_res num  : 112, elapsed : 8.067918062210083
+Processed 47.jpg -> 47.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\49.jpg
+[2025/01/03 19:42:20] ppocr DEBUG: dt_boxes num : 66, elapsed : 0.7066855430603027
+[2025/01/03 19:42:20] ppocr DEBUG: cls num  : 66, elapsed : 0.2937793731689453
+[2025/01/03 19:42:26] ppocr DEBUG: rec_res num  : 66, elapsed : 5.765673875808716
+Processed 49.jpg -> 49.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\5.jpg
+[2025/01/03 19:42:27] ppocr DEBUG: dt_boxes num : 151, elapsed : 1.219529151916504
+[2025/01/03 19:42:28] ppocr DEBUG: cls num  : 151, elapsed : 1.0326433181762695
+[2025/01/03 19:42:43] ppocr DEBUG: rec_res num  : 151, elapsed : 14.418049812316895
+Processed 5.jpg -> 5.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\50.jpg
+Error processing 50.jpg: Error processing image C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\50.jpg: Failed to read image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\50.jpg
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\51.jpg
+[2025/01/03 19:42:44] ppocr DEBUG: dt_boxes num : 118, elapsed : 0.6849238872528076
+[2025/01/03 19:42:44] ppocr DEBUG: cls num  : 118, elapsed : 0.7194130420684814
+[2025/01/03 19:42:54] ppocr DEBUG: rec_res num  : 118, elapsed : 10.244879961013794
+Processed 51.jpg -> 51.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\52.jpg
+[2025/01/03 19:42:55] ppocr DEBUG: dt_boxes num : 66, elapsed : 0.744356632232666
+[2025/01/03 19:42:55] ppocr DEBUG: cls num  : 66, elapsed : 0.20106053352355957
+[2025/01/03 19:43:01] ppocr DEBUG: rec_res num  : 66, elapsed : 5.673490524291992
+Processed 52.jpg -> 52.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\53.jpg
+[2025/01/03 19:43:02] ppocr DEBUG: dt_boxes num : 42, elapsed : 0.5214889049530029
+[2025/01/03 19:43:02] ppocr DEBUG: cls num  : 42, elapsed : 0.28020644187927246
+[2025/01/03 19:43:06] ppocr DEBUG: rec_res num  : 42, elapsed : 4.077680826187134
+Processed 53.jpg -> 53.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\54.jpg
+[2025/01/03 19:43:07] ppocr DEBUG: dt_boxes num : 124, elapsed : 0.7497320175170898
+[2025/01/03 19:43:07] ppocr DEBUG: cls num  : 124, elapsed : 0.4701411724090576
+[2025/01/03 19:43:19] ppocr DEBUG: rec_res num  : 124, elapsed : 11.354838371276855
+Processed 54.jpg -> 54.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\55.jpg
+[2025/01/03 19:43:19] ppocr DEBUG: dt_boxes num : 64, elapsed : 0.41695547103881836
+[2025/01/03 19:43:20] ppocr DEBUG: cls num  : 64, elapsed : 0.4172706604003906
+[2025/01/03 19:43:25] ppocr DEBUG: rec_res num  : 64, elapsed : 5.270400524139404
+Processed 55.jpg -> 55.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\56.jpg
+[2025/01/03 19:43:26] ppocr DEBUG: dt_boxes num : 80, elapsed : 0.7854704856872559
+[2025/01/03 19:43:26] ppocr DEBUG: cls num  : 80, elapsed : 0.3014063835144043
+[2025/01/03 19:43:34] ppocr DEBUG: rec_res num  : 80, elapsed : 7.920001268386841
+Processed 56.jpg -> 56.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\57.jpg
+[2025/01/03 19:43:35] ppocr DEBUG: dt_boxes num : 69, elapsed : 0.6594011783599854
+[2025/01/03 19:43:35] ppocr DEBUG: cls num  : 69, elapsed : 0.3370089530944824
+[2025/01/03 19:43:41] ppocr DEBUG: rec_res num  : 69, elapsed : 5.651190519332886
+Processed 57.jpg -> 57.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\58.jpg
+[2025/01/03 19:43:41] ppocr DEBUG: dt_boxes num : 16, elapsed : 0.7232792377471924
+[2025/01/03 19:43:42] ppocr DEBUG: cls num  : 16, elapsed : 0.10837578773498535
+[2025/01/03 19:43:44] ppocr DEBUG: rec_res num  : 16, elapsed : 2.045161724090576
+Processed 58.jpg -> 58.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\59.jpg
+[2025/01/03 19:43:45] ppocr DEBUG: dt_boxes num : 122, elapsed : 1.3856532573699951
+[2025/01/03 19:43:46] ppocr DEBUG: cls num  : 122, elapsed : 0.8292014598846436
+[2025/01/03 19:43:56] ppocr DEBUG: rec_res num  : 122, elapsed : 10.043313026428223
+Processed 59.jpg -> 59.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\6.jpg
+[2025/01/03 19:43:57] ppocr DEBUG: dt_boxes num : 20, elapsed : 0.6526885032653809
+[2025/01/03 19:43:57] ppocr DEBUG: cls num  : 20, elapsed : 0.09026575088500977
+[2025/01/03 19:43:59] ppocr DEBUG: rec_res num  : 20, elapsed : 2.2237119674682617
+Processed 6.jpg -> 6.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\60.jpg
+[2025/01/03 19:44:00] ppocr DEBUG: dt_boxes num : 97, elapsed : 1.2010421752929688
+[2025/01/03 19:44:01] ppocr DEBUG: cls num  : 97, elapsed : 0.6421880722045898
+[2025/01/03 19:44:12] ppocr DEBUG: rec_res num  : 97, elapsed : 10.903725624084473
+Processed 60.jpg -> 60.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\61.jpg
+[2025/01/03 19:44:13] ppocr DEBUG: dt_boxes num : 84, elapsed : 0.6644601821899414
+[2025/01/03 19:44:13] ppocr DEBUG: cls num  : 84, elapsed : 0.23851466178894043
+[2025/01/03 19:44:21] ppocr DEBUG: rec_res num  : 84, elapsed : 8.583107233047485
+Processed 61.jpg -> 61.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\62.jpg
+[2025/01/03 19:44:22] ppocr DEBUG: dt_boxes num : 37, elapsed : 0.7679684162139893
+[2025/01/03 19:44:23] ppocr DEBUG: cls num  : 37, elapsed : 0.44596290588378906
+[2025/01/03 19:44:28] ppocr DEBUG: rec_res num  : 37, elapsed : 4.897969007492065
+Processed 62.jpg -> 62.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\63.jpg
+[2025/01/03 19:44:28] ppocr DEBUG: dt_boxes num : 119, elapsed : 0.20691442489624023
+[2025/01/03 19:44:29] ppocr DEBUG: cls num  : 119, elapsed : 0.8955297470092773
+[2025/01/03 19:44:41] ppocr DEBUG: rec_res num  : 119, elapsed : 12.0168776512146
+Processed 63.jpg -> 63.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\64.jpg
+[2025/01/03 19:44:42] ppocr DEBUG: dt_boxes num : 213, elapsed : 1.1510257720947266
+[2025/01/03 19:44:44] ppocr DEBUG: cls num  : 213, elapsed : 1.3776512145996094
+[2025/01/03 19:45:01] ppocr DEBUG: rec_res num  : 213, elapsed : 17.099756479263306
+Processed 64.jpg -> 64.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\65.jpg
+[2025/01/03 19:45:01] ppocr DEBUG: dt_boxes num : 75, elapsed : 0.7675046920776367
+[2025/01/03 19:45:02] ppocr DEBUG: cls num  : 75, elapsed : 0.4785737991333008
+[2025/01/03 19:45:09] ppocr DEBUG: rec_res num  : 75, elapsed : 6.943870782852173
+Processed 65.jpg -> 65.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\66.jpg
+[2025/01/03 19:45:10] ppocr DEBUG: dt_boxes num : 98, elapsed : 0.6016199588775635
+[2025/01/03 19:45:10] ppocr DEBUG: cls num  : 98, elapsed : 0.596505880355835
+[2025/01/03 19:45:18] ppocr DEBUG: rec_res num  : 98, elapsed : 7.849892616271973
+Processed 66.jpg -> 66.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\67.jpg
+[2025/01/03 19:45:19] ppocr DEBUG: dt_boxes num : 87, elapsed : 0.8032493591308594
+[2025/01/03 19:45:19] ppocr DEBUG: cls num  : 87, elapsed : 0.40628790855407715
+[2025/01/03 19:45:27] ppocr DEBUG: rec_res num  : 87, elapsed : 7.8666112422943115
+Processed 67.jpg -> 67.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\68.jpg
+[2025/01/03 19:45:28] ppocr DEBUG: dt_boxes num : 109, elapsed : 0.6614329814910889
+[2025/01/03 19:45:28] ppocr DEBUG: cls num  : 109, elapsed : 0.616567850112915
+[2025/01/03 19:45:38] ppocr DEBUG: rec_res num  : 109, elapsed : 9.933484554290771
+Processed 68.jpg -> 68.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\69.jpg
+[2025/01/03 19:45:39] ppocr DEBUG: dt_boxes num : 137, elapsed : 0.7359426021575928
+[2025/01/03 19:45:40] ppocr DEBUG: cls num  : 137, elapsed : 1.1723988056182861
+[2025/01/03 19:45:50] ppocr DEBUG: rec_res num  : 137, elapsed : 9.632967948913574
+Processed 69.jpg -> 69.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\7.jpg
+[2025/01/03 19:45:51] ppocr DEBUG: dt_boxes num : 120, elapsed : 0.72723388671875
+[2025/01/03 19:45:51] ppocr DEBUG: cls num  : 120, elapsed : 0.32961082458496094
+[2025/01/03 19:46:01] ppocr DEBUG: rec_res num  : 120, elapsed : 9.450010299682617
+Processed 7.jpg -> 7.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\70.jpg
+[2025/01/03 19:46:01] ppocr DEBUG: dt_boxes num : 198, elapsed : 0.5986952781677246
+[2025/01/03 19:46:02] ppocr DEBUG: cls num  : 198, elapsed : 0.5918171405792236
+[2025/01/03 19:46:19] ppocr DEBUG: rec_res num  : 198, elapsed : 16.766621589660645
+Processed 70.jpg -> 70.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\71.jpg
+[2025/01/03 19:46:19] ppocr DEBUG: dt_boxes num : 50, elapsed : 0.633692741394043
+[2025/01/03 19:46:20] ppocr DEBUG: cls num  : 50, elapsed : 0.2853686809539795
+[2025/01/03 19:46:25] ppocr DEBUG: rec_res num  : 50, elapsed : 5.301537036895752
+Processed 71.jpg -> 71.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\72.jpg
+[2025/01/03 19:46:26] ppocr DEBUG: dt_boxes num : 94, elapsed : 0.6393084526062012
+[2025/01/03 19:46:26] ppocr DEBUG: cls num  : 94, elapsed : 0.3502492904663086
+[2025/01/03 19:46:34] ppocr DEBUG: rec_res num  : 94, elapsed : 8.089165210723877
+Processed 72.jpg -> 72.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\73.jpg
+[2025/01/03 19:46:35] ppocr DEBUG: dt_boxes num : 80, elapsed : 0.6092994213104248
+[2025/01/03 19:46:35] ppocr DEBUG: cls num  : 80, elapsed : 0.45440220832824707
+[2025/01/03 19:46:43] ppocr DEBUG: rec_res num  : 80, elapsed : 7.815274953842163
+Processed 73.jpg -> 73.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\74.jpg
+[2025/01/03 19:46:44] ppocr DEBUG: dt_boxes num : 118, elapsed : 0.8490915298461914
+[2025/01/03 19:46:44] ppocr DEBUG: cls num  : 118, elapsed : 0.43201112747192383
+[2025/01/03 19:46:54] ppocr DEBUG: rec_res num  : 118, elapsed : 9.554476737976074
+Processed 74.jpg -> 74.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\75.jpg
+[2025/01/03 19:46:54] ppocr DEBUG: dt_boxes num : 112, elapsed : 0.4472634792327881
+[2025/01/03 19:46:55] ppocr DEBUG: cls num  : 112, elapsed : 0.46225953102111816
+[2025/01/03 19:47:06] ppocr DEBUG: rec_res num  : 112, elapsed : 10.803617715835571
+Processed 75.jpg -> 75.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\76.jpg
+[2025/01/03 19:47:06] ppocr DEBUG: dt_boxes num : 115, elapsed : 0.6481742858886719
+[2025/01/03 19:47:07] ppocr DEBUG: cls num  : 115, elapsed : 0.4314877986907959
+[2025/01/03 19:47:17] ppocr DEBUG: rec_res num  : 115, elapsed : 10.066348314285278
+Processed 76.jpg -> 76.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\77.jpg
+[2025/01/03 19:47:17] ppocr DEBUG: dt_boxes num : 114, elapsed : 0.4672434329986572
+[2025/01/03 19:47:18] ppocr DEBUG: cls num  : 114, elapsed : 0.40133118629455566
+[2025/01/03 19:47:26] ppocr DEBUG: rec_res num  : 114, elapsed : 8.516491174697876
+Processed 77.jpg -> 77.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\78.jpg
+[2025/01/03 19:47:27] ppocr DEBUG: dt_boxes num : 67, elapsed : 0.6451711654663086
+[2025/01/03 19:47:27] ppocr DEBUG: cls num  : 67, elapsed : 0.30304765701293945
+[2025/01/03 19:47:33] ppocr DEBUG: rec_res num  : 67, elapsed : 5.483274459838867
+Processed 78.jpg -> 78.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\79.jpg
+[2025/01/03 19:47:33] ppocr DEBUG: dt_boxes num : 108, elapsed : 0.4659764766693115
+[2025/01/03 19:47:34] ppocr DEBUG: cls num  : 108, elapsed : 0.39379096031188965
+[2025/01/03 19:47:42] ppocr DEBUG: rec_res num  : 108, elapsed : 8.060639142990112
+Processed 79.jpg -> 79.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\8.jpg
+[2025/01/03 19:47:43] ppocr DEBUG: dt_boxes num : 116, elapsed : 0.7475912570953369
+[2025/01/03 19:47:43] ppocr DEBUG: cls num  : 116, elapsed : 0.4523806571960449
+[2025/01/03 19:47:52] ppocr DEBUG: rec_res num  : 116, elapsed : 9.166558504104614
+Processed 8.jpg -> 8.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\80.jpg
+[2025/01/03 19:47:53] ppocr DEBUG: dt_boxes num : 132, elapsed : 0.7057504653930664
+[2025/01/03 19:47:54] ppocr DEBUG: cls num  : 132, elapsed : 0.4698026180267334
+[2025/01/03 19:48:07] ppocr DEBUG: rec_res num  : 132, elapsed : 13.535663366317749
+Processed 80.jpg -> 80.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\81.jpg
+[2025/01/03 19:48:08] ppocr DEBUG: dt_boxes num : 137, elapsed : 0.7801861763000488
+[2025/01/03 19:48:09] ppocr DEBUG: cls num  : 137, elapsed : 0.6872055530548096
+[2025/01/03 19:48:20] ppocr DEBUG: rec_res num  : 137, elapsed : 11.266638040542603
+Processed 81.jpg -> 81.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\82.jpg
+[2025/01/03 19:48:21] ppocr DEBUG: dt_boxes num : 142, elapsed : 0.8020274639129639
+[2025/01/03 19:48:21] ppocr DEBUG: cls num  : 142, elapsed : 0.7535912990570068
+[2025/01/03 19:48:32] ppocr DEBUG: rec_res num  : 142, elapsed : 10.43752670288086
+Processed 82.jpg -> 82.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\83.jpg
+[2025/01/03 19:48:33] ppocr DEBUG: dt_boxes num : 53, elapsed : 0.7248561382293701
+[2025/01/03 19:48:33] ppocr DEBUG: cls num  : 53, elapsed : 0.408139705657959
+[2025/01/03 19:48:38] ppocr DEBUG: rec_res num  : 53, elapsed : 5.213040113449097
+Processed 83.jpg -> 83.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\84.jpg
+[2025/01/03 19:48:40] ppocr DEBUG: dt_boxes num : 90, elapsed : 1.1942188739776611
+[2025/01/03 19:48:40] ppocr DEBUG: cls num  : 90, elapsed : 0.5958812236785889
+[2025/01/03 19:48:50] ppocr DEBUG: rec_res num  : 90, elapsed : 9.779419898986816
+Processed 84.jpg -> 84.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\85.jpg
+[2025/01/03 19:48:51] ppocr DEBUG: dt_boxes num : 53, elapsed : 1.1199030876159668
+[2025/01/03 19:48:52] ppocr DEBUG: cls num  : 53, elapsed : 0.7018635272979736
+[2025/01/03 19:48:58] ppocr DEBUG: rec_res num  : 53, elapsed : 6.342916011810303
+Processed 85.jpg -> 85.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\86.jpg
+[2025/01/03 19:48:59] ppocr DEBUG: dt_boxes num : 90, elapsed : 0.9099526405334473
+[2025/01/03 19:48:59] ppocr DEBUG: cls num  : 90, elapsed : 0.28679370880126953
+[2025/01/03 19:49:08] ppocr DEBUG: rec_res num  : 90, elapsed : 9.089442253112793
+Processed 86.jpg -> 86.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\88.jpg
+[2025/01/03 19:49:09] ppocr DEBUG: dt_boxes num : 90, elapsed : 0.1885240077972412
+[2025/01/03 19:49:09] ppocr DEBUG: cls num  : 90, elapsed : 0.4077465534210205
+[2025/01/03 19:49:16] ppocr DEBUG: rec_res num  : 90, elapsed : 6.82123064994812
+Processed 88.jpg -> 88.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\89.jpg
+[2025/01/03 19:49:17] ppocr DEBUG: dt_boxes num : 171, elapsed : 0.8623132705688477
+[2025/01/03 19:49:18] ppocr DEBUG: cls num  : 171, elapsed : 0.6327300071716309
+[2025/01/03 19:49:34] ppocr DEBUG: rec_res num  : 171, elapsed : 16.241273880004883
+Processed 89.jpg -> 89.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\90.jpg
+[2025/01/03 19:49:35] ppocr DEBUG: dt_boxes num : 86, elapsed : 0.9199895858764648
+[2025/01/03 19:49:35] ppocr DEBUG: cls num  : 86, elapsed : 0.5994789600372314
+[2025/01/03 19:49:46] ppocr DEBUG: rec_res num  : 86, elapsed : 10.180087089538574
+Processed 90.jpg -> 90.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\91.jpg
+[2025/01/03 19:49:46] ppocr DEBUG: dt_boxes num : 67, elapsed : 0.7346539497375488
+[2025/01/03 19:49:47] ppocr DEBUG: cls num  : 67, elapsed : 0.2637648582458496
+[2025/01/03 19:49:52] ppocr DEBUG: rec_res num  : 67, elapsed : 5.000076055526733
+Processed 91.jpg -> 91.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\92.jpg
+[2025/01/03 19:49:52] ppocr DEBUG: dt_boxes num : 97, elapsed : 0.4547595977783203
+[2025/01/03 19:49:52] ppocr DEBUG: cls num  : 97, elapsed : 0.3450586795806885
+[2025/01/03 19:50:00] ppocr DEBUG: rec_res num  : 97, elapsed : 7.2677321434021
+Processed 92.jpg -> 92.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\93.jpg
+[2025/01/03 19:50:01] ppocr DEBUG: dt_boxes num : 92, elapsed : 0.7849059104919434
+[2025/01/03 19:50:01] ppocr DEBUG: cls num  : 92, elapsed : 0.401975154876709
+[2025/01/03 19:50:08] ppocr DEBUG: rec_res num  : 92, elapsed : 7.1764421463012695
+Processed 93.jpg -> 93.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\94.jpg
+[2025/01/03 19:50:09] ppocr DEBUG: dt_boxes num : 92, elapsed : 0.33481502532958984
+[2025/01/03 19:50:09] ppocr DEBUG: cls num  : 92, elapsed : 0.6582214832305908
+[2025/01/03 19:50:17] ppocr DEBUG: rec_res num  : 92, elapsed : 7.513714075088501
+Processed 94.jpg -> 94.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\95.jpg
+[2025/01/03 19:50:18] ppocr DEBUG: dt_boxes num : 142, elapsed : 0.6570558547973633
+[2025/01/03 19:50:18] ppocr DEBUG: cls num  : 142, elapsed : 0.5939798355102539
+[2025/01/03 19:50:29] ppocr DEBUG: rec_res num  : 142, elapsed : 10.766088724136353
+Processed 95.jpg -> 95.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\96.jpg
+[2025/01/03 19:50:30] ppocr DEBUG: dt_boxes num : 91, elapsed : 0.5848016738891602
+[2025/01/03 19:50:30] ppocr DEBUG: cls num  : 91, elapsed : 0.6791872978210449
+[2025/01/03 19:50:39] ppocr DEBUG: rec_res num  : 91, elapsed : 8.465299606323242
+Processed 96.jpg -> 96.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\97.jpg
+[2025/01/03 19:50:39] ppocr DEBUG: dt_boxes num : 116, elapsed : 0.7273592948913574
+[2025/01/03 19:50:40] ppocr DEBUG: cls num  : 116, elapsed : 0.46553659439086914
+[2025/01/03 19:50:51] ppocr DEBUG: rec_res num  : 116, elapsed : 10.689227819442749
+Processed 97.jpg -> 97.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\98.jpg
+[2025/01/03 19:50:52] ppocr DEBUG: dt_boxes num : 91, elapsed : 0.8860101699829102
+[2025/01/03 19:50:54] ppocr DEBUG: cls num  : 91, elapsed : 2.0005340576171875
+[2025/01/03 19:51:10] ppocr DEBUG: rec_res num  : 91, elapsed : 16.207308530807495
+Processed 98.jpg -> 98.txt
+
+File: 1.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\1.txt
+
+File: 10.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\10.txt
+
+File: 11.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\11.txt
+
+File: 12.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\12.txt
+
+File: 13.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\13.txt
+
+File: 14.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\14.txt
+
+File: 15.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\15.txt
+
+File: 16.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\16.txt
+
+File: 17.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\17.txt
+
+File: 18.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\18.txt
+
+File: 19.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\19.txt
+
+File: 2.jpg
+Confidence: 0.74
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\2.txt
+
+File: 20.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\20.txt
+
+File: 21.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\21.txt
+
+File: 22.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\22.txt
+
+File: 23.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\23.txt
+
+File: 24.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\24.txt
+
+File: 25.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\25.txt
+
+File: 26.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\26.txt
+
+File: 27.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\27.txt
+
+File: 28.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\28.txt
+
+File: 29.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\29.txt
+
+File: 3.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\3.txt
+
+File: 30.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\30.txt
+
+File: 31.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\31.txt
+
+File: 32.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\32.txt
+
+File: 33.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\33.txt
+
+File: 34.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\34.txt
+
+File: 35.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\35.txt
+
+File: 37.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\37.txt
+
+File: 39.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\39.txt
+
+File: 41.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\41.txt
+
+File: 42.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\42.txt
+
+File: 43.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\43.txt
+
+File: 44.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\44.txt
+
+File: 45.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\45.txt
+
+File: 46.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\46.txt
+
+File: 47.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\47.txt
+
+File: 49.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\49.txt
+
+File: 5.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\5.txt
+
+File: 51.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\51.txt
+
+File: 52.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\52.txt
+
+File: 53.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\53.txt
+
+File: 54.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\54.txt
+
+File: 55.jpg
+Confidence: 0.89
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\55.txt
+
+File: 56.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\56.txt
+
+File: 57.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\57.txt
+
+File: 58.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\58.txt
+
+File: 59.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\59.txt
+
+File: 6.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\6.txt
+
+File: 60.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\60.txt
+
+File: 61.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\61.txt
+
+File: 62.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\62.txt
+
+File: 63.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\63.txt
+
+File: 64.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\64.txt
+
+File: 65.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\65.txt
+
+File: 66.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\66.txt
+
+File: 67.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\67.txt
+
+File: 68.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\68.txt
+
+File: 69.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\69.txt
+
+File: 7.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\7.txt
+
+File: 70.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\70.txt
+
+File: 71.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\71.txt
+
+File: 72.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\72.txt
+
+File: 73.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\73.txt
+
+File: 74.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\74.txt
+
+File: 75.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\75.txt
+
+File: 76.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\76.txt
+
+File: 77.jpg
+Confidence: 0.86
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\77.txt
+
+File: 78.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\78.txt
+
+File: 79.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\79.txt
+
+File: 8.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\8.txt
+
+File: 80.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\80.txt
+
+File: 81.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\81.txt
+
+File: 82.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\82.txt
+
+File: 83.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\83.txt
+
+File: 84.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\84.txt
+
+File: 85.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\85.txt
+
+File: 86.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\86.txt
+
+File: 88.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\88.txt
+
+File: 89.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\89.txt
+
+File: 90.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\90.txt
+
+File: 91.jpg
+Confidence: 0.90
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\91.txt
+
+File: 92.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\92.txt
+
+File: 93.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\93.txt
+
+File: 94.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\94.txt
+
+File: 95.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\95.txt
+
+File: 96.jpg
+Confidence: 0.87
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\96.txt
+
+File: 97.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\97.txt
+
+File: 98.jpg
+Confidence: 0.87
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\extracted_text\98.txt

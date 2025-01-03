@@ -1,4 +1,4 @@
-from utils.LLM_utils import get_completion_gpt4
+from src.utils.LLM_utils import get_completion_gpt4
 import numpy as np
 from IPython.display import display, HTML
 
@@ -50,7 +50,7 @@ def classify_document_with_llm(text):
             return "Unknown"  # Return "Unknown" if response is unexpected
 
     except Exception as e:
-        print(f"Error during LLM classification: {e}")
+        print(f"Error during Document Classification: {e}")
         return "Error"
 
 # Example usage
@@ -126,7 +126,7 @@ Your summary of cash flows inception to date including this distribution are as 
         }
     ]
     }
-    prompt, predicted_class, prob = classify_document_with_llm(doc)
-    print(prompt)
+    predicted_class, prob = classify_document_with_llm(doc)
+
     print(f"Predicted Class: {predicted_class}")
     print(f"Linear Probability: {prob}")

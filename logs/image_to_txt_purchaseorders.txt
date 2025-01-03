@@ -1,0 +1,1101 @@
+[2025/01/03 20:53:22] ppocr DEBUG: Namespace(help='==SUPPRESS==', use_gpu=False, use_xpu=False, use_npu=False, use_mlu=False, ir_optim=True, use_tensorrt=False, min_subgraph_size=15, precision='fp32', gpu_mem=500, gpu_id=0, image_dir=None, page_num=0, det_algorithm='DB', det_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\det\\en\\en_PP-OCRv3_det_infer', det_limit_side_len=960, det_limit_type='max', det_box_type='quad', det_db_thresh=0.3, det_db_box_thresh=0.6, det_db_unclip_ratio=1.5, max_batch_size=10, use_dilation=False, det_db_score_mode='fast', det_east_score_thresh=0.8, det_east_cover_thresh=0.1, det_east_nms_thresh=0.2, det_sast_score_thresh=0.5, det_sast_nms_thresh=0.2, det_pse_thresh=0, det_pse_box_thresh=0.85, det_pse_min_area=16, det_pse_scale=1, scales=[8, 16, 32], alpha=1.0, beta=1.0, fourier_degree=5, rec_algorithm='SVTR_LCNet', rec_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\rec\\en\\en_PP-OCRv4_rec_infer', rec_image_inverse=True, rec_image_shape='3, 48, 320', rec_batch_num=6, max_text_length=25, rec_char_dict_path='c:\\Users\\ayesha.amjad\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\paddleocr\\ppocr\\utils\\en_dict.txt', use_space_char=True, vis_font_path='./doc/fonts/simfang.ttf', drop_score=0.5, e2e_algorithm='PGNet', e2e_model_dir=None, e2e_limit_side_len=768, e2e_limit_type='max', e2e_pgnet_score_thresh=0.5, e2e_char_dict_path='./ppocr/utils/ic15_dict.txt', e2e_pgnet_valid_set='totaltext', e2e_pgnet_mode='fast', use_angle_cls=True, cls_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\cls\\ch_ppocr_mobile_v2.0_cls_infer', cls_image_shape='3, 48, 192', label_list=['0', '180'], cls_batch_num=6, cls_thresh=0.9, enable_mkldnn=False, cpu_threads=10, use_pdserving=False, warmup=False, sr_model_dir=None, sr_image_shape='3, 32, 128', sr_batch_num=1, draw_img_save_dir='./inference_results', save_crop_res=False, crop_res_save_dir='./output', use_mp=False, total_process_num=1, process_id=0, benchmark=False, save_log_path='./log_output/', show_log=True, use_onnx=False, return_word_box=False, output='./output', table_max_len=488, table_algorithm='TableAttn', table_model_dir=None, merge_no_span_structure=True, table_char_dict_path=None, formula_algorithm='LaTeXOCR', formula_model_dir=None, formula_char_dict_path=None, formula_batch_num=1, layout_model_dir=None, layout_dict_path=None, layout_score_threshold=0.5, layout_nms_threshold=0.5, kie_algorithm='LayoutXLM', ser_model_dir=None, re_model_dir=None, use_visual_backbone=True, ser_dict_path='../train_data/XFUND/class_list_xfun.txt', ocr_order_method=None, mode='structure', image_orientation=False, layout=True, table=True, formula=False, ocr=True, recovery=False, recovery_to_markdown=False, use_pdf2docx_api=False, invert=False, binarize=False, alphacolor=(255, 255, 255), lang='en', det=True, rec=True, type='ocr', savefile=False, ocr_version='PP-OCRv4', structure_version='PP-StructureV2')
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE CORDOVA PO.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE CORDOVA PO.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE EAST 3RD PO.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE EAST 3RD PO.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE EAST 3RDPO.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE EAST 3RDPO.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE LIQ CORDOVA PO.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE LIQ CORDOVA PO.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE LIQ EAST 3RD PO.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE LIQ EAST 3RD PO.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Borgwarner_PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Borgwarner_PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_1.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_1.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_3.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_3.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_5.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_5.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_6.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_6.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_1.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_1.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_10.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_10.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_11.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_11.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_12.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_12.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_13.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_13.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_14.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_14.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_15.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_15.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_16.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_16.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_17.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_17.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_18.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_18.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_19.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_19.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_20.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_20.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_3.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_3.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_5.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_5.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_6.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_6.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_7.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_7.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_8.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_8.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_9.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_9.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Ciena_PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Ciena_PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\ClassicalMusicalDistributor_PurchaseOrders_1.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\ClassicalMusicalDistributor_PurchaseOrders_1.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\ClassicalMusicalDistributor_PurchaseOrders_2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\ClassicalMusicalDistributor_PurchaseOrders_2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\ECOFLOR_PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\ECOFLOR_PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\EMTInternational_PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\EMTInternational_PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Foodlink - Ahold - Giant Carlisle .pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Foodlink - Ahold - Giant Carlisle .txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Foodlink - Ahold - Stop and Shop .pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Foodlink - Ahold - Stop and Shop .txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Foodlink - C&S Baldwin - Foodlink - .pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Foodlink - C&S Baldwin - Foodlink - .txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\GoodnessMeorders.psource.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\GoodnessMeorders.psource.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO593426.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO593426.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641431.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641431.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641431_4AAJxg.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641431_4AAJxg.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641433.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641433.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641433_4AAJxg.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641433_4AAJxg.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641435.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641435.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641435_4AAJxg.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641435_4AAJxg.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641437.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641437.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641442.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641442.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641444.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641444.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641449.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641449.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641450.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641450.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641451.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641451.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641451_4AAJxj.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641451_4AAJxj.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641451_4AAJxm.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641451_4AAJxm.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO642125.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO642125.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO642125_4AAJxj.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO642125_4AAJxj.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO642125_4AAJxm.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO642125_4AAJxm.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Inari New Listings Aug 31 2021.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Inari New Listings Aug 31 2021.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\InvoiceWithTableBoundary2_PO_Cienna_1_PO_Cienna_2_PO_Cienna_3_PO_Cienna_4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\InvoiceWithTableBoundary2_PO_Cienna_1_PO_Cienna_2_PO_Cienna_3_PO_Cienna_4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\July 19 2021.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\July 19 2021.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\July 27 2021.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\July 27 2021.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\June 28 2021.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\June 28 2021.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\NaturesEmporium-PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\NaturesEmporium-PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PMX-PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PMX-PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-1.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-1.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-3.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-3.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-5.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-5.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-6.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-6.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO001639970_87463134.PDF
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO001639970_87463134.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv10.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv10.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv11.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv11.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv13.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv13.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv18.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv18.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv19.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv19.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv4.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv4.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv4.0_ScalingFactor4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv4.0_ScalingFactor4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv6.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv6.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv7.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv7.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv8.0.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv8.0.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_1.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_1.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_3.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_3.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order 108641-23.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order 108641-23.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order 16342.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order 16342.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order 16343.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order 16343.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order Sample.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order Sample.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order Template 01 - TemplateLab.com.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order Template 01 - TemplateLab.com.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder 135783.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder 135783.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder1.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder1.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_ 472942_BPsAAAAB.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_ 472942_BPsAAAAB.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_ AUG31 PO.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_ AUG31 PO.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_472942.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_472942.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Aug 29.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Aug 29.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Aug30.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Aug30.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_AUG31 PO_BPsAAAAJ.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_AUG31 PO_BPsAAAAJ.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Order 473269.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Order 473269.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Order 473269_BPsAAAAL.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Order 473269_BPsAAAAL.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Order 502113.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Order 502113.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO #473713.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO #473713.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO DEC 20.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO DEC 20.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Po#472892 August 31 2021.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Po#472892 August 31 2021.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO#473205.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO#473205.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO#473205_BPsAAAAD.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO#473205_BPsAAAAD.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\puresourcePO#473783.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\puresourcePO#473783.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PY Employee List - hire date, position 2015.PDF
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PY Employee List - hire date, position 2015.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT547030000010_EAAAHD..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT547030000010_EAAAHD..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548020000003_EAAAHF..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548020000003_EAAAHF..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548022000001_EAAAHG..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548022000001_EAAAHG..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548022000001_EAAAHH..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548022000001_EAAAHH..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548022000001_EAAAHI..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548022000001_EAAAHI..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548740000004_EAAAHJ..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548740000004_EAAAHJ..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548740000005_EAAAHK..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548740000005_EAAAHK..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000030_EAAAHL..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000030_EAAAHL..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000030_EAAAHO..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000030_EAAAHO..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000031_EAAAHM..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000031_EAAAHM..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000031_EAAAHN..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000031_EAAAHN..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT550721000001_EAAAHT..pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT550721000001_EAAAHT..txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QTF15388520220401142039ID434458.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QTF15388520220401142039ID434458.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Quidel 294741 delivery ticket more detail.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Quidel 294741 delivery ticket more detail.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Safeway464584.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Safeway464584.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Sample Purchase Order in PDF.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Sample Purchase Order in PDF.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Sample4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Sample4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SampleAutoGenerateTable (2).pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SampleAutoGenerateTable (2).txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SampleAutoGenerateTable.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SampleAutoGenerateTable.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SampleTable.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SampleTable.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\sample_po_+en.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\sample_po_+en.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SEQ057170.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SEQ057170.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Shipp Belting Purchase Order 53671.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Shipp Belting Purchase Order 53671.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Sinopower PO - 3306-1704014 SM3411NKQAC-TRG-Revised (3 Lot code) - Copy.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Sinopower PO - 3306-1704014 SM3411NKQAC-TRG-Revised (3 Lot code) - Copy.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SLED_PO_Template.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SLED_PO_Template.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SLED_PO_Template_updated.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SLED_PO_Template_updated.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Stihl Southwest PO for Report Miner_signed.pdf
+Processing as scanned PDF...
+Total pages detected: 1
+Processing page 1/1 with OCR
+[2025/01/03 20:54:38] ppocr DEBUG: dt_boxes num : 51, elapsed : 0.6330170631408691
+[2025/01/03 20:54:38] ppocr DEBUG: cls num  : 51, elapsed : 0.3882784843444824
+[2025/01/03 20:54:42] ppocr DEBUG: rec_res num  : 51, elapsed : 3.950545072555542
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Stihl Southwest PO for Report Miner_signed.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\STU4500479883 NTT EAST.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\STU4500479883 NTT EAST.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\STU4500487640 NTT WEST.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\STU4500487640 NTT WEST.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\STU4500493582.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\STU4500493582.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TabularData.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TabularData.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_1.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_1.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_3.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_3.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_4.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_4.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\tdext440111107 - 2023-04-05T123617.471.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\tdext440111107 - 2023-04-05T123617.471.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\VirginMedia_PurchaseOrder.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\VirginMedia_PurchaseOrder.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market Order.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market Order.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market Order2.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market Order2.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market Order3.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market Order3.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market OrderColored.pdf
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market OrderColored.txt
+Processing: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\XML001-e.PDF
+Processing as searchable PDF...
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\XML001-e.txt
+
+Processing Summary:
+Total PDFs processed: 156
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE CORDOVA PO.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE CORDOVA PO.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE EAST 3RD PO.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE EAST 3RD PO.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE EAST 3RDPO.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE EAST 3RDPO.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE LIQ CORDOVA PO.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE LIQ CORDOVA PO.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\2_PURESOURCE LIQ EAST 3RD PO.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\2_PURESOURCE LIQ EAST 3RD PO.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Borgwarner_PurchaseOrder.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Borgwarner_PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_1.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_1.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_2.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_3.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_3.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_4.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_5.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_5.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Camfil_PurchaseOrders_6.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Camfil_PurchaseOrders_6.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_1.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_1.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_10.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_10.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_11.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_11.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_12.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_12.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_13.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_13.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_14.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_14.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_15.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_15.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_16.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_16.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_17.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_17.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_18.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_18.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_19.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_19.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_2.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_20.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_20.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_3.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_3.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_4.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_5.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_5.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_6.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_6.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_7.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_7.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_8.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_8.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\CandRMetals_PurchaseOrders_9.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\CandRMetals_PurchaseOrders_9.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Ciena_PurchaseOrder.pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Ciena_PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\ClassicalMusicalDistributor_PurchaseOrders_1.pdf
+Pages: 13
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\ClassicalMusicalDistributor_PurchaseOrders_1.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\ClassicalMusicalDistributor_PurchaseOrders_2.pdf
+Pages: 20
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\ClassicalMusicalDistributor_PurchaseOrders_2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\ECOFLOR_PurchaseOrder.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\ECOFLOR_PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\EMTInternational_PurchaseOrder.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\EMTInternational_PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Foodlink - Ahold - Giant Carlisle .pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Foodlink - Ahold - Giant Carlisle .txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Foodlink - Ahold - Stop and Shop .pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Foodlink - Ahold - Stop and Shop .txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Foodlink - C&S Baldwin - Foodlink - .pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Foodlink - C&S Baldwin - Foodlink - .txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\GoodnessMeorders.psource.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\GoodnessMeorders.psource.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO593426.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO593426.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641431.pdf
+Pages: 5
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641431.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641431_4AAJxg.pdf
+Pages: 5
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641431_4AAJxg.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641433.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641433.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641433_4AAJxg.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641433_4AAJxg.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641435.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641435.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641435_4AAJxg.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641435_4AAJxg.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641437.pdf
+Pages: 8
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641437.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641442.pdf
+Pages: 10
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641442.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641444.pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641444.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641449.pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641449.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641450.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641450.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641451.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641451.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641451_4AAJxj.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641451_4AAJxj.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO641451_4AAJxm.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO641451_4AAJxm.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO642125.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO642125.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO642125_4AAJxj.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO642125_4AAJxj.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\HealthyPlanetPurchase Order PO642125_4AAJxm.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\HealthyPlanetPurchase Order PO642125_4AAJxm.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Inari New Listings Aug 31 2021.pdf
+Pages: 11
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Inari New Listings Aug 31 2021.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\InvoiceWithTableBoundary2_PO_Cienna_1_PO_Cienna_2_PO_Cienna_3_PO_Cienna_4.pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\InvoiceWithTableBoundary2_PO_Cienna_1_PO_Cienna_2_PO_Cienna_3_PO_Cienna_4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\July 19 2021.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\July 19 2021.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\July 27 2021.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\July 27 2021.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\June 28 2021.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\June 28 2021.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\NaturesEmporium-PurchaseOrder.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\NaturesEmporium-PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PMX-PurchaseOrder.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PMX-PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-1.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-1.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-2.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-3.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-3.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-4.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-5.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-5.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\po-template-6.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\po-template-6.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO001639970_87463134.PDF
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO001639970_87463134.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv10.0.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv10.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv11.0.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv11.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv13.0.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv13.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv18.0.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv18.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv19.0.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv19.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv4.0.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv4.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv4.0_ScalingFactor4.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv4.0_ScalingFactor4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv6.0.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv6.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv7.0.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv7.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\POv8.0.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\POv8.0.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_1.pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_1.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_2.pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_3.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_3.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PO_Cienna_4.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PO_Cienna_4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order 108641-23.pdf
+Pages: 6
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order 108641-23.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order 16342.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order 16342.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order 16343.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order 16343.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order Sample.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order Sample.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order Template 01 - TemplateLab.com.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order Template 01 - TemplateLab.com.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Purchase Order.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Purchase Order.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder 135783.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder 135783.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder1.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder1.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder2.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PurchaseOrder4.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PurchaseOrder4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_ 472942_BPsAAAAB.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_ 472942_BPsAAAAB.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_ AUG31 PO.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_ AUG31 PO.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_472942.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_472942.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Aug 29.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Aug 29.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Aug30.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Aug30.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_AUG31 PO_BPsAAAAJ.pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_AUG31 PO_BPsAAAAJ.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Order 473269.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Order 473269.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Order 473269_BPsAAAAL.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Order 473269_BPsAAAAL.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Order 502113.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Order 502113.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO #473713.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO #473713.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO DEC 20.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO DEC 20.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_Po#472892 August 31 2021.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_Po#472892 August 31 2021.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO#473205.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO#473205.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Puresource1_PO#473205_BPsAAAAD.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Puresource1_PO#473205_BPsAAAAD.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\puresourcePO#473783.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\puresourcePO#473783.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\PY Employee List - hire date, position 2015.PDF
+Pages: 5
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\PY Employee List - hire date, position 2015.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT547030000010_EAAAHD..pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT547030000010_EAAAHD..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548020000003_EAAAHF..pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548020000003_EAAAHF..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548022000001_EAAAHG..pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548022000001_EAAAHG..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548022000001_EAAAHH..pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548022000001_EAAAHH..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548022000001_EAAAHI..pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548022000001_EAAAHI..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548740000004_EAAAHJ..pdf
+Pages: 3
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548740000004_EAAAHJ..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT548740000005_EAAAHK..pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT548740000005_EAAAHK..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000030_EAAAHL..pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000030_EAAAHL..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000030_EAAAHO..pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000030_EAAAHO..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000031_EAAAHM..pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000031_EAAAHM..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT549536000031_EAAAHN..pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT549536000031_EAAAHN..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QSYSPRT550721000001_EAAAHT..pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QSYSPRT550721000001_EAAAHT..txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\QTF15388520220401142039ID434458.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\QTF15388520220401142039ID434458.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Quidel 294741 delivery ticket more detail.pdf
+Pages: 322
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Quidel 294741 delivery ticket more detail.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Safeway464584.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Safeway464584.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Sample Purchase Order in PDF.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Sample Purchase Order in PDF.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Sample4.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Sample4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SampleAutoGenerateTable (2).pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SampleAutoGenerateTable (2).txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SampleAutoGenerateTable.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SampleAutoGenerateTable.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SampleTable.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SampleTable.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\sample_po_+en.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\sample_po_+en.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SEQ057170.pdf
+Pages: 4
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SEQ057170.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Shipp Belting Purchase Order 53671.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Shipp Belting Purchase Order 53671.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Sinopower PO - 3306-1704014 SM3411NKQAC-TRG-Revised (3 Lot code) - Copy.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Sinopower PO - 3306-1704014 SM3411NKQAC-TRG-Revised (3 Lot code) - Copy.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SLED_PO_Template.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SLED_PO_Template.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\SLED_PO_Template_updated.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\SLED_PO_Template_updated.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Stihl Southwest PO for Report Miner_signed.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Stihl Southwest PO for Report Miner_signed.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\STU4500479883 NTT EAST.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\STU4500479883 NTT EAST.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\STU4500487640 NTT WEST.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\STU4500487640 NTT WEST.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\STU4500493582.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\STU4500493582.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TabularData.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TabularData.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_1.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_1.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_2.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_3.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_3.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\TaylorCommunications_PurchaseOrders_4.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\TaylorCommunications_PurchaseOrders_4.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\tdext440111107 - 2023-04-05T123617.471.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\tdext440111107 - 2023-04-05T123617.471.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\VirginMedia_PurchaseOrder.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\VirginMedia_PurchaseOrder.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market Order.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market Order.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market Order2.pdf
+Pages: 2
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market Order2.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market Order3.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market Order3.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\Whole Foods Market OrderColored.pdf
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\Whole Foods Market OrderColored.txt
+
+File: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\XML001-e.PDF
+Pages: 1
+Output: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\PurchaseOrders\extracted_text\.\XML001-e.txt

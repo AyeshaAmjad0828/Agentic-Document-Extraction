@@ -1,0 +1,850 @@
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\1.jpg
+[2025/01/03 20:14:46] ppocr DEBUG: dt_boxes num : 37, elapsed : 0.5219271183013916
+[2025/01/03 20:14:47] ppocr DEBUG: cls num  : 37, elapsed : 0.37043070793151855
+[2025/01/03 20:14:49] ppocr DEBUG: rec_res num  : 37, elapsed : 2.5609843730926514
+Processed 1.jpg -> 1.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\10.jpg
+[2025/01/03 20:14:50] ppocr DEBUG: dt_boxes num : 42, elapsed : 0.4865250587463379
+[2025/01/03 20:14:50] ppocr DEBUG: cls num  : 42, elapsed : 0.13048744201660156
+[2025/01/03 20:14:52] ppocr DEBUG: rec_res num  : 42, elapsed : 2.531501054763794
+Processed 10.jpg -> 10.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\100.jpg
+[2025/01/03 20:14:53] ppocr DEBUG: dt_boxes num : 45, elapsed : 0.5492081642150879
+[2025/01/03 20:14:53] ppocr DEBUG: cls num  : 45, elapsed : 0.269946813583374
+[2025/01/03 20:14:56] ppocr DEBUG: rec_res num  : 45, elapsed : 3.2858242988586426
+Processed 100.jpg -> 100.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\101.jpg
+[2025/01/03 20:14:57] ppocr DEBUG: dt_boxes num : 15, elapsed : 0.3245394229888916
+[2025/01/03 20:14:57] ppocr DEBUG: cls num  : 15, elapsed : 0.17083740234375
+[2025/01/03 20:14:58] ppocr DEBUG: rec_res num  : 15, elapsed : 1.1245651245117188
+Processed 101.jpg -> 101.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\102.jpg
+[2025/01/03 20:14:59] ppocr DEBUG: dt_boxes num : 70, elapsed : 0.49284791946411133
+[2025/01/03 20:14:59] ppocr DEBUG: cls num  : 70, elapsed : 0.45130372047424316
+[2025/01/03 20:15:05] ppocr DEBUG: rec_res num  : 70, elapsed : 5.489439964294434
+Processed 102.jpg -> 102.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\11.jpg
+[2025/01/03 20:15:05] ppocr DEBUG: dt_boxes num : 43, elapsed : 0.4964711666107178
+[2025/01/03 20:15:05] ppocr DEBUG: cls num  : 43, elapsed : 0.2671523094177246
+[2025/01/03 20:15:09] ppocr DEBUG: rec_res num  : 43, elapsed : 3.4369516372680664
+Processed 11.jpg -> 11.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\12.jpg
+[2025/01/03 20:15:09] ppocr DEBUG: dt_boxes num : 167, elapsed : 0.4943716526031494
+[2025/01/03 20:15:10] ppocr DEBUG: cls num  : 167, elapsed : 0.994232177734375
+[2025/01/03 20:15:21] ppocr DEBUG: rec_res num  : 167, elapsed : 10.214797735214233
+Processed 12.jpg -> 12.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\13.jpg
+[2025/01/03 20:15:22] ppocr DEBUG: dt_boxes num : 35, elapsed : 0.18655657768249512
+[2025/01/03 20:15:22] ppocr DEBUG: cls num  : 35, elapsed : 0.08345413208007812
+[2025/01/03 20:15:24] ppocr DEBUG: rec_res num  : 35, elapsed : 1.954897403717041
+Processed 13.jpg -> 13.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\14.jpg
+[2025/01/03 20:15:25] ppocr DEBUG: dt_boxes num : 102, elapsed : 0.5292482376098633
+[2025/01/03 20:15:25] ppocr DEBUG: cls num  : 102, elapsed : 0.3523890972137451
+[2025/01/03 20:15:33] ppocr DEBUG: rec_res num  : 102, elapsed : 7.616250038146973
+Processed 14.jpg -> 14.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\15.jpg
+[2025/01/03 20:15:33] ppocr DEBUG: dt_boxes num : 67, elapsed : 0.38074636459350586
+[2025/01/03 20:15:34] ppocr DEBUG: cls num  : 67, elapsed : 0.46146559715270996
+[2025/01/03 20:15:39] ppocr DEBUG: rec_res num  : 67, elapsed : 5.452646970748901
+Processed 15.jpg -> 15.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\16.jpg
+[2025/01/03 20:15:40] ppocr DEBUG: dt_boxes num : 95, elapsed : 0.8401591777801514
+[2025/01/03 20:15:40] ppocr DEBUG: cls num  : 95, elapsed : 0.40041661262512207
+[2025/01/03 20:15:48] ppocr DEBUG: rec_res num  : 95, elapsed : 7.042158603668213
+Processed 16.jpg -> 16.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\18.jpg
+[2025/01/03 20:15:48] ppocr DEBUG: dt_boxes num : 29, elapsed : 0.4782843589782715
+[2025/01/03 20:15:48] ppocr DEBUG: cls num  : 29, elapsed : 0.19814586639404297
+[2025/01/03 20:15:50] ppocr DEBUG: rec_res num  : 29, elapsed : 2.1628382205963135
+Processed 18.jpg -> 18.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\19.jpg
+[2025/01/03 20:15:51] ppocr DEBUG: dt_boxes num : 26, elapsed : 0.800586462020874
+[2025/01/03 20:15:52] ppocr DEBUG: cls num  : 26, elapsed : 0.4775543212890625
+[2025/01/03 20:15:56] ppocr DEBUG: rec_res num  : 26, elapsed : 3.841824769973755
+Processed 19.jpg -> 19.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\2.jpg
+[2025/01/03 20:15:56] ppocr DEBUG: dt_boxes num : 58, elapsed : 0.6037502288818359
+[2025/01/03 20:15:57] ppocr DEBUG: cls num  : 58, elapsed : 0.3167712688446045
+[2025/01/03 20:16:02] ppocr DEBUG: rec_res num  : 58, elapsed : 5.31734561920166
+Processed 2.jpg -> 2.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\20.jpg
+[2025/01/03 20:16:02] ppocr DEBUG: dt_boxes num : 30, elapsed : 0.3903641700744629
+[2025/01/03 20:16:02] ppocr DEBUG: cls num  : 30, elapsed : 0.18143343925476074
+[2025/01/03 20:16:06] ppocr DEBUG: rec_res num  : 30, elapsed : 3.0658555030822754
+Processed 20.jpg -> 20.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\21.jpg
+[2025/01/03 20:16:07] ppocr DEBUG: dt_boxes num : 43, elapsed : 1.314532995223999
+[2025/01/03 20:16:08] ppocr DEBUG: cls num  : 43, elapsed : 1.026440143585205
+[2025/01/03 20:16:12] ppocr DEBUG: rec_res num  : 43, elapsed : 4.225774526596069
+Processed 21.jpg -> 21.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\22.jpg
+[2025/01/03 20:16:13] ppocr DEBUG: dt_boxes num : 73, elapsed : 0.8129715919494629
+[2025/01/03 20:16:13] ppocr DEBUG: cls num  : 73, elapsed : 0.3600902557373047
+[2025/01/03 20:16:20] ppocr DEBUG: rec_res num  : 73, elapsed : 6.373810291290283
+Processed 22.jpg -> 22.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\23.jpg
+Error processing 23.jpg: Error processing image C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\23.jpg: Failed to read image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\23.jpg
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\24.jpg
+[2025/01/03 20:16:21] ppocr DEBUG: dt_boxes num : 35, elapsed : 0.7240521907806396
+[2025/01/03 20:16:21] ppocr DEBUG: cls num  : 35, elapsed : 0.39216017723083496
+[2025/01/03 20:16:24] ppocr DEBUG: rec_res num  : 35, elapsed : 3.2358241081237793
+Processed 24.jpg -> 24.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\25.jpg
+[2025/01/03 20:16:25] ppocr DEBUG: dt_boxes num : 73, elapsed : 0.8528692722320557
+[2025/01/03 20:16:25] ppocr DEBUG: cls num  : 73, elapsed : 0.3413352966308594
+[2025/01/03 20:16:31] ppocr DEBUG: rec_res num  : 73, elapsed : 6.071134567260742
+Processed 25.jpg -> 25.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\26.jpg
+[2025/01/03 20:16:32] ppocr DEBUG: dt_boxes num : 122, elapsed : 0.3963749408721924
+[2025/01/03 20:16:33] ppocr DEBUG: cls num  : 122, elapsed : 0.7540478706359863
+[2025/01/03 20:16:43] ppocr DEBUG: rec_res num  : 122, elapsed : 10.450097560882568
+Processed 26.jpg -> 26.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\27.jpg
+[2025/01/03 20:16:44] ppocr DEBUG: dt_boxes num : 42, elapsed : 0.7198224067687988
+[2025/01/03 20:16:44] ppocr DEBUG: cls num  : 42, elapsed : 0.12845373153686523
+[2025/01/03 20:16:48] ppocr DEBUG: rec_res num  : 42, elapsed : 4.121511697769165
+Processed 27.jpg -> 27.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\28.jpg
+[2025/01/03 20:16:49] ppocr DEBUG: dt_boxes num : 47, elapsed : 0.7441158294677734
+[2025/01/03 20:16:49] ppocr DEBUG: cls num  : 47, elapsed : 0.40131068229675293
+[2025/01/03 20:16:55] ppocr DEBUG: rec_res num  : 47, elapsed : 5.260500907897949
+Processed 28.jpg -> 28.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\29.jpg
+[2025/01/03 20:16:56] ppocr DEBUG: dt_boxes num : 42, elapsed : 1.0362799167633057
+[2025/01/03 20:16:56] ppocr DEBUG: cls num  : 42, elapsed : 0.2608346939086914
+[2025/01/03 20:17:01] ppocr DEBUG: rec_res num  : 42, elapsed : 4.950821161270142
+Processed 29.jpg -> 29.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\30.jpg
+[2025/01/03 20:17:01] ppocr DEBUG: dt_boxes num : 31, elapsed : 0.51593017578125
+[2025/01/03 20:17:02] ppocr DEBUG: cls num  : 31, elapsed : 0.41621851921081543
+[2025/01/03 20:17:05] ppocr DEBUG: rec_res num  : 31, elapsed : 2.93629789352417
+Processed 30.jpg -> 30.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\31.jpg
+[2025/01/03 20:17:06] ppocr DEBUG: dt_boxes num : 39, elapsed : 0.7285294532775879
+[2025/01/03 20:17:06] ppocr DEBUG: cls num  : 39, elapsed : 0.26200127601623535
+[2025/01/03 20:17:10] ppocr DEBUG: rec_res num  : 39, elapsed : 4.215811252593994
+Processed 31.jpg -> 31.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\32.jpg
+[2025/01/03 20:17:11] ppocr DEBUG: dt_boxes num : 54, elapsed : 0.5907554626464844
+[2025/01/03 20:17:11] ppocr DEBUG: cls num  : 54, elapsed : 0.2676084041595459
+[2025/01/03 20:17:16] ppocr DEBUG: rec_res num  : 54, elapsed : 4.647024393081665
+Processed 32.jpg -> 32.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\33.jpg
+[2025/01/03 20:17:17] ppocr DEBUG: dt_boxes num : 36, elapsed : 0.5581858158111572
+[2025/01/03 20:17:17] ppocr DEBUG: cls num  : 36, elapsed : 0.1454017162322998
+[2025/01/03 20:17:19] ppocr DEBUG: rec_res num  : 36, elapsed : 2.498034715652466
+Processed 33.jpg -> 33.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\34.jpg
+[2025/01/03 20:17:20] ppocr DEBUG: dt_boxes num : 66, elapsed : 0.5370824337005615
+[2025/01/03 20:17:20] ppocr DEBUG: cls num  : 66, elapsed : 0.22999215126037598
+[2025/01/03 20:17:25] ppocr DEBUG: rec_res num  : 66, elapsed : 4.905406475067139
+Processed 34.jpg -> 34.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\35.jpg
+[2025/01/03 20:17:26] ppocr DEBUG: dt_boxes num : 49, elapsed : 0.7290496826171875
+[2025/01/03 20:17:26] ppocr DEBUG: cls num  : 49, elapsed : 0.2977919578552246
+[2025/01/03 20:17:30] ppocr DEBUG: rec_res num  : 49, elapsed : 3.53326416015625
+Processed 35.jpg -> 35.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\36.jpg
+[2025/01/03 20:17:31] ppocr DEBUG: dt_boxes num : 85, elapsed : 0.9085919857025146
+[2025/01/03 20:17:31] ppocr DEBUG: cls num  : 85, elapsed : 0.4890267848968506
+[2025/01/03 20:17:39] ppocr DEBUG: rec_res num  : 85, elapsed : 7.983063459396362
+Processed 36.jpg -> 36.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\37.jpg
+[2025/01/03 20:17:40] ppocr DEBUG: dt_boxes num : 57, elapsed : 0.7473762035369873
+[2025/01/03 20:17:41] ppocr DEBUG: cls num  : 57, elapsed : 0.8069360256195068
+[2025/01/03 20:17:46] ppocr DEBUG: rec_res num  : 57, elapsed : 5.426878452301025
+Processed 37.jpg -> 37.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\38.jpg
+[2025/01/03 20:17:47] ppocr DEBUG: dt_boxes num : 35, elapsed : 0.8092820644378662
+[2025/01/03 20:17:48] ppocr DEBUG: cls num  : 35, elapsed : 0.691913366317749
+[2025/01/03 20:17:51] ppocr DEBUG: rec_res num  : 35, elapsed : 3.432077646255493
+Processed 38.jpg -> 38.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\39.jpg
+[2025/01/03 20:17:52] ppocr DEBUG: dt_boxes num : 62, elapsed : 0.6680810451507568
+[2025/01/03 20:17:52] ppocr DEBUG: cls num  : 62, elapsed : 0.6463871002197266
+[2025/01/03 20:17:57] ppocr DEBUG: rec_res num  : 62, elapsed : 5.028733968734741
+Processed 39.jpg -> 39.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\4.jpg
+[2025/01/03 20:17:58] ppocr DEBUG: dt_boxes num : 55, elapsed : 0.8722245693206787
+[2025/01/03 20:17:59] ppocr DEBUG: cls num  : 55, elapsed : 0.5131208896636963
+[2025/01/03 20:18:05] ppocr DEBUG: rec_res num  : 55, elapsed : 5.761979579925537
+Processed 4.jpg -> 4.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\40.jpg
+[2025/01/03 20:18:05] ppocr DEBUG: dt_boxes num : 31, elapsed : 0.4838263988494873
+[2025/01/03 20:18:06] ppocr DEBUG: cls num  : 31, elapsed : 0.2693624496459961
+[2025/01/03 20:18:09] ppocr DEBUG: rec_res num  : 31, elapsed : 3.3157315254211426
+Processed 40.jpg -> 40.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\41.jpg
+Error processing 41.jpg: Error processing image C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\41.jpg: Failed to read image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\41.jpg
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\42.jpg
+[2025/01/03 20:18:09] ppocr DEBUG: dt_boxes num : 43, elapsed : 0.5450518131256104
+[2025/01/03 20:18:10] ppocr DEBUG: cls num  : 43, elapsed : 0.3027966022491455
+[2025/01/03 20:18:14] ppocr DEBUG: rec_res num  : 43, elapsed : 3.760157346725464
+Processed 42.jpg -> 42.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\43.jpg
+[2025/01/03 20:18:14] ppocr DEBUG: dt_boxes num : 15, elapsed : 0.43208861351013184
+[2025/01/03 20:18:14] ppocr DEBUG: cls num  : 15, elapsed : 0.3774700164794922
+[2025/01/03 20:18:16] ppocr DEBUG: rec_res num  : 15, elapsed : 1.4726803302764893
+Processed 43.jpg -> 43.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\44.jpg
+[2025/01/03 20:18:17] ppocr DEBUG: dt_boxes num : 30, elapsed : 0.6567230224609375
+[2025/01/03 20:18:17] ppocr DEBUG: cls num  : 30, elapsed : 0.14323735237121582
+[2025/01/03 20:18:20] ppocr DEBUG: rec_res num  : 30, elapsed : 2.923001289367676
+Processed 44.jpg -> 44.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\45.jpg
+[2025/01/03 20:18:20] ppocr DEBUG: dt_boxes num : 63, elapsed : 0.6681632995605469
+[2025/01/03 20:18:21] ppocr DEBUG: cls num  : 63, elapsed : 0.3551921844482422
+[2025/01/03 20:18:26] ppocr DEBUG: rec_res num  : 63, elapsed : 5.3531365394592285
+Processed 45.jpg -> 45.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\47.jpg
+[2025/01/03 20:18:27] ppocr DEBUG: dt_boxes num : 59, elapsed : 0.7183511257171631
+[2025/01/03 20:18:27] ppocr DEBUG: cls num  : 59, elapsed : 0.5582334995269775
+[2025/01/03 20:18:34] ppocr DEBUG: rec_res num  : 59, elapsed : 6.676385879516602
+Processed 47.jpg -> 47.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\48.jpg
+[2025/01/03 20:18:35] ppocr DEBUG: dt_boxes num : 60, elapsed : 0.734203577041626
+[2025/01/03 20:18:35] ppocr DEBUG: cls num  : 60, elapsed : 0.23328399658203125
+[2025/01/03 20:18:40] ppocr DEBUG: rec_res num  : 60, elapsed : 5.16884446144104
+Processed 48.jpg -> 48.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\49.jpg
+[2025/01/03 20:18:41] ppocr DEBUG: dt_boxes num : 98, elapsed : 0.8642899990081787
+[2025/01/03 20:18:42] ppocr DEBUG: cls num  : 98, elapsed : 0.7978355884552002
+[2025/01/03 20:18:50] ppocr DEBUG: rec_res num  : 98, elapsed : 7.590371370315552
+Processed 49.jpg -> 49.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\5.jpg
+[2025/01/03 20:18:50] ppocr DEBUG: dt_boxes num : 36, elapsed : 0.6635892391204834
+[2025/01/03 20:18:50] ppocr DEBUG: cls num  : 36, elapsed : 0.16644597053527832
+[2025/01/03 20:18:54] ppocr DEBUG: rec_res num  : 36, elapsed : 3.6861774921417236
+Processed 5.jpg -> 5.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\50.jpg
+[2025/01/03 20:18:55] ppocr DEBUG: dt_boxes num : 23, elapsed : 0.4636073112487793
+[2025/01/03 20:18:55] ppocr DEBUG: cls num  : 23, elapsed : 0.3670065402984619
+[2025/01/03 20:18:57] ppocr DEBUG: rec_res num  : 23, elapsed : 2.173658609390259
+Processed 50.jpg -> 50.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\51.jpg
+[2025/01/03 20:18:59] ppocr DEBUG: dt_boxes num : 40, elapsed : 1.2781524658203125
+[2025/01/03 20:18:59] ppocr DEBUG: cls num  : 40, elapsed : 0.6440000534057617
+[2025/01/03 20:19:04] ppocr DEBUG: rec_res num  : 40, elapsed : 4.975156545639038
+Processed 51.jpg -> 51.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\52.jpg
+[2025/01/03 20:19:05] ppocr DEBUG: dt_boxes num : 33, elapsed : 0.8065078258514404
+[2025/01/03 20:19:05] ppocr DEBUG: cls num  : 33, elapsed : 0.25765085220336914
+[2025/01/03 20:19:08] ppocr DEBUG: rec_res num  : 33, elapsed : 3.0845539569854736
+Processed 52.jpg -> 52.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\53.jpg
+[2025/01/03 20:19:09] ppocr DEBUG: dt_boxes num : 165, elapsed : 0.755690336227417
+[2025/01/03 20:19:10] ppocr DEBUG: cls num  : 165, elapsed : 0.8698480129241943
+[2025/01/03 20:19:22] ppocr DEBUG: rec_res num  : 165, elapsed : 11.66732406616211
+Processed 53.jpg -> 53.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\54.jpg
+[2025/01/03 20:19:22] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.31673526763916016
+[2025/01/03 20:19:22] ppocr DEBUG: cls num  : 2, elapsed : 0.11660313606262207
+[2025/01/03 20:19:23] ppocr DEBUG: rec_res num  : 2, elapsed : 0.33540844917297363
+Processed 54.jpg -> 54.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\55.jpg
+[2025/01/03 20:19:23] ppocr DEBUG: dt_boxes num : 52, elapsed : 0.5497725009918213
+[2025/01/03 20:19:23] ppocr DEBUG: cls num  : 52, elapsed : 0.36769604682922363
+[2025/01/03 20:19:28] ppocr DEBUG: rec_res num  : 52, elapsed : 4.481538772583008
+Processed 55.jpg -> 55.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\57.jpg
+[2025/01/03 20:19:29] ppocr DEBUG: dt_boxes num : 55, elapsed : 0.7523496150970459
+[2025/01/03 20:19:29] ppocr DEBUG: cls num  : 55, elapsed : 0.43235325813293457
+[2025/01/03 20:19:35] ppocr DEBUG: rec_res num  : 55, elapsed : 5.531243562698364
+Processed 57.jpg -> 57.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\58.jpg
+[2025/01/03 20:19:35] ppocr DEBUG: dt_boxes num : 35, elapsed : 0.3761422634124756
+[2025/01/03 20:19:35] ppocr DEBUG: cls num  : 35, elapsed : 0.33675622940063477
+[2025/01/03 20:19:38] ppocr DEBUG: rec_res num  : 35, elapsed : 2.817256450653076
+Processed 58.jpg -> 58.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\59.jpg
+[2025/01/03 20:19:39] ppocr DEBUG: dt_boxes num : 57, elapsed : 0.6433444023132324
+[2025/01/03 20:19:40] ppocr DEBUG: cls num  : 57, elapsed : 0.5387208461761475
+[2025/01/03 20:19:45] ppocr DEBUG: rec_res num  : 57, elapsed : 5.455448627471924
+Processed 59.jpg -> 59.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\60.jpg
+[2025/01/03 20:19:46] ppocr DEBUG: dt_boxes num : 102, elapsed : 0.6039993762969971
+[2025/01/03 20:19:46] ppocr DEBUG: cls num  : 102, elapsed : 0.5642120838165283
+[2025/01/03 20:19:55] ppocr DEBUG: rec_res num  : 102, elapsed : 8.745690107345581
+Processed 60.jpg -> 60.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\61.jpg
+[2025/01/03 20:19:55] ppocr DEBUG: dt_boxes num : 51, elapsed : 0.36530518531799316
+[2025/01/03 20:19:56] ppocr DEBUG: cls num  : 51, elapsed : 0.32236456871032715
+[2025/01/03 20:20:01] ppocr DEBUG: rec_res num  : 51, elapsed : 4.926819324493408
+Processed 61.jpg -> 61.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\62.jpg
+[2025/01/03 20:20:02] ppocr DEBUG: dt_boxes num : 74, elapsed : 0.8878815174102783
+[2025/01/03 20:20:03] ppocr DEBUG: cls num  : 74, elapsed : 1.061732530593872
+[2025/01/03 20:20:10] ppocr DEBUG: rec_res num  : 74, elapsed : 7.105810880661011
+Processed 62.jpg -> 62.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\63.jpg
+[2025/01/03 20:20:10] ppocr DEBUG: dt_boxes num : 31, elapsed : 0.5912959575653076
+[2025/01/03 20:20:11] ppocr DEBUG: cls num  : 31, elapsed : 0.3576371669769287
+[2025/01/03 20:20:14] ppocr DEBUG: rec_res num  : 31, elapsed : 3.535083532333374
+Processed 63.jpg -> 63.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\64.jpg
+[2025/01/03 20:20:15] ppocr DEBUG: dt_boxes num : 74, elapsed : 1.0204672813415527
+[2025/01/03 20:20:16] ppocr DEBUG: cls num  : 74, elapsed : 0.7551131248474121
+[2025/01/03 20:20:26] ppocr DEBUG: rec_res num  : 74, elapsed : 9.813612461090088
+Processed 64.jpg -> 64.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\65.jpg
+[2025/01/03 20:20:26] ppocr DEBUG: dt_boxes num : 57, elapsed : 0.5301938056945801
+[2025/01/03 20:20:27] ppocr DEBUG: cls num  : 57, elapsed : 0.4094424247741699
+[2025/01/03 20:20:31] ppocr DEBUG: rec_res num  : 57, elapsed : 4.542614221572876
+Processed 65.jpg -> 65.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\66.jpg
+[2025/01/03 20:20:32] ppocr DEBUG: dt_boxes num : 47, elapsed : 0.6819548606872559
+[2025/01/03 20:20:32] ppocr DEBUG: cls num  : 47, elapsed : 0.3135974407196045
+[2025/01/03 20:20:38] ppocr DEBUG: rec_res num  : 47, elapsed : 5.59549617767334
+Processed 66.jpg -> 66.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\67.jpg
+[2025/01/03 20:20:39] ppocr DEBUG: dt_boxes num : 33, elapsed : 0.5427837371826172
+[2025/01/03 20:20:39] ppocr DEBUG: cls num  : 33, elapsed : 0.5704770088195801
+[2025/01/03 20:20:43] ppocr DEBUG: rec_res num  : 33, elapsed : 3.581773042678833
+Processed 67.jpg -> 67.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\68.jpg
+[2025/01/03 20:20:44] ppocr DEBUG: dt_boxes num : 70, elapsed : 1.057920217514038
+[2025/01/03 20:20:45] ppocr DEBUG: cls num  : 70, elapsed : 0.585961103439331
+[2025/01/03 20:20:53] ppocr DEBUG: rec_res num  : 70, elapsed : 7.991886615753174
+Processed 68.jpg -> 68.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\69.jpg
+[2025/01/03 20:20:53] ppocr DEBUG: dt_boxes num : 102, elapsed : 0.8226377964019775
+[2025/01/03 20:20:54] ppocr DEBUG: cls num  : 102, elapsed : 0.7681031227111816
+[2025/01/03 20:21:04] ppocr DEBUG: rec_res num  : 102, elapsed : 10.249392986297607
+Processed 69.jpg -> 69.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\7.jpg
+[2025/01/03 20:21:05] ppocr DEBUG: dt_boxes num : 36, elapsed : 0.9752757549285889
+[2025/01/03 20:21:06] ppocr DEBUG: cls num  : 36, elapsed : 0.14742612838745117
+[2025/01/03 20:21:09] ppocr DEBUG: rec_res num  : 36, elapsed : 3.5929617881774902
+Processed 7.jpg -> 7.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\70.jpg
+[2025/01/03 20:21:10] ppocr DEBUG: dt_boxes num : 62, elapsed : 0.469188928604126
+[2025/01/03 20:21:10] ppocr DEBUG: cls num  : 62, elapsed : 0.6263790130615234
+[2025/01/03 20:21:17] ppocr DEBUG: rec_res num  : 62, elapsed : 7.184295177459717
+Processed 70.jpg -> 70.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\71.jpg
+[2025/01/03 20:21:18] ppocr DEBUG: dt_boxes num : 54, elapsed : 0.6752374172210693
+[2025/01/03 20:21:19] ppocr DEBUG: cls num  : 54, elapsed : 0.3968672752380371
+[2025/01/03 20:21:24] ppocr DEBUG: rec_res num  : 54, elapsed : 5.791396141052246
+Processed 71.jpg -> 71.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\72.jpg
+[2025/01/03 20:21:26] ppocr DEBUG: dt_boxes num : 29, elapsed : 1.3322041034698486
+[2025/01/03 20:21:26] ppocr DEBUG: cls num  : 29, elapsed : 0.6329286098480225
+[2025/01/03 20:21:31] ppocr DEBUG: rec_res num  : 29, elapsed : 4.828414440155029
+Processed 72.jpg -> 72.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\73.jpg
+[2025/01/03 20:21:32] ppocr DEBUG: dt_boxes num : 82, elapsed : 0.5249514579772949
+[2025/01/03 20:21:33] ppocr DEBUG: cls num  : 82, elapsed : 0.9244692325592041
+[2025/01/03 20:21:42] ppocr DEBUG: rec_res num  : 82, elapsed : 9.308764457702637
+Processed 73.jpg -> 73.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\74.jpg
+[2025/01/03 20:21:43] ppocr DEBUG: dt_boxes num : 54, elapsed : 1.1801331043243408
+[2025/01/03 20:21:44] ppocr DEBUG: cls num  : 54, elapsed : 0.44131946563720703
+[2025/01/03 20:21:49] ppocr DEBUG: rec_res num  : 54, elapsed : 5.4907801151275635
+Processed 74.jpg -> 74.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\75.jpg
+[2025/01/03 20:21:50] ppocr DEBUG: dt_boxes num : 37, elapsed : 0.7043492794036865
+[2025/01/03 20:21:50] ppocr DEBUG: cls num  : 37, elapsed : 0.40447497367858887
+[2025/01/03 20:21:54] ppocr DEBUG: rec_res num  : 37, elapsed : 3.742061138153076
+Processed 75.jpg -> 75.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\76.jpg
+[2025/01/03 20:21:55] ppocr DEBUG: dt_boxes num : 41, elapsed : 0.855600118637085
+[2025/01/03 20:21:56] ppocr DEBUG: cls num  : 41, elapsed : 0.4058394432067871
+[2025/01/03 20:22:01] ppocr DEBUG: rec_res num  : 41, elapsed : 5.098039627075195
+Processed 76.jpg -> 76.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\77.jpg
+[2025/01/03 20:22:01] ppocr DEBUG: dt_boxes num : 2, elapsed : 0.5272841453552246
+[2025/01/03 20:22:02] ppocr DEBUG: cls num  : 2, elapsed : 0.3866286277770996
+[2025/01/03 20:22:02] ppocr DEBUG: rec_res num  : 2, elapsed : 0.6216413974761963
+Processed 77.jpg -> 77.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\78.jpg
+[2025/01/03 20:22:03] ppocr DEBUG: dt_boxes num : 42, elapsed : 1.1407544612884521
+[2025/01/03 20:22:04] ppocr DEBUG: cls num  : 42, elapsed : 0.3037145137786865
+[2025/01/03 20:22:09] ppocr DEBUG: rec_res num  : 42, elapsed : 5.037389278411865
+Processed 78.jpg -> 78.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\79.jpg
+[2025/01/03 20:22:10] ppocr DEBUG: dt_boxes num : 66, elapsed : 1.3054871559143066
+[2025/01/03 20:22:11] ppocr DEBUG: cls num  : 66, elapsed : 0.7797722816467285
+[2025/01/03 20:22:18] ppocr DEBUG: rec_res num  : 66, elapsed : 6.613685846328735
+Processed 79.jpg -> 79.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\8.jpg
+[2025/01/03 20:22:18] ppocr DEBUG: dt_boxes num : 107, elapsed : 0.7537765502929688
+[2025/01/03 20:22:19] ppocr DEBUG: cls num  : 107, elapsed : 0.6852078437805176
+[2025/01/03 20:22:28] ppocr DEBUG: rec_res num  : 107, elapsed : 8.514798164367676
+Processed 8.jpg -> 8.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\80.jpg
+[2025/01/03 20:22:28] ppocr DEBUG: dt_boxes num : 37, elapsed : 0.17863178253173828
+[2025/01/03 20:22:28] ppocr DEBUG: cls num  : 37, elapsed : 0.5547618865966797
+[2025/01/03 20:22:32] ppocr DEBUG: rec_res num  : 37, elapsed : 4.022587060928345
+Processed 80.jpg -> 80.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\81.jpg
+[2025/01/03 20:22:33] ppocr DEBUG: dt_boxes num : 49, elapsed : 0.830862283706665
+[2025/01/03 20:22:34] ppocr DEBUG: cls num  : 49, elapsed : 0.3605222702026367
+[2025/01/03 20:22:39] ppocr DEBUG: rec_res num  : 49, elapsed : 5.205404996871948
+Processed 81.jpg -> 81.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\82.jpg
+[2025/01/03 20:22:40] ppocr DEBUG: dt_boxes num : 40, elapsed : 1.1493499279022217
+[2025/01/03 20:22:41] ppocr DEBUG: cls num  : 40, elapsed : 0.40281009674072266
+[2025/01/03 20:22:45] ppocr DEBUG: rec_res num  : 40, elapsed : 4.352582216262817
+Processed 82.jpg -> 82.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\83.jpg
+[2025/01/03 20:22:45] ppocr DEBUG: dt_boxes num : 39, elapsed : 0.44582271575927734
+[2025/01/03 20:22:46] ppocr DEBUG: cls num  : 39, elapsed : 0.46527981758117676
+[2025/01/03 20:22:49] ppocr DEBUG: rec_res num  : 39, elapsed : 3.1697256565093994
+Processed 83.jpg -> 83.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\84.jpg
+[2025/01/03 20:22:50] ppocr DEBUG: dt_boxes num : 104, elapsed : 0.8141279220581055
+[2025/01/03 20:22:51] ppocr DEBUG: cls num  : 104, elapsed : 0.8932113647460938
+[2025/01/03 20:23:00] ppocr DEBUG: rec_res num  : 104, elapsed : 9.085147857666016
+Processed 84.jpg -> 84.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\85.jpg
+[2025/01/03 20:23:01] ppocr DEBUG: dt_boxes num : 81, elapsed : 0.8351936340332031
+[2025/01/03 20:23:01] ppocr DEBUG: cls num  : 81, elapsed : 0.5543975830078125
+[2025/01/03 20:23:09] ppocr DEBUG: rec_res num  : 81, elapsed : 7.296523094177246
+Processed 85.jpg -> 85.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\86.jpg
+[2025/01/03 20:23:10] ppocr DEBUG: dt_boxes num : 74, elapsed : 0.7986674308776855
+[2025/01/03 20:23:10] ppocr DEBUG: cls num  : 74, elapsed : 0.803234338760376
+[2025/01/03 20:23:17] ppocr DEBUG: rec_res num  : 74, elapsed : 6.840641498565674
+Processed 86.jpg -> 86.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\87.jpg
+[2025/01/03 20:23:18] ppocr DEBUG: dt_boxes num : 63, elapsed : 0.9239208698272705
+[2025/01/03 20:23:19] ppocr DEBUG: cls num  : 63, elapsed : 0.7908535003662109
+[2025/01/03 20:23:26] ppocr DEBUG: rec_res num  : 63, elapsed : 6.830458402633667
+Processed 87.jpg -> 87.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\88.jpg
+[2025/01/03 20:23:27] ppocr DEBUG: dt_boxes num : 102, elapsed : 0.7753674983978271
+[2025/01/03 20:23:27] ppocr DEBUG: cls num  : 102, elapsed : 0.5831289291381836
+[2025/01/03 20:23:37] ppocr DEBUG: rec_res num  : 102, elapsed : 9.331690788269043
+Processed 88.jpg -> 88.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\89.jpg
+[2025/01/03 20:23:37] ppocr DEBUG: dt_boxes num : 82, elapsed : 0.7918219566345215
+[2025/01/03 20:23:38] ppocr DEBUG: cls num  : 82, elapsed : 0.6253206729888916
+[2025/01/03 20:23:46] ppocr DEBUG: rec_res num  : 82, elapsed : 7.580497741699219
+Processed 89.jpg -> 89.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\9.jpg
+[2025/01/03 20:23:46] ppocr DEBUG: dt_boxes num : 98, elapsed : 0.7727012634277344
+[2025/01/03 20:23:47] ppocr DEBUG: cls num  : 98, elapsed : 0.7500782012939453
+[2025/01/03 20:23:57] ppocr DEBUG: rec_res num  : 98, elapsed : 9.555002927780151
+Processed 9.jpg -> 9.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\90.jpg
+[2025/01/03 20:23:58] ppocr DEBUG: dt_boxes num : 36, elapsed : 0.8432884216308594
+[2025/01/03 20:23:58] ppocr DEBUG: cls num  : 36, elapsed : 0.3827531337738037
+[2025/01/03 20:24:03] ppocr DEBUG: rec_res num  : 36, elapsed : 4.5005974769592285
+Processed 90.jpg -> 90.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\91.jpg
+[2025/01/03 20:24:03] ppocr DEBUG: dt_boxes num : 29, elapsed : 0.7987885475158691
+[2025/01/03 20:24:04] ppocr DEBUG: cls num  : 29, elapsed : 0.4257326126098633
+[2025/01/03 20:24:07] ppocr DEBUG: rec_res num  : 29, elapsed : 2.9676523208618164
+Processed 91.jpg -> 91.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\92.jpg
+[2025/01/03 20:24:07] ppocr DEBUG: dt_boxes num : 23, elapsed : 0.17512989044189453
+[2025/01/03 20:24:07] ppocr DEBUG: cls num  : 23, elapsed : 0.1568012237548828
+[2025/01/03 20:24:09] ppocr DEBUG: rec_res num  : 23, elapsed : 2.2048637866973877
+Processed 92.jpg -> 92.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\93.jpg
+[2025/01/03 20:24:10] ppocr DEBUG: dt_boxes num : 45, elapsed : 0.9754598140716553
+[2025/01/03 20:24:11] ppocr DEBUG: cls num  : 45, elapsed : 0.5695228576660156
+[2025/01/03 20:24:15] ppocr DEBUG: rec_res num  : 45, elapsed : 3.9463179111480713
+Processed 93.jpg -> 93.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\95.jpg
+[2025/01/03 20:24:16] ppocr DEBUG: dt_boxes num : 50, elapsed : 0.9991121292114258
+[2025/01/03 20:24:17] ppocr DEBUG: cls num  : 50, elapsed : 0.6235527992248535
+[2025/01/03 20:24:21] ppocr DEBUG: rec_res num  : 50, elapsed : 4.654401540756226
+Processed 95.jpg -> 95.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\96.jpg
+[2025/01/03 20:24:22] ppocr DEBUG: dt_boxes num : 39, elapsed : 0.6173510551452637
+[2025/01/03 20:24:22] ppocr DEBUG: cls num  : 39, elapsed : 0.3382530212402344
+[2025/01/03 20:24:26] ppocr DEBUG: rec_res num  : 39, elapsed : 3.889207363128662
+Processed 96.jpg -> 96.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\97.jpg
+[2025/01/03 20:24:27] ppocr DEBUG: dt_boxes num : 72, elapsed : 0.571711540222168
+[2025/01/03 20:24:27] ppocr DEBUG: cls num  : 72, elapsed : 0.34091639518737793
+[2025/01/03 20:24:33] ppocr DEBUG: rec_res num  : 72, elapsed : 6.118929147720337
+Processed 97.jpg -> 97.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\98.jpg
+[2025/01/03 20:24:34] ppocr DEBUG: dt_boxes num : 25, elapsed : 0.653101921081543
+[2025/01/03 20:24:34] ppocr DEBUG: cls num  : 25, elapsed : 0.4565746784210205
+[2025/01/03 20:24:37] ppocr DEBUG: rec_res num  : 25, elapsed : 2.559937000274658
+Processed 98.jpg -> 98.txt
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\99.jpg
+[2025/01/03 20:24:38] ppocr DEBUG: dt_boxes num : 54, elapsed : 0.5188696384429932
+[2025/01/03 20:24:38] ppocr DEBUG: cls num  : 54, elapsed : 0.37230992317199707
+[2025/01/03 20:24:43] ppocr DEBUG: rec_res num  : 54, elapsed : 4.9804418087005615
+Processed 99.jpg -> 99.txt
+
+File: 1.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\1.txt
+
+File: 10.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\10.txt
+
+File: 100.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\100.txt
+
+File: 101.jpg
+Confidence: 0.69
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\101.txt
+
+File: 102.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\102.txt
+
+File: 11.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\11.txt
+
+File: 12.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\12.txt
+
+File: 13.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\13.txt
+
+File: 14.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\14.txt
+
+File: 15.jpg
+Confidence: 0.80
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\15.txt
+
+File: 16.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\16.txt
+
+File: 18.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\18.txt
+
+File: 19.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\19.txt
+
+File: 2.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\2.txt
+
+File: 20.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\20.txt
+
+File: 21.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\21.txt
+
+File: 22.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\22.txt
+
+File: 24.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\24.txt
+
+File: 25.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\25.txt
+
+File: 26.jpg
+Confidence: 0.88
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\26.txt
+
+File: 27.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\27.txt
+
+File: 28.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\28.txt
+
+File: 29.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\29.txt
+
+File: 30.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\30.txt
+
+File: 31.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\31.txt
+
+File: 32.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\32.txt
+
+File: 33.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\33.txt
+
+File: 34.jpg
+Confidence: 0.92
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\34.txt
+
+File: 35.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\35.txt
+
+File: 36.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\36.txt
+
+File: 37.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\37.txt
+
+File: 38.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\38.txt
+
+File: 39.jpg
+Confidence: 0.87
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\39.txt
+
+File: 4.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\4.txt
+
+File: 40.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\40.txt
+
+File: 42.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\42.txt
+
+File: 43.jpg
+Confidence: 0.64
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\43.txt
+
+File: 44.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\44.txt
+
+File: 45.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\45.txt
+
+File: 47.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\47.txt
+
+File: 48.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\48.txt
+
+File: 49.jpg
+Confidence: 0.91
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\49.txt
+
+File: 5.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\5.txt
+
+File: 50.jpg
+Confidence: 0.62
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\50.txt
+
+File: 51.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\51.txt
+
+File: 52.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\52.txt
+
+File: 53.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\53.txt
+
+File: 54.jpg
+Confidence: 0.89
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\54.txt
+
+File: 55.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\55.txt
+
+File: 57.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\57.txt
+
+File: 58.jpg
+Confidence: 0.75
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\58.txt
+
+File: 59.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\59.txt
+
+File: 60.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\60.txt
+
+File: 61.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\61.txt
+
+File: 62.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\62.txt
+
+File: 63.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\63.txt
+
+File: 64.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\64.txt
+
+File: 65.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\65.txt
+
+File: 66.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\66.txt
+
+File: 67.jpg
+Confidence: 0.85
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\67.txt
+
+File: 68.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\68.txt
+
+File: 69.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\69.txt
+
+File: 7.jpg
+Confidence: 0.85
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\7.txt
+
+File: 70.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\70.txt
+
+File: 71.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\71.txt
+
+File: 72.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\72.txt
+
+File: 73.jpg
+Confidence: 0.91
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\73.txt
+
+File: 74.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\74.txt
+
+File: 75.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\75.txt
+
+File: 76.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\76.txt
+
+File: 77.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\77.txt
+
+File: 78.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\78.txt
+
+File: 79.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\79.txt
+
+File: 8.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\8.txt
+
+File: 80.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\80.txt
+
+File: 81.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\81.txt
+
+File: 82.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\82.txt
+
+File: 83.jpg
+Confidence: 0.85
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\83.txt
+
+File: 84.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\84.txt
+
+File: 85.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\85.txt
+
+File: 86.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\86.txt
+
+File: 87.jpg
+Confidence: 0.95
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\87.txt
+
+File: 88.jpg
+Confidence: 0.94
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\88.txt
+
+File: 89.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\89.txt
+
+File: 9.jpg
+Confidence: 0.90
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\9.txt
+
+File: 90.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\90.txt
+
+File: 91.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\91.txt
+
+File: 92.jpg
+Confidence: 1.00
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\92.txt
+
+File: 93.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\93.txt
+
+File: 95.jpg
+Confidence: 0.98
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\95.txt
+
+File: 96.jpg
+Confidence: 0.97
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\96.txt
+
+File: 97.jpg
+Confidence: 0.96
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\97.txt
+
+File: 98.jpg
+Confidence: 0.92
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\98.txt
+
+File: 99.jpg
+Confidence: 0.99
+Saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Salary Slip\extracted_text\99.txt
