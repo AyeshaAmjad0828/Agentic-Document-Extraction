@@ -107,26 +107,24 @@ def process_document(file_path: str, output_dir: str = None, schema_groundtruth:
 
     # 2. Classify document using first page
     try:
-        doc_type, confidence = classify_document_with_llm(pages_text[0])
+        doc_type, confidence = classify_document_with_llm(pages_text[0])  # Unpack only two values
         metrics['Document_Type'] = doc_type
         metrics['Classification_Confidence'] = confidence
         print(f"Document classified as: {doc_type} (confidence: {confidence}%)")
         
-        # Handle unknown document types
         if doc_type == "Unknown":
             unknown_dir = os.path.join(output_dir, "Unknown_Docs")
             os.makedirs(unknown_dir, exist_ok=True)
             
             # Copy file to Unknown_Docs folder
-            
             unknown_file_path = os.path.join(unknown_dir, os.path.basename(file_path))
             shutil.copy2(file_path, unknown_file_path)
             
             print(f"Unrecognized document type. File copied to: {unknown_file_path}")
-
+            
             # Update metrics file even for unknown documents
             update_metrics_excel(metrics)
-
+            
             return {
                 'document_type': "Unknown",
                 'confidence': confidence,
@@ -140,7 +138,7 @@ def process_document(file_path: str, output_dir: str = None, schema_groundtruth:
 
     # 3. Build and optimize schema
     try:
-        schema_prompt = load_prompt_from_file("schema_building_prompt.txt")
+        schema_prompt = load_prompt_from_file(filename="schema_builder_prompt.txt")
         schema_env = SchemaBuilderEnv(
             baseprompt=schema_prompt,
             document_text=pages_text[0],  # Use first page for schema building
@@ -164,7 +162,7 @@ def process_document(file_path: str, output_dir: str = None, schema_groundtruth:
 
     # 4. Extract data from each page and combine results
     try:
-        extraction_prompt = load_prompt_from_file("data_extraction_prompt.txt")
+        extraction_prompt = load_prompt_from_file(document_type=doc_type)
         combined_results = []
         max_extraction_steps = 0
         best_exact_match = 0
