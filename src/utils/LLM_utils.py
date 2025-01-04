@@ -41,13 +41,6 @@ def get_completion_gpt4(
 
 def openai_embedding(text):
     """Get OpenAI embedding for text"""
-    if not text or not isinstance(text, str):
-        print("Warning: Empty or invalid text provided for embedding")
-        return None
-        
-    # Convert to string if it's a dictionary/list
-    if isinstance(text, (dict, list)):
-        text = json.dumps(text)
         
     try:
         response = client.embeddings.create(
