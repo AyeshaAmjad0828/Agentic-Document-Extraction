@@ -1,4 +1,3 @@
-
 import sys
 import os
 
@@ -19,7 +18,7 @@ from src.action_space.meta_prompting_agent import adjust_prompt
 
 
 class SchemaBuilderEnv(gym.Env):
-    def __init__(self, baseprompt, document_text, groundtruth):
+    def __init__(self, baseprompt, document_text, groundtruth, max_steps=5):
         super(SchemaBuilderEnv, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(
@@ -47,6 +46,8 @@ class SchemaBuilderEnv(gym.Env):
         self.current_step = 0
         
         self.state = None
+
+        self.max_steps = max_steps
 
     def step(self, action):
         self.current_step += 1
@@ -91,7 +92,7 @@ class SchemaBuilderEnv(gym.Env):
         reward = self.best_perplexity - perplexity_score
 
         # Determine if we should terminate
-        done = self.non_improvement_count >= self.max_non_improvements
+        done = (self.non_improvement_count >= self.max_non_improvements) or (self.current_step >= self.max_steps)
 
         # Create info dictionary
         info = {
@@ -108,7 +109,11 @@ class SchemaBuilderEnv(gym.Env):
         print(f"Non-improvement count: {self.non_improvement_count}")
         
         if done:
-            print("\nTerminating due to no improvements in last two updates")
+            print("\nTerminating due to:", end=" ")
+            if self.current_step >= self.max_steps:
+                print("maximum steps reached")
+            else:
+                print("no improvements in last two updates")
             print(f"Best Results Achieved:")
             print(f"Perplexity: {self.best_perplexity:.4f}")
             print("\nBest Schema:")
