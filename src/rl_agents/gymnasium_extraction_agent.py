@@ -60,7 +60,8 @@ where you replace <action> with your actual action.
             # Format observation for better readability
             obs_dict = {
                 'Exact Match': observation[0],
-                'Similarity': observation[1]
+                'Semantic Match': observation[1],
+                'Similarity': observation[2]
             }
             print("\nCurrent State:")
             for metric, value in obs_dict.items():
