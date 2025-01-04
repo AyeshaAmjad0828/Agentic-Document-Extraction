@@ -16,13 +16,29 @@ def calculate_match_score(generated_output, groundtruth):
     # Convert string to dict if needed
     if isinstance(generated_output, str):
         try:
-            generated_output = json.loads(generated_output)
+            generated_output = json.loads(generated_output.strip())
         except json.JSONDecodeError as e:
-            print(f"Error parsing generated output: {e}")
+            print(f"Warning: Could not parse generated output as JSON: {e}")
             return 0.0
+        
+    # Debug prints
+    print("Exact Match - Generated type:", type(generated_output))
+    print("Exact Match - Generated fields:", generated_output.keys() if isinstance(generated_output, dict) else "Not a dict")
+    print("Exact Match - Groundtruth type:", type(groundtruth))
+    print("Exact Match - Groundtruth fields:", groundtruth.keys() if isinstance(groundtruth, dict) else "Not a dict")
 
     total_fields = 0
     matched_fields = 0
+
+    # Ensure we have dictionaries to compare
+    if not isinstance(generated_output, dict) or not isinstance(groundtruth, dict):
+        print("Warning: Inputs must be dictionaries for field comparison")
+        return 0.0
+
+    # If we have empty dictionaries, return 0
+    if not generated_output or not groundtruth:
+        print("Warning: Empty dictionary provided")
+        return 0.0
 
     def normalize_value(value):
         """Normalize values for comparison"""
