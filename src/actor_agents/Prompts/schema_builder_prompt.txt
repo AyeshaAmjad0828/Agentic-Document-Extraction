@@ -8,6 +8,6 @@ You are a JSON schema builder. You will receive an unstructured form-like docume
 
 4. ONLY include unique column names as they appear in the document, without duplicates or associated data. 
 
-5. ONLY Respond with the JSON schema.
+5. ONLY Respond with the JSON schema with all key phrases and table column headers.
 
 Here is the content of the form-like document:
