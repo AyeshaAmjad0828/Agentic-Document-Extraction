@@ -24,7 +24,7 @@ from src.utils.cache_utils import cache_results
 
 
 @cache_results
-def update_metrics_excel(metrics_dict: dict, excel_path: str = "output\extraction_metrics.xlsx"):
+def update_metrics_excel(metrics_dict: dict, excel_path: str = "output\metrics\extraction_metrics.xlsx"):
     """
     Update or create Excel file with document processing metrics
     """
@@ -54,6 +54,10 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         schema_groundtruth: Groundtruth for schema building
         max_workers: Maximum number of parallel workers (default: number of CPU cores)
     """
+    # Create required output directory structure
+    if output_dir:
+        os.makedirs(os.path.join(output_dir, "extracted_data"), exist_ok=True)
+        os.makedirs(os.path.join(output_dir, "unknown_docs"), exist_ok=True)
 
     # Start timing the entire process
     start_time = time.time()
@@ -131,7 +135,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         logging.info(f"Document classified as: {doc_type} (confidence: {confidence}%)")
         
         if doc_type == "Unknown":
-            unknown_dir = os.path.join(output_dir, "Unknown_Docs")
+            unknown_dir = os.path.join(output_dir, "unknown_docs")
             os.makedirs(unknown_dir, exist_ok=True)
             
             # Copy file to Unknown_Docs folder
@@ -278,8 +282,9 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         
         # Save results if output directory specified
         if output_dir:
-            os.makedirs(output_dir, exist_ok=True)
-            output_file = os.path.join(output_dir, f"{os.path.splitext(os.path.basename(file_path))[0]}_extracted.json")
+            extracted_data_dir = os.path.join(output_dir, "extracted_data")
+            os.makedirs(extracted_data_dir, exist_ok=True)
+            output_file = os.path.join(extracted_data_dir, f"{os.path.splitext(os.path.basename(file_path))[0]}_extracted.json")
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(final_results, f, indent=2)
             logging.info(f"Results saved to: {output_file}")
