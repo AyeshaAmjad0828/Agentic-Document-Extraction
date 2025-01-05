@@ -1,0 +1,140 @@
+{
+  "BankStatements": {
+    "Account Name": "MR JOHN DOE",
+    "Card Number": "xxxx-xxxx-xxxx-1234",
+    "Company Name": "408 Queen St W",
+    "Account Limit": "$30,000.00",
+    "Employee ID": "08/11/2019",
+    "Statement Date": "MM/DD/YYYY",
+    "Currency": "U.S.DOLLAR",
+    "Payments": "$0.00",
+    "Adjustments": "$0.00",
+    "Net Purchases": "$5,946.75",
+    "Cash Advance": "$0.00",
+    "Fees": "$0.00",
+    "Other Charges": "$0.00",
+    "New Account Balance": "$5,946.75",
+    "Transaction Summary": [
+      {
+        "Trans Date": "07/16",
+        "Posting Date": "07/17",
+        "Trans ID": "FEDEX775671220714",
+        "Description": "MEMPHIS TN",
+        "Pre-Tax Amount": "$11.10",
+        "Auth#": "301000873",
+        "Total Tax": "$0.00",
+        "Trans Amount": "$11.10"
+      },
+      {
+        "Trans Date": "07/16",
+        "Posting Date": "07/17",
+        "Trans ID": "ZIPRECRUITER,INC.8557475493",
+        "Description": "CA",
+        "Pre-Tax Amount": "$449.00",
+        "Auth#": "301000874",
+        "Total Tax": "$0.00",
+        "Trans Amount": "$449.00"
+      },
+      {
+        "Trans Date": "07/16",
+        "Posting Date": "07/17",
+        "Trans ID": "USPS POSTAGE STAMPS.C 888-434-0055",
+        "Description": "CA",
+        "Pre-Tax Amount": "$100.00",
+        "Auth#": "301000875",
+        "Total Tax": "$0.00",
+        "Trans Amount": "$100.00"
+      },
+      {
+        "Trans Date": "07/20",
+        "Posting Date": "07/22",
+        "Trans ID": "BENCHMARK EDUCATION CONEW ROCHELLE",
+        "Description": "NY",
+        "Pre-Tax Amount": "$3,645.83",
+        "Auth#": "301776100",
+        "Total Tax": "$204.17e",
+        "Trans Amount": "$3,850.00"
+      },
+      {
+        "Trans Date": "07/27",
+        "Posting Date": "07/29",
+        "Trans ID": "BATH AND BODY WORKS",
+        "Description": "50 BROOKFIELD WI",
+        "Pre-Tax Amount": "$91.20",
+        "Auth#": "302892881",
+        "Total Tax": "$4.65e",
+        "Trans Amount": "$95.85"
+      },
+      {
+        "Trans Date": "07/30",
+        "Posting Date": "07/30",
+        "Trans ID": "AMZN MKTPUS MA0PS94JO",
+        "Description": "AMZN.COM/BILL WA",
+        "Pre-Tax Amount": "$149.80",
+        "Auth#": "303042904",
+        "Total Tax": "$0.00",
+        "Trans Amount": "$149.80"
+      },
+      {
+        "Trans Date": "08/03",
+        "Posting Date": "08/05",
+        "Trans ID": "NATIONAL CRIME SEARCH",
+        "Description": "888-527-3282 AR",
+        "Pre-Tax Amount": "$151.52",
+        "Auth#": "303978185",
+        "Total Tax": "$8.48e",
+        "Trans Amount": "$160.00"
+      },
+      {
+        "Trans Date": "08/04",
+        "Posting Date": "08/05",
+        "Trans ID": "ZIPRECRUITER,INC.8557475493",
+        "Description": "CA",
+        "Pre-Tax Amount": "$449.00",
+        "Auth#": "303978184",
+        "Total Tax": "$0.00",
+        "Trans Amount": "$449.00"
+      },
+      {
+        "Trans Date": "08/06",
+        "Posting Date": "08/07",
+        "Trans ID": "AMAZON.COM MA71N28H1",
+        "Description": "AMZN.COM/BILL WA",
+        "Pre-Tax Amount": "$82.61",
+        "Auth#": "304255288",
+        "Total Tax": "$8.34e",
+        "Trans Amount": "$90.95"
+      },
+      {
+        "Trans Date": "08/06",
+        "Posting Date": "08/07",
+        "Trans ID": "SQ SQ KC PHONE GUYS",
+        "Description": "GOSQ.COM MO",
+        "Pre-Tax Amount": "$408.66",
+        "Auth#": "304255287",
+        "Total Tax": "$0.00",
+        "Trans Amount": "$408.66"
+      },
+      {
+        "Trans Date": "08/07",
+        "Posting Date": "08/07",
+        "Trans ID": "AMAZON.COMMAOTG7GSO",
+        "Description": "AMZN.COM/BILL WA",
+        "Pre-Tax Amount": "$29.47",
+        "Auth#": "304255289",
+        "Total Tax": "$2.98e",
+        "Trans Amount": "$32.45"
+      },
+      {
+        "Trans Date": "08/07",
+        "Posting Date": "08/08",
+        "Trans ID": "AMZNMKTPUS MA3QL5742",
+        "Description": "AMZN.COM/BILL WA",
+        "Pre-Tax Amount": "$149.94",
+        "Auth#": "304453307",
+        "Total Tax": "$0.00",
+        "Trans Amount": "$149.94"
+      }
+    ]
+  }
+}
