@@ -28,9 +28,12 @@ An advanced document processing system that leverages Large Language Models (LLM
 
 - Python 3.10+
 - OpenAI API key
-- Dependencies listed in [requirements.txt](.pre-commit-config.yaml)
+- Dependencies listed in [requirements.txt](requirements.txt)
 - For OCR support:
   - PaddleOCR
+- For Image Reading support:
+  - open-cv
+  - PyMuPDF
 
 ## 🛠️ Installation
 
@@ -100,14 +103,26 @@ python main.py "path/to/your/documents" --output-dir "output" --schema-groundtru
    - Multi-class classification
 
 3. **Schema Builder** ([src/environments/schema_builder_env.py](src/environments/schema_builder_env.py))
+   - Schema building agent ([src/actor_agents/schema_builder.py](src/actor_agents/schema_builder.py))
    - Dynamic schema generation
-   - Reinforcement learning optimization
    - Perplexity-based evaluation
 
 4. **Data Extractor** ([src/environments/data_extraction_env.py](src/environments/data_extraction_env.py))
+   - Data extraction agent ([src/actor_agents/data_extraction.py](src/actor_agents/data_extraction.py))
    - Iterative extraction process
    - Multi-metric evaluation
-   - Adaptive improvement
+
+5. **Reinforcement learning Agent** ([src/rl_agents](src/rl_agents))
+   - Gymnasium environment data extraction ([src/rl_agents/gymnasium_extraction_agent.py](src/rl_agents/gymnasium_extraction_agent.py))
+   - Gymnasium environment schema generation ([src/rl_agents/gymnasium_schemabuilder_agent.py](src/rl_agents/gymnasium_schemabuilder_agent.py))
+   - Action space with meta-prompting-agent ([src/action_space/meta_prompting_agent.py](src/action_space/meta_prompting_agent.py))
+   - Custom reward function
+   - Custom observation space
+
+6. **Base Prompts** ([src/actor_agents/Prompts](src/actor_agents/Prompts))
+   - Base prompts for document data extraction 
+   - Base prompts for schema generation 
+
 
 ### Supporting Components
 
@@ -228,7 +243,6 @@ The system implements comprehensive logging ([src/utils/logging_utils.py](src/ut
    pip install paddlepaddle-gpu
    ```
 
-
 ### Development Setup
 
 1. **Install Pre-commit Hooks**
@@ -236,7 +250,6 @@ The system implements comprehensive logging ([src/utils/logging_utils.py](src/ut
    pip install pre-commit
    pre-commit install
    ```
-
 
 ### Updating
 
@@ -274,7 +287,7 @@ docker run -v $(pwd)/data:/app/data unstructured-data-extraction
 ### Need Help?
 
 If you encounter any installation issues:
-1. Check the [Common Issues](docs/TROUBLESHOOTING.md) guide
+1. Check the [Common Issues](https://github.com/AyeshaAmjad0828/Unstructured-Data-Extraction?tab=readme-ov-file#common-issues)
 2. Open an issue on GitHub
 3. Contact the maintainers
 
