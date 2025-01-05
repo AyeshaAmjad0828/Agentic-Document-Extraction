@@ -1,0 +1,491 @@
+2025-01-05 16:11:51,408 - INFO - Log file created at: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\logs\processing_34_20250105_161151.log
+2025-01-05 16:11:51,416 - INFO - Starting document processing pipeline
+2025-01-05 16:11:51,416 - INFO - Input path: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\34.jpg
+2025-01-05 16:11:51,416 - INFO - Output directory: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output
+2025-01-05 16:11:51,432 - INFO - Loaded extraction groundtruth
+2025-01-05 16:11:51,432 - INFO - Processing single file: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\34.jpg
+2025-01-05 16:11:55,619 - INFO - Processing document: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\34.jpg
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Bank Statement\34.jpg2025-01-05 16:12:26,504 - INFO - Image processed with confidence: 0.98
+2025-01-05 16:12:26,504 - INFO - Successfully read document with 1 pages
+2025-01-05 16:12:31,280 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+<IPython.core.display.HTML object>2025-01-05 16:12:31,307 - INFO - Document classified as: Financial Document (confidence: 99.88%)
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\schema_builder_prompt.txt2025-01-05 16:12:34,382 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Initial Prompt: 
+    
+You are a JSON schema builder. You will receive an unstructured form-like document and you will perform following tasks:
+
+1. Extract only the key phrases in key-value pairs, and header names in tables from the document. 
+
+2. Arrange all keys phrases with data types in the parent region of the json and table header names in the child region.
+
+3. Ensure the order of key names and table headers aligns with the original text.
+
+4. ONLY include unique column names as they appear in the document, without duplicates or associated data. 
+
+5. ONLY Respond with the JSON schema with all key phrases and table column headers.
+
+Here is the content of the form-like document:
+
+
+BankStatements.net
+BMO AA           Financial Group
+Statement
+Account Name:                    MR JOHN DOE Card Number:                          xxxx-xxxx-xxxx-1234
+Company Name:                  408 Queen St W Account Limit:                             $30,000.00
+Toronto,ON
+M5V2A7
+Employee ID:                       08/11/2019
+Statement Date (MM/DD/YYYY):               Currency:                                U.S.DOLLAR
+Statement Summary:
+Report any items which do not agree with your records Payments:                                   $0.00
+within 30 days of the statement date.          Adjustments:                                $0.00
+Net Purchases:                            $5,946.75
+Cash Advance:                              $0.00
+Fees:                                        $0.00
+Other Charges:                              $0.00
+New Account Balance:                    $5,946.75
+For your records only. No payment required.
+Transaction Summary:
+Trans Date     Posting Date Trans ID      Description                                Pre-Tax Amount Auth#   Total Tax  Trans Amount
+07/16       07/17               FEDEX775671220714MEMPHIS TN            $11.10   $0.00     $11.10
+301000873                                               02347Z
+07/16        07/17                ZIPRECRUITER,INC.8557475493 CA          $449.00   $0.00     $449.00
+301000874                                               00160Z
+07/16        07/17                  USPS POSTAGE STAMPS.C 888-434-0055CA  $100.00   $0.00     $100.00
+301000875                                               03122Z
+07/20        07/22                    BENCHMARK EDUCATION CONEW ROCHELLE NY $3,645.83 $204.17e   $3,850.00
+301776100                                                08461E
+07/27        07/29                   BATH AND BODY WORKS 50 BROOKFIELD WI  $91.20  $4.65e    $95.85
+302892881                                               03581E
+07/30        07/30                   AMZN MKTPUS MA0PS94JO AMZN.COM/BILL WA $149.80   $0.00     $149.80
+303042904                                               04401E
+08/03        08/05                  NATIONAL CRIME SEARCH 888-527-3282 AR   $151.52  $8.48e    $160.00
+303978185                                               01996E
+08/04        08/05               ZIPRECRUITER,INC.8557475493 CA          $449.00   $0.00     $449.00
+303978184                                               09731E
+08/06        08/07                   AMAZON.COM MA71N28H1 AMZN.COM/BILL WA $82.61  $8.34e     $90.95
+304255288                                               05939E
+08/06        08/07                 SQ SQ KC PHONE GUYS GOSQ.COM MO      $408.66   $0.00     $408.66
+304255287                                               02564E
+08/07        08/07                   AMAZON.COMMAOTG7GSO AMZN.COM/BILL WA $29.47  $2.98e    $32.45
+304255289                                               03767E
+08/07        08/08                    AMZNMKTPUS MA3QL5742 AMZN.COM/BILL WA $149.94   $0.00     $149.94
+304453307                                               05048E
+
+    Initial Schema:
+{
+  "BankStatements": {
+    "Account Name": "string",
+    "Card Number": "string",
+    "Company Name": "string",
+    "Account Limit": "string",
+    "Employee ID": "string",
+    "Statement Date": "string",
+    "Currency": "string",
+    "Payments": "string",
+    "Adjustments": "string",
+    "Net Purchases": "string",
+    "Cash Advance": "string",
+    "Fees": "string",
+    "Other Charges": "string",
+    "New Account Balance": "string",
+    "Transaction Summary": {
+      "Trans Date": "string",
+      "Posting Date": "string",
+      "Trans ID": "string",
+      "Description": "string",
+      "Pre-Tax Amount": "string",
+      "Auth#": "string",
+      "Total Tax": "string",
+      "Trans Amount": "string"
+    }
+  }
+}Initial Perplexity: 1.0075
+Current State:Perplexity: 1.00752025-01-05 16:12:39,841 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. SCHEMA BUILDER - ITERATION 1 BEGINS.....................................2025-01-05 16:12:57,769 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 16:13:05,894 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 1
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to convert an unstructured form-like document into a structured JSON schema. Follow these steps:
+
+1. **Extract Key Phrases**: Identify and extract key phrases in key-value pairs and table header names from the document.
+
+2. **Organize Structure**: Arrange the extracted key phrases with their corresponding data types in the parent region of the JSON schema. Place the table header names in the child region.
+
+3. **Maintain Order**: Ensure that the order of key names and table headers reflects their appearance in the original document.
+
+4. **Uniqueness**: Include only unique column names and key phrases, avoiding duplicates or any associated data.
+
+5. **Output Format**: Respond exclusively with the JSON schema containing all key phrases and table column headers.
+
+### Examples:
+
+**Example 1:**
+Input Document:
+```
+Name: John Doe
+Age: 30
+Address:
+  - Street: 123 Main St
+  - City: Springfield
+```
+Output JSON Schema:
+```json
+{
+  "Name": "string",
+  "Age": "integer",
+  "Address": {
+    "Street": "string",
+    "City": "string"
+  }
+}
+```
+
+**Example 2:**
+Input Document:
+```
+Product: Laptop
+Specifications:
+  - Brand: Dell
+  - Model: XPS 13
+  - Price: 999.99
+```
+Output JSON Schema:
+```json
+{
+  "Product": "string",
+  "Specifications": {
+    "Brand": "string",
+    "Model": "string",
+    "Price": "number"
+  }
+}
+```
+
+**Example 3:**
+Input Document:
+```
+Event: Conference
+Date: 2023-10-15
+Location:
+  - Venue: Convention Center
+  - City: New York
+```
+Output JSON Schema:
+```json
+{
+  "Event": "string",
+  "Date": "string",
+  "Location": {
+    "Venue": "string",
+    "City": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+
+BankStatements.net
+BMO AA           Financial Group
+Statement
+Account Name:                    MR JOHN DOE Card Number:                          xxxx-xxxx-xxxx-1234
+Company Name:                  408 Queen St W Account Limit:                             $30,000.00
+Toronto,ON
+M5V2A7
+Employee ID:                       08/11/2019
+Statement Date (MM/DD/YYYY):               Currency:                                U.S.DOLLAR
+Statement Summary:
+Report any items which do not agree with your records Payments:                                   $0.00
+within 30 days of the statement date.          Adjustments:                                $0.00
+Net Purchases:                            $5,946.75
+Cash Advance:                              $0.00
+Fees:                                        $0.00
+Other Charges:                              $0.00
+New Account Balance:                    $5,946.75
+For your records only. No payment required.
+Transaction Summary:
+Trans Date     Posting Date Trans ID      Description                                Pre-Tax Amount Auth#   Total Tax  Trans Amount
+07/16       07/17               FEDEX775671220714MEMPHIS TN            $11.10   $0.00     $11.10
+301000873                                               02347Z
+07/16        07/17                ZIPRECRUITER,INC.8557475493 CA          $449.00   $0.00     $449.00
+301000874                                               00160Z
+07/16        07/17                  USPS POSTAGE STAMPS.C 888-434-0055CA  $100.00   $0.00     $100.00
+301000875                                               03122Z
+07/20        07/22                    BENCHMARK EDUCATION CONEW ROCHELLE NY $3,645.83 $204.17e   $3,850.00
+301776100                                                08461E
+07/27        07/29                   BATH AND BODY WORKS 50 BROOKFIELD WI  $91.20  $4.65e    $95.85
+302892881                                               03581E
+07/30        07/30                   AMZN MKTPUS MA0PS94JO AMZN.COM/BILL WA $149.80   $0.00     $149.80
+303042904                                               04401E
+08/03        08/05                  NATIONAL CRIME SEARCH 888-527-3282 AR   $151.52  $8.48e    $160.00
+303978185                                               01996E
+08/04        08/05               ZIPRECRUITER,INC.8557475493 CA          $449.00   $0.00     $449.00
+303978184                                               09731E
+08/06        08/07                   AMAZON.COM MA71N28H1 AMZN.COM/BILL WA $82.61  $8.34e     $90.95
+304255288                                               05939E
+08/06        08/07                 SQ SQ KC PHONE GUYS GOSQ.COM MO      $408.66   $0.00     $408.66
+304255287                                               02564E
+08/07        08/07                   AMAZON.COMMAOTG7GSO AMZN.COM/BILL WA $29.47  $2.98e    $32.45
+304255289                                               03767E
+08/07        08/08                    AMZNMKTPUS MA3QL5742 AMZN.COM/BILL WA $149.94   $0.00     $149.94
+304453307                                               05048E
+
+    Updated Schema:
+{
+  "Account Name": "string",
+  "Card Number": "string",
+  "Company Name": "string",
+  "Account Limit": "string",
+  "Address": {
+    "Street": "string",
+    "City": "string",
+    "Postal Code": "string"
+  },
+  "Employee ID": "string",
+  "Statement Date": "string",
+  "Currency": "string",
+  "Statement Summary": {
+    "Payments": "string",
+    "Adjustments": "string",
+    "Net Purchases": "string",
+    "Cash Advance": "string",
+    "Fees": "string",
+    "Other Charges": "string",
+    "New Account Balance": "string"
+  },
+  "Transaction Summary": {
+    "Trans Date": "string",
+    "Posting Date": "string",
+    "Trans ID": "string",
+    "Description": "string",
+    "Pre-Tax Amount": "string",
+    "Auth#": "string",
+    "Total Tax": "string",
+    "Trans Amount": "string"
+  }
+}Current Perplexity: 1.0096Best Perplexity: 1.0075Improved: FalseNon-improvement count: 1
+Action taken: 2Reward: -0.0022
+Terminated: FalseTotal Return: -0.0022Metrics:{'perplexity': 1.009626842970887, 'best_perplexity': 1.0074570503864972, 'improved': False, 'non_improvement_count': 1, 'steps': 1}
+Current State:Perplexity: 1.00962025-01-05 16:13:23,051 - INFO - Retrying request to /chat/completions in 0.410203 seconds
+2025-01-05 16:13:26,562 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. SCHEMA BUILDER - ITERATION 2 BEGINS.....................................2025-01-05 16:13:36,308 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 16:13:39,204 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 2
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+```
+**Goal**: Convert an unstructured form-like document into a structured JSON schema.
+
+**Instructions**:
+
+1. **Extract Key Phrases**:
+   - Identify key phrases in key-value pairs.
+   - Extract table header names.
+
+2. **Organize Structure**:
+   - Place extracted key phrases in the parent region of the JSON schema.
+   - Place table header names in the child region.
+
+3. **Maintain Order**:
+   - Ensure the order of key names and table headers matches their appearance in the original document.
+
+4. **Ensure Uniqueness**:
+   - Include only unique column names and key phrases.
+   - Avoid duplicates and any associated data.
+
+5. **Output Format**:
+   - Respond only with the JSON schema that includes all key phrases and table column headers.
+
+**Examples**:
+
+**Example 1:**
+Input Document:
+```
+Name: John Doe
+Age: 30
+Address:
+  - Street: 123 Main St
+  - City: Springfield
+```
+Output JSON Schema:
+```json
+{
+  "Name": "string",
+  "Age": "integer",
+  "Address": {
+    "Street": "string",
+    "City": "string"
+  }
+}
+```
+
+**Example 2:**
+Input Document:
+```
+Product: Laptop
+Specifications:
+  - Brand: Dell
+  - Model: XPS 13
+  - Price: 999.99
+```
+Output JSON Schema:
+```json
+{
+  "Product": "string",
+  "Specifications": {
+    "Brand": "string",
+    "Model": "string",
+    "Price": "number"
+  }
+}
+```
+
+**Example 3:**
+Input Document:
+```
+Event: Conference
+Date: 2023-10-15
+Location:
+  - Venue: Convention Center
+  - City: New York
+```
+Output JSON Schema:
+```json
+{
+  "Event": "string",
+  "Date": "string",
+  "Location": {
+    "Venue": "string",
+    "City": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+```
+
+BankStatements.net
+BMO AA           Financial Group
+Statement
+Account Name:                    MR JOHN DOE Card Number:                          xxxx-xxxx-xxxx-1234
+Company Name:                  408 Queen St W Account Limit:                             $30,000.00
+Toronto,ON
+M5V2A7
+Employee ID:                       08/11/2019
+Statement Date (MM/DD/YYYY):               Currency:                                U.S.DOLLAR
+Statement Summary:
+Report any items which do not agree with your records Payments:                                   $0.00
+within 30 days of the statement date.          Adjustments:                                $0.00
+Net Purchases:                            $5,946.75
+Cash Advance:                              $0.00
+Fees:                                        $0.00
+Other Charges:                              $0.00
+New Account Balance:                    $5,946.75
+For your records only. No payment required.
+Transaction Summary:
+Trans Date     Posting Date Trans ID      Description                                Pre-Tax Amount Auth#   Total Tax  Trans Amount
+07/16       07/17               FEDEX775671220714MEMPHIS TN            $11.10   $0.00     $11.10
+301000873                                               02347Z
+07/16        07/17                ZIPRECRUITER,INC.8557475493 CA          $449.00   $0.00     $449.00
+301000874                                               00160Z
+07/16        07/17                  USPS POSTAGE STAMPS.C 888-434-0055CA  $100.00   $0.00     $100.00
+301000875                                               03122Z
+07/20        07/22                    BENCHMARK EDUCATION CONEW ROCHELLE NY $3,645.83 $204.17e   $3,850.00
+301776100                                                08461E
+07/27        07/29                   BATH AND BODY WORKS 50 BROOKFIELD WI  $91.20  $4.65e    $95.85
+302892881                                               03581E
+07/30        07/30                   AMZN MKTPUS MA0PS94JO AMZN.COM/BILL WA $149.80   $0.00     $149.80
+303042904                                               04401E
+08/03        08/05                  NATIONAL CRIME SEARCH 888-527-3282 AR   $151.52  $8.48e    $160.00
+303978185                                               01996E
+08/04        08/05               ZIPRECRUITER,INC.8557475493 CA          $449.00   $0.00     $449.00
+303978184                                               09731E
+08/06        08/07                   AMAZON.COM MA71N28H1 AMZN.COM/BILL WA $82.61  $8.34e     $90.95
+304255288                                               05939E
+08/06        08/07                 SQ SQ KC PHONE GUYS GOSQ.COM MO      $408.66   $0.00     $408.66
+304255287                                               02564E
+08/07        08/07                   AMAZON.COMMAOTG7GSO AMZN.COM/BILL WA $29.47  $2.98e    $32.45
+304255289                                               03767E
+08/07        08/08                    AMZNMKTPUS MA3QL5742 AMZN.COM/BILL WA $149.94   $0.00     $149.94
+304453307                                               05048E
+
+    Updated Schema:
+{
+  "Account Name": "string",
+  "Card Number": "string",
+  "Company Name": "string",
+  "Account Limit": "string",
+  "Statement Date": "string",
+  "Currency": "string",
+  "Statement Summary": {
+    "Payments": "string",
+    "Adjustments": "string",
+    "Net Purchases": "string",
+    "Cash Advance": "string",
+    "Fees": "string",
+    "Other Charges": "string",
+    "New Account Balance": "string"
+  },
+  "Transaction Summary": {
+    "Trans Date": "string",
+    "Posting Date": "string",
+    "Trans ID": "string",
+    "Description": "string",
+    "Pre-Tax Amount": "string",
+    "Auth#": "string",
+    "Total Tax": "string",
+    "Trans Amount": "string"
+  }
+}Current Perplexity: 1.0132Best Perplexity: 1.0075Improved: FalseNon-improvement count: 2
+Terminating due to:no improvements in last two updatesBest Results Achieved:Perplexity: 1.0075
+Best Schema:{
+  "BankStatements": {
+    "Account Name": "string",
+    "Card Number": "string",
+    "Company Name": "string",
+    "Account Limit": "string",
+    "Employee ID": "string",
+    "Statement Date": "string",
+    "Currency": "string",
+    "Payments": "string",
+    "Adjustments": "string",
+    "Net Purchases": "string",
+    "Cash Advance": "string",
+    "Fees": "string",
+    "Other Charges": "string",
+    "New Account Balance": "string",
+    "Transaction Summary": {
+      "Trans Date": "string",
+      "Posting Date": "string",
+      "Trans ID": "string",
+      "Description": "string",
+      "Pre-Tax Amount": "string",
+      "Auth#": "string",
+      "Total Tax": "string",
+      "Trans Amount": "string"
+    }
+  }
+}
+Action taken: 1Reward: -0.0057
+Terminated: TrueTotal Return: -0.0079Metrics:{'perplexity': 1.013153581392578, 'best_perplexity': 1.0074570503864972, 'improved': False, 'non_improvement_count': 2, 'steps': 2}
+Task completed successfully!2025-01-05 16:13:39,856 - INFO - Schema created and optimized
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\financial_prompt.txt2025-01-05 16:13:39,864 - INFO - 
+Starting parallel processing with 1 workers
+2025-01-05 16:16:33,502 - INFO - 
+Data extraction completed
+2025-01-05 16:16:33,522 - INFO - Results saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\34_extracted.json
