@@ -3,7 +3,7 @@ from langchain_openai import ChatOpenAI
 from src.environments.data_extraction_env import DataExtractionEnvIterative
 from src.rl_agents.gymnasium_extraction_agent import GymnasiumAgent as ExtractionAgent
 
-def process_single_page(args: Tuple[str, str, str, dict, dict, int, int]) -> Dict[str, Any]:
+def process_single_page(args: Tuple[str, str, str, dict, dict, int, int, int]) -> Dict[str, Any]:
     """
     Process a single page for data extraction in parallel.
     
@@ -16,6 +16,7 @@ def process_single_page(args: Tuple[str, str, str, dict, dict, int, int]) -> Dic
             - groundtruth (dict): Optional groundtruth for validation
             - page_num (int): Current page number
             - total_pages (int): Total number of pages
+            - max_steps (int): Maximum number of steps for extraction
     
     Returns:
         Dict containing:
@@ -23,7 +24,7 @@ def process_single_page(args: Tuple[str, str, str, dict, dict, int, int]) -> Dic
             - results: Extraction results for the page
             - steps: Number of steps taken
     """
-    page_text, doc_type, extraction_prompt, schema, groundtruth, page_num, total_pages = args
+    page_text, doc_type, extraction_prompt, schema, groundtruth, page_num, total_pages, max_steps = args
     
     print(f"\nProcessing page {page_num + 1}/{total_pages}")
     
@@ -36,7 +37,8 @@ def process_single_page(args: Tuple[str, str, str, dict, dict, int, int]) -> Dic
         document_type=doc_type,
         document=page_text,
         schema=schema,
-        groundtruth=groundtruth
+        groundtruth=groundtruth,
+        max_steps=max_steps  
     )
     
     # Run extraction
