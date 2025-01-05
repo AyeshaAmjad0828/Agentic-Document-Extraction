@@ -1,0 +1,2020 @@
+Loaded extraction groundtruth
+Received extraction_groundtruth: {'issuer': 'Amazon Web Services', 'amount': 4.11, 'amount_untaxed': 4.11, 'date': '2014-08-03', 'invoice_number': '42183017', 'partner_name': 'Amazon Web Services, Inc.', 'partner_website': 'aws.amazon.com', 'currency': 'USD', 'lines': [{'description': 'AWS Data Transfer', 'price_unit': '0.01'}, {'description': 'Amazon Elastic Compute Cloud', 'price_unit': '1.87'}, {'description': 'Amazon Glacier', 'price_unit': '2.22'}, {'description': 'Amazon Simple Storage Service', 'price_unit': '0.01'}], 'desc': 'Invoice from Amazon Web Services'}
+[2025/01/04 14:55:48] ppocr DEBUG: Namespace(help='==SUPPRESS==', use_gpu=False, use_xpu=False, use_npu=False, use_mlu=False, ir_optim=True, use_tensorrt=False, min_subgraph_size=15, precision='fp32', gpu_mem=500, gpu_id=0, image_dir=None, page_num=0, det_algorithm='DB', det_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\det\\en\\en_PP-OCRv3_det_infer', det_limit_side_len=960, det_limit_type='max', det_box_type='quad', det_db_thresh=0.3, det_db_box_thresh=0.6, det_db_unclip_ratio=1.5, max_batch_size=10, use_dilation=False, det_db_score_mode='fast', det_east_score_thresh=0.8, det_east_cover_thresh=0.1, det_east_nms_thresh=0.2, det_sast_score_thresh=0.5, det_sast_nms_thresh=0.2, det_pse_thresh=0, det_pse_box_thresh=0.85, det_pse_min_area=16, det_pse_scale=1, scales=[8, 16, 32], alpha=1.0, beta=1.0, fourier_degree=5, rec_algorithm='SVTR_LCNet', rec_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\rec\\en\\en_PP-OCRv4_rec_infer', rec_image_inverse=True, rec_image_shape='3, 48, 320', rec_batch_num=6, max_text_length=25, rec_char_dict_path='C:\\Users\\ayesha.amjad\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\paddleocr\\ppocr\\utils\\en_dict.txt', use_space_char=True, vis_font_path='./doc/fonts/simfang.ttf', drop_score=0.5, e2e_algorithm='PGNet', e2e_model_dir=None, e2e_limit_side_len=768, e2e_limit_type='max', e2e_pgnet_score_thresh=0.5, e2e_char_dict_path='./ppocr/utils/ic15_dict.txt', e2e_pgnet_valid_set='totaltext', e2e_pgnet_mode='fast', use_angle_cls=True, cls_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\cls\\ch_ppocr_mobile_v2.0_cls_infer', cls_image_shape='3, 48, 192', label_list=['0', '180'], cls_batch_num=6, cls_thresh=0.9, enable_mkldnn=False, cpu_threads=10, use_pdserving=False, warmup=False, sr_model_dir=None, sr_image_shape='3, 32, 128', sr_batch_num=1, draw_img_save_dir='./inference_results', save_crop_res=False, crop_res_save_dir='./output', use_mp=False, total_process_num=1, process_id=0, benchmark=False, save_log_path='./log_output/', show_log=True, use_onnx=False, return_word_box=False, output='./output', table_max_len=488, table_algorithm='TableAttn', table_model_dir=None, merge_no_span_structure=True, table_char_dict_path=None, formula_algorithm='LaTeXOCR', formula_model_dir=None, formula_char_dict_path=None, formula_batch_num=1, layout_model_dir=None, layout_dict_path=None, layout_score_threshold=0.5, layout_nms_threshold=0.5, kie_algorithm='LayoutXLM', ser_model_dir=None, re_model_dir=None, use_visual_backbone=True, ser_dict_path='../train_data/XFUND/class_list_xfun.txt', ocr_order_method=None, mode='structure', image_orientation=False, layout=True, table=True, formula=False, ocr=True, recovery=False, recovery_to_markdown=False, use_pdf2docx_api=False, invert=False, binarize=False, alphacolor=(255, 255, 255), lang='en', det=True, rec=True, type='ocr', savefile=False, ocr_version='PP-OCRv4', structure_version='PP-StructureV2')
+Processing document: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\compare\AmazonWebServices.pdf
+Processing as searchable PDF...
+Successfully read document with 1 pages
+<IPython.core.display.HTML object>
+
+
+Document classified as: Invoice (confidence: 100.0%)
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\schema_builder_prompt.txt
+
+Initial Prompt:
+
+You are a JSON schema builder. You will receive an unstructured form-like document and you will perform following tasks:
+
+1. Extract only the key phrases in key-value pairs, and header names in tables from the document.
+
+2. Arrange all keys phrases with data types in the parent region of the json and table header names in the child region.
+
+3. Ensure the order of key names and table headers aligns with the original text.
+
+4. ONLY include unique column names as they appear in the document, without duplicates or associated data.
+
+5. ONLY Respond with the JSON schema.
+
+Here is the content of the form-like document:
+
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+
+Initial Schema:
+ {
+  "Invoice": {
+    "Account number": "string",
+    "Invoice Number": "string",
+    "Invoice Date": "string",
+    "Bill to Address": "string",
+    "TOTAL AMOUNT DUE ON": "string",
+    "Billing Period": "string",
+    "Summary": {
+      "AWS Service Charges": "string",
+      "Charges": "string",
+      "Credits": "string",
+      "Tax": "string",
+      "Total for this invoice": "string"
+    },
+    "Detail": {
+      "AWS Data Transfer": "string",
+      "Charges": "string",
+      "VAT": "string",
+      "Amazon Elastic Compute Cloud": "string",
+      "Amazon Glacier": "string",
+      "Amazon Simple Storage Service": "string"
+    }
+  }
+}
+Initial Perplexity: 1.0232
+
+Current State:
+Perplexity: 1.0232
+
+............................. ITERATION 1 BEGINS.....................................
+
+Step 1
+
+Updated Prompt:
+
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to create a JSON schema from an unstructured form-like document by following these steps:
+
+1. **Extract Key Phrases**: Identify and extract key phrases in key-value pairs and header names in tables from the document.
+
+2. **Organize Structure**: Arrange all key phrases with their corresponding data types in the parent region of the JSON schema, and place table header names in the child region.
+
+3. **Maintain Order**: Ensure that the order of key names and table headers matches the original text.
+
+4. **Uniqueness**: Include only unique column names as they appear in the document, avoiding duplicates or associated data.
+
+5. **Output Format**: Respond exclusively with the JSON schema.
+
+### Examples:
+
+**Example 1:**
+Document Content:
+```
+Name: John Doe
+Age: 30
+Occupation: Engineer
+Skills:
+- Programming
+- Design
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Name": { "type": "string" },
+    "Age": { "type": "integer" },
+    "Occupation": { "type": "string" },
+    "Skills": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+**Example 2:**
+Document Content:
+```
+Product Name: Laptop
+Price: 1200.99
+Specifications:
+- RAM: 16GB
+- Storage: 512GB SSD
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Product Name": { "type": "string" },
+    "Price": { "type": "number" },
+    "Specifications": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+**Example 3:**
+Document Content:
+```
+Event Title: Conference 2023
+Date: 2023-09-15
+Location: New York
+Participants:
+- Speaker: Dr. Smith
+- Attendee: Jane Doe
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Event Title": { "type": "string" },
+    "Date": { "type": "string", "format": "date" },
+    "Location": { "type": "string" },
+    "Participants": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+```
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+
+Updated Schema:
+ {
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "Billing Period": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+Current Perplexity: 1.0145
+Best Perplexity: 1.0145
+Improved: True
+Non-improvement count: 0
+
+Action taken: 2
+Reward: 0.0000
+
+Terminated: False
+Total Return: 0.0000
+Metrics: {'perplexity': 1.0144716053758118, 'best_perplexity': 1.0144716053758118, 'improved': True, 'non_improvement_count': 0, 'steps': 1}
+
+Current State:
+Perplexity: 1.0145
+
+............................. ITERATION 2 BEGINS.....................................
+
+Step 2
+
+Updated Prompt:
+
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to create a JSON schema from an unstructured form-like document by following these steps:
+
+1. **Extract Key Phrases**: Identify and extract key phrases in key-value pairs and header names in tables from the document.
+
+2. **Organize Structure**: Arrange all key phrases with their corresponding data types in the parent region of the JSON schema, and place table header names in the child region.
+
+3. **Maintain Order**: Ensure that the order of key names and table headers matches the original text.
+
+4. **Uniqueness**: Include only unique column names as they appear in the document, avoiding duplicates or associated data.
+
+5. **Output Format**: Respond exclusively with the JSON schema.
+
+### Examples:
+
+**Example 1:**
+Document Content:
+```
+Name: John Doe
+Age: 30
+Occupation: Engineer
+Skills:
+- Programming
+- Design
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Name": { "type": "string" },
+    "Age": { "type": "integer" },
+    "Occupation": { "type": "string" },
+    "Skills": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+**Example 2:**
+Document Content:
+```
+Product Name: Laptop
+Price: 1200.99
+Specifications:
+- RAM: 16GB
+- Storage: 512GB SSD
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Product Name": { "type": "string" },
+    "Price": { "type": "number" },
+    "Specifications": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+**Example 3:**
+Document Content:
+```
+Event Title: Conference 2023
+Date: 2023-09-15
+Location: New York
+Participants:
+- Speaker: Dr. Smith
+- Attendee: Jane Doe
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Event Title": { "type": "string" },
+    "Date": { "type": "string", "format": "date" },
+    "Location": { "type": "string" },
+    "Participants": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+```
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+
+Updated Schema:
+ {
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "Billing Period": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+Current Perplexity: 1.0255
+Best Perplexity: 1.0145
+Improved: False
+Non-improvement count: 1
+
+Action taken: 2
+Reward: -0.0111
+
+Terminated: False
+Total Return: -0.0111
+Metrics: {'perplexity': 1.0255336862184754, 'best_perplexity': 1.0144716053758118, 'improved': False, 'non_improvement_count': 1, 'steps': 2}
+
+Current State:
+Perplexity: 1.0255
+
+............................. ITERATION 3 BEGINS.....................................
+
+Step 3
+
+Updated Prompt:
+
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to create a JSON schema from an unstructured form-like document by following these steps:
+
+1. **Extract Key Phrases**: Identify and extract key phrases in key-value pairs and header names in tables from the document.
+
+2. **Organize Structure**: Arrange all key phrases with their corresponding data types in the parent region of the JSON schema, and place table header names in the child region.
+
+3. **Maintain Order**: Ensure that the order of key names and table headers matches the original text.
+
+4. **Uniqueness**: Include only unique column names as they appear in the document, avoiding duplicates or associated data.
+
+5. **Output Format**: Respond exclusively with the JSON schema.
+
+### Examples:
+
+**Example 1:**
+Document Content:
+```
+Name: John Doe
+Age: 30
+Occupation: Engineer
+Skills:
+- Programming
+- Design
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Name": { "type": "string" },
+    "Age": { "type": "integer" },
+    "Occupation": { "type": "string" },
+    "Skills": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+**Example 2:**
+Document Content:
+```
+Product Name: Laptop
+Price: 1200.99
+Specifications:
+- RAM: 16GB
+- Storage: 512GB SSD
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Product Name": { "type": "string" },
+    "Price": { "type": "number" },
+    "Specifications": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+**Example 3:**
+Document Content:
+```
+Event Title: Conference 2023
+Date: 2023-09-15
+Location: New York
+Participants:
+- Speaker: Dr. Smith
+- Attendee: Jane Doe
+```
+JSON Schema Output:
+```json
+{
+  "type": "object",
+  "properties": {
+    "Event Title": { "type": "string" },
+    "Date": { "type": "string", "format": "date" },
+    "Location": { "type": "string" },
+    "Participants": { "type": "array", "items": { "type": "string" } }
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+```
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+
+Updated Schema:
+ {
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+Current Perplexity: 1.0163
+Best Perplexity: 1.0145
+Improved: False
+Non-improvement count: 2
+
+Terminating due to no improvements in last two updates
+Best Results Achieved:
+Perplexity: 1.0145
+
+Best Schema:
+{
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "Billing Period": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+
+Action taken: 2
+Reward: -0.0018
+
+Terminated: True
+Total Return: -0.0129
+Metrics: {'perplexity': 1.016299743306663, 'best_perplexity': 1.0144716053758118, 'improved': False, 'non_improvement_count': 2, 'steps': 3}
+
+Task completed successfully!
+Schema created and optimized
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\invoice_prompt.txt
+
+Processing page 1/1
+Start Prompt:
+
+### Instructions:
+You are a data extraction tool capable of extracting data from each page of an invoice.
+
+1. Please extract the data in this invoice and format it to the given output JSON schema.
+
+2. Extract all key-value pairs from the invoice.
+
+3. If there are tables in the invoice, capture all of the rows and columns in the JSON object.
+Even if a column is blank, include it as a key in the JSON object with a null value.
+
+4. If a row is blank denote missing fields with "null" values.
+
+5. If the page contains no charge data, please output an empty JSON object and don't make up any data.
+
+6. Don't interpolate or make up data.
+
+7. Please maintain the table structure of the charges, i.e. capture all of the rows and columns in the JSON object.
+
+8. Ensuring the order of key-value pairs and tabular data aligns with the original text.
+
+
+The language model must interpret and execute these extraction and formatting instructions accurately.
+
+Perform the task as per above instructions on the following invoice document:
+
+
+### INPUT Invoice:
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "Billing Period": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+
+
+Start Output:
+ {
+  "Account number": "296664039561",
+  "Invoice Number": "42183017",
+  "Invoice Date": "August 3 , 2014",
+  "Bill to Address": "ATTN: iViveLabs Limited\n93B Sai Yu Chung\nYuen Long, N.T., 0000, HK",
+  "TOTAL AMOUNT DUE ON": "$4.11",
+  "Billing Period": "July 1 - July 31 , 2014",
+  "AWS Service Charges": 4.11,
+  "Charges": 4.11,
+  "Credits": 0.0,
+  "Tax": 0.0,
+  "Total for this invoice": 4.11,
+  "Detail": [
+    {
+      "Service": "AWS Data Transfer",
+      "Charges": 0.01,
+      "VAT": 0.0
+    },
+    {
+      "Service": "Amazon Elastic Compute Cloud",
+      "Charges": 1.87,
+      "VAT": 0.0
+    },
+    {
+      "Service": "Amazon Glacier",
+      "Charges": 2.22,
+      "VAT": 0.0
+    },
+    {
+      "Service": "Amazon Simple Storage Service",
+      "Charges": 0.01,
+      "VAT": 0.0
+    }
+  ]
+}
+Environment Reset - Groundtruth: {'issuer': 'Amazon Web Services', 'amount': 4.11, 'amount_untaxed': 4.11, 'date': '2014-08-03', 'invoice_number': '42183017', 'partner_name': 'Amazon Web Services, Inc.', 'partner_website': 'aws.amazon.com', 'currency': 'USD', 'lines': [{'description': 'AWS Data Transfer', 'price_unit': '0.01'}, {'description': 'Amazon Elastic Compute Cloud', 'price_unit': '1.87'}, {'description': 'Amazon Glacier', 'price_unit': '2.22'}, {'description': 'Amazon Simple Storage Service', 'price_unit': '0.01'}], 'desc': 'Invoice from Amazon Web Services'}
+Exact Match - Generated type: <class 'str'>
+Exact Match - Generated fields: Not a dict
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['issuer', 'amount', 'amount_untaxed', 'date', 'invoice_number', 'partner_name', 'partner_website', 'currency', 'lines', 'desc'])
+Warning: Inputs must be dictionaries for field comparison
+
+Current State:
+Exact Match: 0.0000
+Similarity: 0.9070
+
+............................. ITERATION 1 BEGINS.....................................
+
+Step 1
+
+Updated Prompt:
+### Revised Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from each page of an invoice. Please follow the guidelines below to ensure accurate extraction and formatting according to the specified JSON schema.
+
+1. **Extract Data**: Extract the following key-value pairs from the invoice:
+   - `issuer`: The name of the issuer.
+   - `invoice_number`: The unique identifier for the invoice.
+   - `date`: The date of the invoice in 'YYYY-MM-DD' format.
+   - `partner_website`: The website of the partner.
+   - `total_amount`: The total amount due on the invoice.
+
+2. **Table Structure**: If the invoice contains a table of charges, capture all rows and columns in the `lines` array. Each entry in the `lines` array should be an object with the following keys:
+   - `description`: A description of the service or item.
+   - `price_unit`: The unit price of the service or item.
+   - `quantity`: The quantity of the service or item.
+   - `total_price`: The total price for that line item.
+
+3. **Handle Missing Data**:
+   - If any key is not present in the invoice, include it in the JSON output with a value of `null`.
+   - If a row in the table is blank, denote missing fields with `null` values for each key in that row.
+
+4. **Output Format**: Ensure that the JSON output adheres to the following structure:
+   ```json
+   {
+     "issuer": "string",
+     "invoice_number": "string",
+     "date": "YYYY-MM-DD",
+     "partner_website": "string",
+     "total_amount": "float",
+     "lines": [
+       {
+         "description": "string",
+         "price_unit": "float",
+         "quantity": "integer",
+         "total_price": "float"
+       }
+     ]
+   }
+   ```
+
+5. **Empty Invoices**: If the page contains no charge data, output an empty JSON object: `{}`. Do not fabricate or interpolate any data.
+
+6. **Consistency**: Maintain consistent formatting for monetary values (as floats) and ensure that the order of key-value pairs aligns with the original text.
+
+### Example Output:
+For an invoice with the following details:
+- Issuer: "ABC Corp"
+- Invoice Number: "12345"
+- Date: "2023-10-01"
+- Partner Website: "www.abccorp.com"
+- Total Amount: 150.00
+- Charges Table:
+  - Description: "Service A", Price Unit: 50.00, Quantity: 2, Total Price: 100.00
+  - Description: "Service B", Price Unit: 25.00, Quantity: 2, Total Price: 50.00
+
+The expected JSON output would be:
+```json
+{
+  "issuer": "ABC Corp",
+  "invoice_number": "12345",
+  "date": "2023-10-01",
+  "partner_website": "www.abccorp.com",
+  "total_amount": 150.00,
+  "lines": [
+    {
+      "description": "Service A",
+      "price_unit": 50.00,
+      "quantity": 2,
+      "total_price": 100.00
+    },
+    {
+      "description": "Service B",
+      "price_unit": 25.00,
+      "quantity": 2,
+      "total_price": 50.00
+    }
+  ]
+}
+```
+
+Please perform the task as per the above instructions on the following invoice document.
+
+
+### INPUT Invoice:
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "Billing Period": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+
+
+Updated Output:
+ {
+  "issuer": "Amazon Web Services",
+  "invoice_number": "42183017",
+  "date": "2014-08-03",
+  "partner_website": "aws.amazon.com",
+  "total_amount": 4.11,
+  "lines": [
+    {
+      "description": "AWS Data Transfer",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    },
+    {
+      "description": "Amazon Elastic Compute Cloud",
+      "price_unit": 1.87,
+      "quantity": 1,
+      "total_price": 1.87
+    },
+    {
+      "description": "Amazon Glacier",
+      "price_unit": 2.22,
+      "quantity": 1,
+      "total_price": 2.22
+    },
+    {
+      "description": "Amazon Simple Storage Service",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    }
+  ]
+}
+Exact Match - Generated type: <class 'str'>
+Exact Match - Generated fields: Not a dict
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['issuer', 'amount', 'amount_untaxed', 'date', 'invoice_number', 'partner_name', 'partner_website', 'currency', 'lines', 'desc'])
+Warning: Inputs must be dictionaries for field comparison
+Current Scores - Exact Match: 0.0000, Similarity: 0.9623
+Best Scores    - Exact Match: 0.0000, Similarity: 0.9623
+
+Action taken: 3
+Reward: 0.0552
+
+Terminated: False
+Total Return: 0.0552
+Metrics: {'exact_match': 0.0, 'similarity': 0.962258644660359, 'best_exact_match': 0.0, 'best_similarity': 0.962258644660359, 'improved': True, 'non_improvement_count': 0, 'steps': 1}
+
+Current State:
+Exact Match: 0.0000
+Similarity: 0.9623
+
+............................. ITERATION 2 BEGINS.....................................
+
+Step 2
+
+Updated Prompt:
+### Improved Instruction Prompt:
+
+### Goal:
+Extract structured data from each page of an invoice and format it according to the specified JSON schema.
+
+### Instructions:
+
+1. **Extract Key Data**:
+   - Identify and extract the following key-value pairs:
+     - `issuer`: Name of the issuer.
+     - `invoice_number`: Unique identifier for the invoice.
+     - `date`: Invoice date in 'YYYY-MM-DD' format.
+     - `partner_website`: Partner's website URL.
+     - `total_amount`: Total amount due on the invoice.
+
+2. **Capture Table Data**:
+   - If the invoice includes a table of charges:
+     - Extract all rows and columns into the `lines` array.
+     - Each entry in the `lines` array must be an object containing:
+       - `description`: Description of the service or item.
+       - `price_unit`: Unit price of the service or item.
+       - `quantity`: Quantity of the service or item.
+       - `total_price`: Total price for that line item.
+
+3. **Handle Missing Data**:
+   - If any key is missing, include it in the JSON output with a value of `null`.
+   - For any blank row in the table, set all keys in that row to `null`.
+
+4. **Format JSON Output**:
+   - Ensure the JSON output follows this structure:
+   ```json
+   {
+     "issuer": "string",
+     "invoice_number": "string",
+     "date": "YYYY-MM-DD",
+     "partner_website": "string",
+     "total_amount": "float",
+     "lines": [
+       {
+         "description": "string",
+         "price_unit": "float",
+         "quantity": "integer",
+         "total_price": "float"
+       }
+     ]
+   }
+   ```
+
+5. **Handle Empty Invoices**:
+   - If the invoice contains no charge data, output an empty JSON object: `{}`.
+   - Do not create or estimate any data.
+
+6. **Ensure Consistency**:
+   - Format monetary values as floats.
+   - Maintain the order of key-value pairs as they appear in the invoice.
+
+### Example Output:
+For an invoice with the following details:
+- Issuer: "ABC Corp"
+- Invoice Number: "12345"
+- Date: "2023-10-01"
+- Partner Website: "www.abccorp.com"
+- Total Amount: 150.00
+- Charges Table:
+  - Description: "Service A", Price Unit: 50.00, Quantity: 2, Total Price: 100.00
+  - Description: "Service B", Price Unit: 25.00, Quantity: 2, Total Price: 50.00
+
+The expected JSON output would be:
+```json
+{
+  "issuer": "ABC Corp",
+  "invoice_number": "12345",
+  "date": "2023-10-01",
+  "partner_website": "www.abccorp.com",
+  "total_amount": 150.00,
+  "lines": [
+    {
+      "description": "Service A",
+      "price_unit": 50.00,
+      "quantity": 2,
+      "total_price": 100.00
+    },
+    {
+      "description": "Service B",
+      "price_unit": 25.00,
+      "quantity": 2,
+      "total_price": 50.00
+    }
+  ]
+}
+```
+
+### Task:
+Perform the data extraction and formatting as per the above instructions on the provided invoice document.
+
+
+### INPUT Invoice:
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "Billing Period": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+
+
+Updated Output:
+ {
+  "issuer": "Amazon Web Services",
+  "invoice_number": "42183017",
+  "date": "2014-08-03",
+  "partner_website": "aws.amazon.com",
+  "total_amount": 4.11,
+  "lines": [
+    {
+      "description": "AWS Data Transfer",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    },
+    {
+      "description": "Amazon Elastic Compute Cloud",
+      "price_unit": 1.87,
+      "quantity": 1,
+      "total_price": 1.87
+    },
+    {
+      "description": "Amazon Glacier",
+      "price_unit": 2.22,
+      "quantity": 1,
+      "total_price": 2.22
+    },
+    {
+      "description": "Amazon Simple Storage Service",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    }
+  ]
+}
+Exact Match - Generated type: <class 'str'>
+Exact Match - Generated fields: Not a dict
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['issuer', 'amount', 'amount_untaxed', 'date', 'invoice_number', 'partner_name', 'partner_website', 'currency', 'lines', 'desc'])
+Warning: Inputs must be dictionaries for field comparison
+Current Scores - Exact Match: 0.0000, Similarity: 0.9623
+Best Scores    - Exact Match: 0.0000, Similarity: 0.9623
+
+Action taken: 1
+Reward: 0.0000
+
+Terminated: False
+Total Return: 0.0552
+Metrics: {'exact_match': 0.0, 'similarity': 0.962258644660359, 'best_exact_match': 0.0, 'best_similarity': 0.962258644660359, 'improved': False, 'non_improvement_count': 1, 'steps': 2}
+
+Current State:
+Exact Match: 0.0000
+Similarity: 0.9623
+
+............................. ITERATION 3 BEGINS.....................................
+
+Step 3
+
+Updated Prompt:
+### Improved Instruction Prompt:
+
+### Goal:
+Extract structured data from each page of an invoice and format it according to the specified JSON schema.
+
+### Instructions:
+
+1. **Extract Key Data**:
+   - Identify and extract the following key-value pairs:
+     - `issuer`: Name of the issuer.
+     - `invoice_number`: Unique identifier for the invoice.
+     - `date`: Invoice date in 'YYYY-MM-DD' format.
+     - `partner_website`: Partner's website URL.
+     - `total_amount`: Total amount due on the invoice.
+
+2. **Capture Table Data**:
+   - If the invoice includes a table of charges:
+     - Extract all rows and columns into the `lines` array.
+     - Each entry in the `lines` array must be an object containing:
+       - `description`: Description of the service or item.
+       - `price_unit`: Unit price of the service or item.
+       - `quantity`: Quantity of the service or item.
+       - `total_price`: Total price for that line item.
+
+3. **Handle Missing Data**:
+   - If any key is missing, include it in the JSON output with a value of `null`.
+   - For any blank row in the table, set all keys in that row to `null`.
+
+4. **Format JSON Output**:
+   - Ensure the JSON output follows this structure:
+   ```json
+   {
+     "issuer": "string",
+     "invoice_number": "string",
+     "date": "YYYY-MM-DD",
+     "partner_website": "string",
+     "total_amount": "float",
+     "lines": [
+       {
+         "description": "string",
+         "price_unit": "float",
+         "quantity": "integer",
+         "total_price": "float"
+       }
+     ]
+   }
+   ```
+
+5. **Handle Empty Invoices**:
+   - If the invoice contains no charge data, output an empty JSON object: `{}`.
+   - Do not create or estimate any data.
+
+6. **Ensure Consistency**:
+   - Format monetary values as floats.
+   - Maintain the order of key-value pairs as they appear in the invoice.
+
+### Example Output:
+For an invoice with the following details:
+- Issuer: "ABC Corp"
+- Invoice Number: "12345"
+- Date: "2023-10-01"
+- Partner Website: "www.abccorp.com"
+- Total Amount: 150.00
+- Charges Table:
+  - Description: "Service A", Price Unit: 50.00, Quantity: 2, Total Price: 100.00
+  - Description: "Service B", Price Unit: 25.00, Quantity: 2, Total Price: 50.00
+
+The expected JSON output would be:
+```json
+{
+  "issuer": "ABC Corp",
+  "invoice_number": "12345",
+  "date": "2023-10-01",
+  "partner_website": "www.abccorp.com",
+  "total_amount": 150.00,
+  "lines": [
+    {
+      "description": "Service A",
+      "price_unit": 50.00,
+      "quantity": 2,
+      "total_price": 100.00
+    },
+    {
+      "description": "Service B",
+      "price_unit": 25.00,
+      "quantity": 2,
+      "total_price": 50.00
+    }
+  ]
+}
+```
+
+### Task:
+Perform the data extraction and formatting as per the above instructions on the provided invoice document.
+
+
+### INPUT Invoice:
+
+
+
+
+
+
+                                   Amazon   Web  Services Invoice
+
+                                   Email or talk to us about your AWS account or bill, visit aws.amazon.com/contact-us/
+     Account number:               Invoice Summary
+     296664039561
+                                   Invoice Number:                        42183017
+                                   Invoice Date:                       August 3 , 2014
+     Bill to Address:
+     ATTN: iViveLabs Limited       TOTAL AMOUNT DUE ON August 3 , 2014     $4.11
+     93B Sai Yu Chung
+     Yuen Long, N.T., 0000, HK
+
+     This invoice is for the billing period July 1 - July 31 , 2014
+
+     Greetings from Amazon Web Services, we're writing to provide you with an electronic invoice for your use of AWS services. Additional information
+     regarding your bill, individual service charge details, and your account history are available on the Account Activity Page.
+     Summary
+
+       AWS Service Charges                                                  $4.11
+        Charges                                                             $4.11
+        Credits                                                             $0.00
+        Tax *                                                               $0.00
+
+     Total for this invoice                                                 $4.11
+
+
+     Detail
+       AWS Data Transfer                                                    $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+       Amazon Elastic Compute Cloud                                         $1.87
+        Charges                                                             $1.87
+        VAT **                                                              $0.00
+       Amazon Glacier                                                       $2.22
+
+        Charges                                                             $2.22
+        VAT **                                                              $0.00
+       Amazon Simple Storage Service                                        $0.01
+        Charges                                                             $0.01
+
+        VAT **                                                              $0.00
+
+
+
+     * May include estimated US sales tax, VAT, GST and CT Service Provider:
+     ** This is not a VAT invoice                          (Not to be used for payment remittance)
+     *** Check the GST statement attached at the end of this Invoice Amazon Web Services, Inc.
+     f †o Ur sd ae gt ea i als nd recurring charges for this statement period will be charged on 4 S1 e0 a tT tle er ,r y W A Av e 9 8N 1o 0rt 9h -5210, US
+     your next billing date. The amount of your actual charges for this statement
+     period may differ from the charges shown on this page. The charges
+     shown on this page do not include any additional usage charges accrued
+     during this statement period after the date you are viewing this page. Also,
+     one-time fees and subscription charges are assessed separately, on the
+     date that they occur.
+     All charges and prices are in US Dollars
+     All AWS Services are sold by Amazon Web Services, Inc.
+                                                                               1
+
+Summary
+AWS Service Charges $4.11
+Charges $4.11
+Credits $0.00
+Tax * $0.00
+Total for this invoice  $4.11
+
+Detail
+AWS Data Transfer $0.01
+Charges $0.01
+VAT ** $0.00
+Amazon Elastic Compute Cloud $1.87
+Charges $1.87
+VAT ** $0.00
+Amazon Glacier $2.22
+Charges $2.22
+VAT ** $0.00
+Amazon Simple Storage Service $0.01
+Charges $0.01
+VAT ** $0.00
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "type": "object",
+  "properties": {
+    "Account number": { "type": "string" },
+    "Invoice Number": { "type": "string" },
+    "Invoice Date": { "type": "string" },
+    "Bill to Address": { "type": "string" },
+    "TOTAL AMOUNT DUE ON": { "type": "string" },
+    "Billing Period": { "type": "string" },
+    "AWS Service Charges": { "type": "number" },
+    "Charges": { "type": "number" },
+    "Credits": { "type": "number" },
+    "Tax": { "type": "number" },
+    "Total for this invoice": { "type": "number" },
+    "Detail": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Service": { "type": "string" },
+          "Charges": { "type": "number" },
+          "VAT": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+
+
+Updated Output:
+ {
+  "issuer": "Amazon Web Services",
+  "invoice_number": "42183017",
+  "date": "2014-08-03",
+  "partner_website": "aws.amazon.com",
+  "total_amount": 4.11,
+  "lines": [
+    {
+      "description": "AWS Data Transfer",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    },
+    {
+      "description": "Amazon Elastic Compute Cloud",
+      "price_unit": 1.87,
+      "quantity": 1,
+      "total_price": 1.87
+    },
+    {
+      "description": "Amazon Glacier",
+      "price_unit": 2.22,
+      "quantity": 1,
+      "total_price": 2.22
+    },
+    {
+      "description": "Amazon Simple Storage Service",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    }
+  ]
+}
+Exact Match - Generated type: <class 'str'>
+Exact Match - Generated fields: Not a dict
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['issuer', 'amount', 'amount_untaxed', 'date', 'invoice_number', 'partner_name', 'partner_website', 'currency', 'lines', 'desc'])
+Warning: Inputs must be dictionaries for field comparison
+Current Scores - Exact Match: 0.0000, Similarity: 0.9623
+Best Scores    - Exact Match: 0.0000, Similarity: 0.9623
+
+Terminating due to no improvements in last two updates
+Best Results Achieved:
+Exact Match: 0.0000
+Similarity: 0.9623
+Best Prompt:
+ ### Revised Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from each page of an invoice. Please follow the guidelines below to ensure accurate extraction and formatting according to the specified JSON schema.
+
+1. **Extract Data**: Extract the following key-value pairs from the invoice:
+   - `issuer`: The name of the issuer.
+   - `invoice_number`: The unique identifier for the invoice.
+   - `date`: The date of the invoice in 'YYYY-MM-DD' format.
+   - `partner_website`: The website of the partner.
+   - `total_amount`: The total amount due on the invoice.
+
+2. **Table Structure**: If the invoice contains a table of charges, capture all rows and columns in the `lines` array. Each entry in the `lines` array should be an object with the following keys:
+   - `description`: A description of the service or item.
+   - `price_unit`: The unit price of the service or item.
+   - `quantity`: The quantity of the service or item.
+   - `total_price`: The total price for that line item.
+
+3. **Handle Missing Data**:
+   - If any key is not present in the invoice, include it in the JSON output with a value of `null`.
+   - If a row in the table is blank, denote missing fields with `null` values for each key in that row.
+
+4. **Output Format**: Ensure that the JSON output adheres to the following structure:
+   ```json
+   {
+     "issuer": "string",
+     "invoice_number": "string",
+     "date": "YYYY-MM-DD",
+     "partner_website": "string",
+     "total_amount": "float",
+     "lines": [
+       {
+         "description": "string",
+         "price_unit": "float",
+         "quantity": "integer",
+         "total_price": "float"
+       }
+     ]
+   }
+   ```
+
+5. **Empty Invoices**: If the page contains no charge data, output an empty JSON object: `{}`. Do not fabricate or interpolate any data.
+
+6. **Consistency**: Maintain consistent formatting for monetary values (as floats) and ensure that the order of key-value pairs aligns with the original text.
+
+### Example Output:
+For an invoice with the following details:
+- Issuer: "ABC Corp"
+- Invoice Number: "12345"
+- Date: "2023-10-01"
+- Partner Website: "www.abccorp.com"
+- Total Amount: 150.00
+- Charges Table:
+  - Description: "Service A", Price Unit: 50.00, Quantity: 2, Total Price: 100.00
+  - Description: "Service B", Price Unit: 25.00, Quantity: 2, Total Price: 50.00
+
+The expected JSON output would be:
+```json
+{
+  "issuer": "ABC Corp",
+  "invoice_number": "12345",
+  "date": "2023-10-01",
+  "partner_website": "www.abccorp.com",
+  "total_amount": 150.00,
+  "lines": [
+    {
+      "description": "Service A",
+      "price_unit": 50.00,
+      "quantity": 2,
+      "total_price": 100.00
+    },
+    {
+      "description": "Service B",
+      "price_unit": 25.00,
+      "quantity": 2,
+      "total_price": 50.00
+    }
+  ]
+}
+```
+
+Please perform the task as per the above instructions on the following invoice document.
+
+Best Output:
+ {
+  "issuer": "Amazon Web Services",
+  "invoice_number": "42183017",
+  "date": "2014-08-03",
+  "partner_website": "aws.amazon.com",
+  "total_amount": 4.11,
+  "lines": [
+    {
+      "description": "AWS Data Transfer",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    },
+    {
+      "description": "Amazon Elastic Compute Cloud",
+      "price_unit": 1.87,
+      "quantity": 1,
+      "total_price": 1.87
+    },
+    {
+      "description": "Amazon Glacier",
+      "price_unit": 2.22,
+      "quantity": 1,
+      "total_price": 2.22
+    },
+    {
+      "description": "Amazon Simple Storage Service",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    }
+  ]
+}
+
+Action taken: 1
+Reward: 0.0000
+
+Terminated: True
+Total Return: 0.0552
+Metrics: {'exact_match': 0.0, 'similarity': 0.962258644660359, 'best_exact_match': 0.0, 'best_similarity': 0.962258644660359, 'improved': False, 'non_improvement_count': 2, 'steps': 3}
+
+Task completed successfully!
+
+Data extraction completed
+Results saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\AmazonWebServices_extracted.json
+Metrics updated in: output\extraction_metrics.xlsx
+
+Processing complete!
+Document Type: Invoice
+Number of Pages: 1
+Extracted Data: {
+  "issuer": [
+    "Amazon Web Services"
+  ],
+  "invoice_number": [
+    "42183017"
+  ],
+  "date": [
+    "2014-08-03"
+  ],
+  "partner_website": [
+    "aws.amazon.com"
+  ],
+  "total_amount": [
+    4.11
+  ],
+  "lines": [
+    {
+      "description": "AWS Data Transfer",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    },
+    {
+      "description": "Amazon Elastic Compute Cloud",
+      "price_unit": 1.87,
+      "quantity": 1,
+      "total_price": 1.87
+    },
+    {
+      "description": "Amazon Glacier",
+      "price_unit": 2.22,
+      "quantity": 1,
+      "total_price": 2.22
+    },
+    {
+      "description": "Amazon Simple Storage Service",
+      "price_unit": 0.01,
+      "quantity": 1,
+      "total_price": 0.01
+    }
+  ]
+}
