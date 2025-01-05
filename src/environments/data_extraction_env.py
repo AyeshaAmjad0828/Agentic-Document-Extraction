@@ -49,7 +49,7 @@ class DataExtractionEnvBase(gym.Env):
         self.current_step += 1
 
 
-        print(f"\n............................. ITERATION {self.current_step} BEGINS.....................................")
+        print(f"\n............................. DATA EXTRACTION - ITERATION {self.current_step} BEGINS.....................................")
         
         # Get updated prompt using meta-prompting agent
         updated_prompt = adjust_prompt(
@@ -177,7 +177,7 @@ class DataExtractionEnvIterative(gym.Env):
     def step(self, action):
         self.current_step += 1
 
-        print(f"\n............................. ITERATION {self.current_step} BEGINS.....................................")
+        print(f"\n............................. DATA EXTRACTION - ITERATION {self.current_step} BEGINS.....................................")
         
         # Get updated prompt using meta-prompting agent
         updated_prompt = adjust_prompt(
@@ -348,7 +348,7 @@ class DataExtractionEnvStepCount(gym.Env):
         """Execute one step in the environment"""
         self.current_step += 1
         
-        print(f"\n............................. ITERATION {self.current_step} BEGINS.....................................")
+        print(f"\n............................. DATA EXTRACTION - ITERATION {self.current_step} BEGINS.....................................")
 
         # Get updated prompt using meta-prompting agent
         updated_prompt = adjust_prompt(
