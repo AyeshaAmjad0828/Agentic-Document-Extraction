@@ -1,0 +1,2950 @@
+Loaded extraction groundtruth
+Received extraction_groundtruth: {'company': 'OJC MARKETING SDN BHD', 'date': '15/01/2019', 'address': 'NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR', 'total': '193.00'}
+[2025/01/04 20:32:19] ppocr DEBUG: Namespace(help='==SUPPRESS==', use_gpu=False, use_xpu=False, use_npu=False, use_mlu=False, ir_optim=True, use_tensorrt=False, min_subgraph_size=15, precision='fp32', gpu_mem=500, gpu_id=0, image_dir=None, page_num=0, det_algorithm='DB', det_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\det\\en\\en_PP-OCRv3_det_infer', det_limit_side_len=960, det_limit_type='max', det_box_type='quad', det_db_thresh=0.3, det_db_box_thresh=0.6, det_db_unclip_ratio=1.5, max_batch_size=10, use_dilation=False, det_db_score_mode='fast', det_east_score_thresh=0.8, det_east_cover_thresh=0.1, det_east_nms_thresh=0.2, det_sast_score_thresh=0.5, det_sast_nms_thresh=0.2, det_pse_thresh=0, det_pse_box_thresh=0.85, det_pse_min_area=16, det_pse_scale=1, scales=[8, 16, 32], alpha=1.0, beta=1.0, fourier_degree=5, rec_algorithm='SVTR_LCNet', rec_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\rec\\en\\en_PP-OCRv4_rec_infer', rec_image_inverse=True, rec_image_shape='3, 48, 320', rec_batch_num=6, max_text_length=25, rec_char_dict_path='C:\\Users\\ayesha.amjad\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\paddleocr\\ppocr\\utils\\en_dict.txt', use_space_char=True, vis_font_path='./doc/fonts/simfang.ttf', drop_score=0.5, e2e_algorithm='PGNet', e2e_model_dir=None, e2e_limit_side_len=768, e2e_limit_type='max', e2e_pgnet_score_thresh=0.5, e2e_char_dict_path='./ppocr/utils/ic15_dict.txt', e2e_pgnet_valid_set='totaltext', e2e_pgnet_mode='fast', use_angle_cls=True, cls_model_dir='C:\\Users\\ayesha.amjad/.paddleocr/whl\\cls\\ch_ppocr_mobile_v2.0_cls_infer', cls_image_shape='3, 48, 192', label_list=['0', '180'], cls_batch_num=6, cls_thresh=0.9, enable_mkldnn=False, cpu_threads=10, use_pdserving=False, warmup=False, sr_model_dir=None, sr_image_shape='3, 32, 128', sr_batch_num=1, draw_img_save_dir='./inference_results', save_crop_res=False, crop_res_save_dir='./output', use_mp=False, total_process_num=1, process_id=0, benchmark=False, save_log_path='./log_output/', show_log=True, use_onnx=False, return_word_box=False, output='./output', table_max_len=488, table_algorithm='TableAttn', table_model_dir=None, merge_no_span_structure=True, table_char_dict_path=None, formula_algorithm='LaTeXOCR', formula_model_dir=None, formula_char_dict_path=None, formula_batch_num=1, layout_model_dir=None, layout_dict_path=None, layout_score_threshold=0.5, layout_nms_threshold=0.5, kie_algorithm='LayoutXLM', ser_model_dir=None, re_model_dir=None, use_visual_backbone=True, ser_dict_path='../train_data/XFUND/class_list_xfun.txt', ocr_order_method=None, mode='structure', image_orientation=False, layout=True, table=True, formula=False, ocr=True, recovery=False, recovery_to_markdown=False, use_pdf2docx_api=False, invert=False, binarize=False, alphacolor=(255, 255, 255), lang='en', det=True, rec=True, type='ocr', savefile=False, ocr_version='PP-OCRv4', structure_version='PP-StructureV2')
+Processing document: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\receipts-2\000.jpg
+Processing image: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\receipts-2\000.jpg
+[2025/01/04 20:32:20] ppocr DEBUG: dt_boxes num : 44, elapsed : 0.32575011253356934
+[2025/01/04 20:32:21] ppocr DEBUG: cls num  : 44, elapsed : 0.1635148525238037
+[2025/01/04 20:32:24] ppocr DEBUG: rec_res num  : 44, elapsed : 3.038038969039917
+Image processed with confidence: 0.95
+Successfully read document with 1 pages
+<IPython.core.display.HTML object>
+
+
+Document classified as: Invoice (confidence: 100.0%)
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\schema_builder_prompt.txt
+
+Initial Prompt:
+
+You are a JSON schema builder. You will receive an unstructured form-like document and you will perform following tasks:
+
+1. Extract only the key phrases in key-value pairs, and header names in tables from the document.
+
+2. Arrange all keys phrases with data types in the parent region of the json and table header names in the child region.
+
+3. Ensure the order of key names and table headers aligns with the original text.
+
+4. ONLY include unique column names as they appear in the document, without duplicates or associated data.
+
+5. ONLY Respond with the JSON schema.
+
+Here is the content of the form-like document:
+
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+
+Initial Schema:
+ {
+  "schema": {
+    "keys": {
+      "Company Name": "string",
+      "ROC NO": "string",
+      "Address": "string",
+      "Telephone": "string",
+      "Fax": "string",
+      "Email": "string",
+      "Invoice No": "string",
+      "Date": "string",
+      "Cashier": "string",
+      "Sales Person": "string",
+      "Bill To": "string",
+      "Total Exclude GST": "number",
+      "Total GST@6%": "number",
+      "Total Inclusive GST": "number",
+      "Round Amt": "number",
+      "TOTAL": "number",
+      "Payment Method": "string",
+      "Approval Code": "string",
+      "Return Policy": "string"
+    },
+    "tables": {
+      "Description": "string",
+      "Qty": "number",
+      "Price": "number",
+      "Amount": "number"
+    }
+  }
+}
+Initial Perplexity: 1.0229
+
+Current State:
+Perplexity: 1.0229
+
+............................. ITERATION 1 BEGINS.....................................
+
+Step 1
+
+Updated Prompt:
+
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to convert an unstructured form-like document into a structured JSON schema. Follow these steps:
+
+1. Extract key phrases as key-value pairs and table header names from the document.
+2. Organize the extracted key phrases with their corresponding data types in the parent region of the JSON schema, and place the table header names in the child region.
+3. Maintain the original order of key names and table headers as they appear in the document.
+4. Include only unique column names without duplicates or associated data.
+5. Respond exclusively with the JSON schema.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john.doe@example.com
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Apple         | 1.00  | 50
+Banana        | 0.50  | 100
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+
+Updated Schema:
+ {
+  "properties": {
+    "Company Name": "string",
+    "ROC NO": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "TOTAL": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+Current Perplexity: 1.0162
+Best Perplexity: 1.0162
+Improved: True
+Non-improvement count: 0
+
+Action taken: 2
+Reward: 0.0000
+
+Terminated: False
+Total Return: 0.0000
+Metrics: {'perplexity': 1.0162083698730056, 'best_perplexity': 1.0162083698730056, 'improved': True, 'non_improvement_count': 0, 'steps': 1}
+
+Current State:
+Perplexity: 1.0162
+
+............................. ITERATION 2 BEGINS.....................................
+
+Step 2
+
+Updated Prompt:
+
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to convert an unstructured form-like document into a structured JSON schema. Follow these steps:
+
+1. Extract key phrases as key-value pairs and table header names from the document.
+2. Organize the extracted key phrases with their corresponding data types in the parent region of the JSON schema, and place the table header names in the child region.
+3. Maintain the original order of key names and table headers as they appear in the document.
+4. Include only unique column names without duplicates or associated data.
+5. Respond exclusively with the JSON schema.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john.doe@example.com
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Apple         | 1.00  | 50
+Banana        | 0.50  | 100
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+
+Updated Schema:
+ {
+  "properties": {
+    "Company Name": "string",
+    "ROC NO": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "TOTAL": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+Current Perplexity: 1.0155
+Best Perplexity: 1.0155
+Improved: True
+Non-improvement count: 0
+
+Action taken: 2
+Reward: 0.0000
+
+Terminated: False
+Total Return: 0.0000
+Metrics: {'perplexity': 1.0154866885099938, 'best_perplexity': 1.0154866885099938, 'improved': True, 'non_improvement_count': 0, 'steps': 2}
+
+Current State:
+Perplexity: 1.0155
+
+............................. ITERATION 3 BEGINS.....................................
+
+Step 3
+
+Updated Prompt:
+
+### Improved Instruction Prompt:
+
+```
+**Goal:** Convert an unstructured form-like document into a structured JSON schema.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify key phrases and table header names from the document.
+   - Record them as key-value pairs.
+
+2. **Organize Extracted Data:**
+   - Place key phrases in the parent region of the JSON schema.
+   - Place table header names in the child region.
+
+3. **Maintain Order:**
+   - Keep the original order of key names and table headers as they appear in the document.
+
+4. **Ensure Uniqueness:**
+   - Include only unique column names.
+   - Avoid duplicates and associated data.
+
+5. **Respond with JSON Schema:**
+   - Provide the output exclusively in JSON schema format.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john.doe@example.com
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Apple         | 1.00  | 50
+Banana        | 0.50  | 100
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+```
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+
+Updated Schema:
+ {
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "TOTAL": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+Current Perplexity: 1.0119
+Best Perplexity: 1.0119
+Improved: True
+Non-improvement count: 0
+
+Action taken: 1
+Reward: 0.0000
+
+Terminated: False
+Total Return: 0.0000
+Metrics: {'perplexity': 1.0119396225751798, 'best_perplexity': 1.0119396225751798, 'improved': True, 'non_improvement_count': 0, 'steps': 3}
+
+Current State:
+Perplexity: 1.0119
+
+............................. ITERATION 4 BEGINS.....................................
+
+Step 4
+
+Updated Prompt:
+
+```
+**Goal:** Convert an unstructured form-like document into a structured JSON schema.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify key phrases and table header names from the document.
+   - Record them as key-value pairs.
+
+2. **Organize Extracted Data:**
+   - Place key phrases in the parent region of the JSON schema.
+   - Place table header names in the child region.
+
+3. **Maintain Order:**
+   - Keep the original order of key names and table headers as they appear in the document.
+
+4. **Ensure Uniqueness:**
+   - Include only unique column names.
+   - Avoid duplicates and associated data.
+
+5. **Respond with JSON Schema:**
+   - Provide the output exclusively in JSON schema format.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john.doe@example.com
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Apple         | 1.00  | 50
+Banana        | 0.50  | 100
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+```
+```
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+
+Updated Schema:
+ {
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+Current Perplexity: 1.0115
+Best Perplexity: 1.0115
+Improved: True
+Non-improvement count: 0
+
+Action taken: 2
+Reward: 0.0000
+
+Terminated: False
+Total Return: 0.0000
+Metrics: {'perplexity': 1.0115300107119498, 'best_perplexity': 1.0115300107119498, 'improved': True, 'non_improvement_count': 0, 'steps': 4}
+
+Current State:
+Perplexity: 1.0115
+
+............................. ITERATION 5 BEGINS.....................................
+
+Step 5
+
+Updated Prompt:
+
+```
+**Goal:** Convert an unstructured form-like document into a structured JSON schema.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify key phrases and table header names from the document.
+   - Record them as key-value pairs.
+
+2. **Organize Extracted Data:**
+   - Place key phrases in the parent region of the JSON schema.
+   - Place table header names in the child region.
+
+3. **Maintain Order:**
+   - Keep the original order of key names and table headers as they appear in the document.
+
+4. **Ensure Uniqueness:**
+   - Include only unique column names.
+   - Avoid duplicates and associated data.
+
+5. **Respond with JSON Schema:**
+   - Provide the output exclusively in JSON schema format.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john.doe@example.com
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Apple         | 1.00  | 50
+Banana        | 0.50  | 100
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+**Here is the content of the form-like document:**
+```
+```
+```
+```
+```
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+
+Updated Schema:
+ {
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+Current Perplexity: 1.0166
+Best Perplexity: 1.0115
+Improved: False
+Non-improvement count: 1
+
+Action taken: 2
+Reward: -0.0051
+
+Terminated: False
+Total Return: -0.0051
+Metrics: {'perplexity': 1.0166350235183679, 'best_perplexity': 1.0115300107119498, 'improved': False, 'non_improvement_count': 1, 'steps': 5}
+
+Current State:
+Perplexity: 1.0166
+
+............................. ITERATION 6 BEGINS.....................................
+
+Step 6
+
+Updated Prompt:
+
+```
+**Goal:** Convert an unstructured form-like document into a structured JSON schema.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify key phrases and table header names from the document.
+   - Record each key phrase and table header as key-value pairs.
+
+2. **Organize Extracted Data:**
+   - Place key phrases in the parent region of the JSON schema.
+   - Place table header names in the child region.
+
+3. **Maintain Order:**
+   - Preserve the original order of key phrases and table headers as they appear in the document.
+
+4. **Ensure Uniqueness:**
+   - Include only unique key phrases and table headers.
+   - Eliminate duplicates.
+
+5. **Respond with JSON Schema:**
+   - Provide the output exclusively in JSON schema format.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john.doe@example.com
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Apple         | 1.00  | 50
+Banana        | 0.50  | 100
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+**Here is the content of the form-like document:**
+```
+```
+```
+```
+```
+```
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+
+Updated Schema:
+ {
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+Current Perplexity: 1.0148
+Best Perplexity: 1.0115
+Improved: False
+Non-improvement count: 2
+
+Terminating due to no improvements in last two updates
+Best Results Achieved:
+Perplexity: 1.0115
+
+Best Schema:
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+Action taken: 1
+Reward: -0.0032
+
+Terminated: True
+Total Return: -0.0083
+Metrics: {'perplexity': 1.0147550501079645, 'best_perplexity': 1.0115300107119498, 'improved': False, 'non_improvement_count': 2, 'steps': 6}
+
+Task completed successfully!
+Schema created and optimized
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\invoice_prompt.txt
+
+Processing page 1/1
+Start Prompt:
+
+### Instructions:
+You are a data extraction tool capable of extracting data from each page of an invoice.
+
+1. Please extract the data in this invoice and format it to the given output JSON schema.
+
+2. Extract all key-value pairs from the invoice.
+
+3. If there are tables in the invoice, capture all of the rows and columns in the JSON object.
+Even if a column is blank, include it as a key in the JSON object with a null value.
+
+4. If a row is blank denote missing fields with "null" values.
+
+5. If the page contains no charge data, please output an empty JSON object and don't make up any data.
+
+6. Don't interpolate or make up data.
+
+7. Please maintain the table structure of the charges, i.e. capture all of the rows and columns in the JSON object.
+
+8. Ensuring the order of key-value pairs and tabular data aligns with the original text.
+
+
+The language model must interpret and execute these extraction and formatting instructions accurately.
+
+Perform the task as per above instructions on the following invoice document:
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Start Output:
+ {
+  "Company Name": "OJC MARKETING SDN BHD",
+  "ROC No": "538358-H",
+  "Address": "NO2&4JALAN BAYU4, BANDAR SERI ALAM, 81750MASAI,JOHOR",
+  "Telephone": "07-3882218",
+  "Fax": "07-3888218",
+  "Email": "ng@ojcgroup.com",
+  "Invoice No": "PEGIV-1030765",
+  "Date": "15/01/2019 11:05:16 AM",
+  "Cashier": "NG CHUAN MIN",
+  "Sales Person": "FATIN",
+  "Bill To": "THE PEAK QUARRY WORKS",
+  "Description": "KINGS SAFETY SHOES KWD805",
+  "Quantity": 1,
+  "Price": 193.00,
+  "Amount": 193.00,
+  "Total Exclude GST": 193.00,
+  "Total GST": 0.00,
+  "Total Inclusive GST": 193.00,
+  "Round Amount": 0.00,
+  "Total": 193.00,
+  "Payment Method": "VISA CARD",
+  "Approval Code": "000",
+  "Return Policy": "Goods Sold Are Not Returnable & Refundable"
+}
+Environment Reset - Groundtruth: {'company': 'OJC MARKETING SDN BHD', 'date': '15/01/2019', 'address': 'NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR', 'total': '193.00'}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['Company Name', 'ROC No', 'Address', 'Telephone', 'Fax', 'Email', 'Invoice No', 'Date', 'Cashier', 'Sales Person', 'Bill To', 'Description', 'Quantity', 'Price', 'Amount', 'Total Exclude GST', 'Total GST', 'Total Inclusive GST', 'Round Amount', 'Total', 'Payment Method', 'Approval Code', 'Return Policy'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Missing key in generated output: company
+Missing key in generated output: date
+Missing key in generated output: address
+Missing key in generated output: total
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 0
+
+Semantic Matching Details:
+Total fields in generated output: 20
+Matched fields: 4
+
+Field Matches:
+- Company Name → company
+  Reason: Both fields represent the name of the company, despite different naming conventions.
+- Date → date
+  Reason: Both fields represent the date of the transaction, although the generated output includes the time as well.
+- Address → address
+  Reason: Both fields provide the address of the company, with slight variations in formatting and details.
+- Total → total
+  Reason: Both fields represent the total amount of the transaction, with identical values.
+
+Current State:
+Exact Match: 0.0000
+Semantic Match: 0.4000
+Similarity: 0.9406
+
+............................. ITERATION 1 BEGINS.....................................
+
+Step 1
+
+Updated Prompt:
+### Improved Instruction Prompt:
+
+```
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Data**: Carefully extract all relevant data from the invoice and format it according to the provided JSON schema.
+
+2. **Key-Value Pairs**: Identify and extract all key-value pairs present in the invoice.
+
+3. **Table Data**: If the invoice contains tables, capture all rows and columns in the JSON object. Ensure that:
+   - Each column is represented as a key, even if it is blank (use `null` for blank values).
+   - Each row is represented accurately, denoting missing fields with `null` values.
+
+4. **Empty Invoices**: If the invoice contains no charge data, output an empty JSON object (`{}`) without inventing any data.
+
+5. **No Interpolation**: Do not interpolate or fabricate any data. Only extract what is present in the invoice.
+
+6. **Maintain Structure**: Preserve the original order of key-value pairs and the structure of tabular data as it appears in the invoice.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Invoice Number: 12345
+   Date: 2023-10-01
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       "invoice_number": "12345",
+       "date": "2023-10-01",
+       "charges": [
+           {"item": "Widget A", "quantity": 2, "price": 10.00},
+           {"item": "Widget B", "quantity": 1, "price": 15.00}
+       ]
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Invoice Number: 67890
+   Date: 2023-10-02
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       "invoice_number": "67890",
+       "date": "2023-10-02",
+       "charges": [
+           {"item": "Widget C", "quantity": null, "price": 20.00},
+           {"item": null, "quantity": 3, "price": null}
+       ]
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Invoice Number: 11121
+   Date: 2023-10-03
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+```
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Updated Output:
+ {
+    "Company Name": "OJC MARKETING SDN BHD",
+    "ROC No": "538358-H",
+    "Address": "NO2&4JALAN BAYU4, BANDAR SERI ALAM, 81750MASAI,JOHOR",
+    "Telephone": "07-3882218",
+    "Fax": "07-3888218",
+    "Email": "ng@ojcgroup.com",
+    "Invoice No": "PEGIV-1030765",
+    "Date": "15/01/2019 11:05:16 AM",
+    "Cashier": "NG CHUAN MIN",
+    "Sales Person": "FATIN",
+    "Bill To": "THE PEAK QUARRY WORKS",
+    "Description": "KINGS SAFETY SHOES KWD805",
+    "Quantity": 1,
+    "Price": 193.00,
+    "Amount": 193.00,
+    "Total Exclude GST": 193.00,
+    "Total GST": 0.00,
+    "Total Inclusive GST": 193.00,
+    "Round Amount": 0.00,
+    "Total": 193.00,
+    "Payment Method": "VISA CARD",
+    "Approval Code": "000",
+    "Return Policy": "Goods Sold Are Not Returnable & Refundable"
+}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['Company Name', 'ROC No', 'Address', 'Telephone', 'Fax', 'Email', 'Invoice No', 'Date', 'Cashier', 'Sales Person', 'Bill To', 'Description', 'Quantity', 'Price', 'Amount', 'Total Exclude GST', 'Total GST', 'Total Inclusive GST', 'Round Amount', 'Total', 'Payment Method', 'Approval Code', 'Return Policy'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Missing key in generated output: company
+Missing key in generated output: date
+Missing key in generated output: address
+Missing key in generated output: total
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 0
+
+Semantic Matching Details:
+Total fields in generated output: 21
+Matched fields: 4
+
+Field Matches:
+- Company Name → company
+  Reason: Both fields represent the name of the company, despite different naming conventions.
+- Date → date
+  Reason: Both fields represent the date of the invoice, although the generated output includes a timestamp.
+- Address → address
+  Reason: Both fields provide the address of the company, though the generated output has slight formatting differences.
+- Total → total
+  Reason: Both fields represent the total amount, with the same numerical value.
+Current Scores - Exact Match: 0.0000, Semantic Match: 0.5700, Similarity: 0.9341
+Best Scores    - Exact Match: 0.0000, Semantic Match: 0.5700, Similarity: 0.9341
+
+Action taken: 2
+Reward: 0.1635
+
+Terminated: False
+Total Return: 0.1635
+Metrics: {'exact_match': 0.0, 'similarity': 0.9341493514069722, 'semantic_match': 0.57, 'best_exact_match': 0.0, 'best_similarity': 0.9341493514069722, 'best_semantic_match': 0.57, 'improved': True, 'non_improvement_count': 0, 'steps': 1}
+
+Current State:
+Exact Match: 0.0000
+Semantic Match: 0.5700
+Similarity: 0.9341
+
+............................. ITERATION 2 BEGINS.....................................
+
+Step 2
+
+Updated Prompt:
+```
+### Improved Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Required Fields**: Focus on extracting the following mandatory fields from the invoice:
+   - **Company Name**: Extract as `"company"`.
+   - **Invoice Number**: Extract as `"invoice_number"`.
+   - **Date**: Extract as `"date"` in the format `"YYYY-MM-DD"`.
+   - **Total Amount**: Extract as `"total"` (ensure numerical values are represented as strings if required).
+
+2. **Key-Value Pairs**: Identify and extract all relevant key-value pairs present in the invoice, adhering to the specified key naming conventions (e.g., lowercase with underscores).
+
+3. **Table Data**: If the invoice contains tables, capture all rows and columns in the JSON object. Ensure that:
+   - Each column is represented as a key, even if it is blank (use `null` for blank values).
+   - Each row is represented accurately, denoting missing fields with `null` values.
+
+4. **Empty Invoices**: If the invoice contains no charge data or required fields, output an empty JSON object (`{}`) without inventing any data.
+
+5. **No Interpolation**: Do not interpolate or fabricate any data. Only extract the specified fields that are present in the invoice.
+
+6. **Maintain Structure**: Preserve the original order of key-value pairs and the structure of tabular data as it appears in the invoice.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Company Name: Acme Corp
+   Invoice Number: 12345
+   Date: 2023-10-01
+   Total Amount: 35.00
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       "company": "Acme Corp",
+       "invoice_number": "12345",
+       "date": "2023-10-01",
+       "total": "35.00",
+       "charges": [
+           {"item": "Widget A", "quantity": 2, "price": "10.00"},
+           {"item": "Widget B", "quantity": 1, "price": "15.00"}
+       ]
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Company Name: Beta LLC
+   Invoice Number: 67890
+   Date: 2023-10-02
+   Total Amount: 20.00
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       "company": "Beta LLC",
+       "invoice_number": "67890",
+       "date": "2023-10-02",
+       "total": "20.00",
+       "charges": [
+           {"item": "Widget C", "quantity": null, "price": "20.00"},
+           {"item": null, "quantity": 3, "price": null}
+       ]
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Company Name: Gamma Inc
+   Invoice Number: 11121
+   Date: 2023-10-03
+   Total Amount: 0.00
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+```
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Updated Output:
+ {
+    "company": "OJC MARKETING SDN BHD",
+    "invoice_number": "PEGIV-1030765",
+    "date": "2019-01-15",
+    "total": "193.00",
+    "charges": [
+        {
+            "description": "KINGS SAFETY SHOES KWD805",
+            "quantity": 1,
+            "price": "193.00",
+            "amount": "193.00"
+        }
+    ]
+}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['company', 'invoice_number', 'date', 'total', 'charges'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Mismatch for key 'date': Generated='2019-01-15', Expected='15/01/2019'
+Missing key in generated output: address
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 2
+
+Semantic Matching Details:
+Total fields in generated output: 5
+Matched fields: 3
+
+Field Matches:
+- company → company
+  Reason: Both fields represent the same entity, the name of the company.
+- date → date
+  Reason: Both fields represent the date, although formatted differently (ISO vs. DD/MM/YYYY).
+- total → total
+  Reason: Both fields represent the total amount, with identical values.
+Current Scores - Exact Match: 0.5000, Semantic Match: 0.6000, Similarity: 0.8865
+Best Scores    - Exact Match: 0.5000, Semantic Match: 0.6000, Similarity: 0.8865
+
+Action taken: 3
+Reward: 0.4823
+
+Terminated: False
+Total Return: 0.6459
+Metrics: {'exact_match': 0.5, 'similarity': 0.8864961672684379, 'semantic_match': 0.6, 'best_exact_match': 0.5, 'best_similarity': 0.8864961672684379, 'best_semantic_match': 0.6, 'improved': True, 'non_improvement_count': 0, 'steps': 2}
+
+Current State:
+Exact Match: 0.5000
+Semantic Match: 0.6000
+Similarity: 0.8865
+
+............................. ITERATION 3 BEGINS.....................................
+
+Step 3
+
+Updated Prompt:
+```
+### Improved Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Required Fields**: Focus on extracting the following mandatory fields from the invoice:
+   - **Company Name**: Extract as `"company"`.
+   - **Invoice Number**: Extract as `"invoice_number"`.
+   - **Date**: Extract as `"date"` in the format `"YYYY-MM-DD"`.
+   - **Total Amount**: Extract as `"total"` (ensure numerical values are represented as strings if required).
+
+2. **Key-Value Pairs**: Identify and extract all relevant key-value pairs present in the invoice, adhering to the specified key naming conventions (e.g., lowercase with underscores).
+
+3. **Table Data**: If the invoice contains tables, capture all rows and columns in the JSON object. Ensure that:
+   - Each column is represented as a key, even if it is blank (use `null` for blank values).
+   - Each row is represented accurately, denoting missing fields with `null` values.
+
+4. **Empty Invoices**: If the invoice contains no charge data or required fields, output an empty JSON object (`{}`) without inventing any data.
+
+5. **No Interpolation**: Do not interpolate or fabricate any data. Only extract the specified fields that are present in the invoice.
+
+6. **Maintain Structure**: Preserve the original order of key-value pairs and the structure of tabular data as it appears in the invoice.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Company Name: Acme Corp
+   Invoice Number: 12345
+   Date: 2023-10-01
+   Total Amount: 35.00
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       "company": "Acme Corp",
+       "invoice_number": "12345",
+       "date": "2023-10-01",
+       "total": "35.00",
+       "charges": [
+           {"item": "Widget A", "quantity": 2, "price": "10.00"},
+           {"item": "Widget B", "quantity": 1, "price": "15.00"}
+       ]
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Company Name: Beta LLC
+   Invoice Number: 67890
+   Date: 2023-10-02
+   Total Amount: 20.00
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       "company": "Beta LLC",
+       "invoice_number": "67890",
+       "date": "2023-10-02",
+       "total": "20.00",
+       "charges": [
+           {"item": "Widget C", "quantity": null, "price": "20.00"},
+           {"item": null, "quantity": 3, "price": null}
+       ]
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Company Name: Gamma Inc
+   Invoice Number: 11121
+   Date: 2023-10-03
+   Total Amount: 0.00
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+```
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Updated Output:
+ {
+    "company": "OJC MARKETING SDN BHD",
+    "invoice_number": "PEGIV-1030765",
+    "date": "2019-01-15",
+    "total": "193.00",
+    "charges": [
+        {
+            "description": "KINGS SAFETY SHOES KWD805",
+            "quantity": 1,
+            "price": "193.00",
+            "amount": "193.00"
+        }
+    ],
+    "roc_no": "538358-H",
+    "address": "NO2&4JALAN BAYU4, BANDAR SERI ALAM, 81750MASAI,JOHOR",
+    "telephone": "07-3882218",
+    "fax": "07-3888218",
+    "email": "ng@ojcgroup.com",
+    "cashier": "NG CHUAN MIN",
+    "sales_person": "FATIN",
+    "bill_to": "THE PEAK QUARRY WORKS",
+    "total_exclude_gst": "193.00",
+    "total_gst": "0.00",
+    "total_inclusive_gst": "193.00",
+    "round_amount": "0.00",
+    "payment_method": "VISA CARD",
+    "approval_code": "000",
+    "return_policy": "Goods Sold Are Not Returnable & Refundable"
+}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['company', 'invoice_number', 'date', 'total', 'charges', 'roc_no', 'address', 'telephone', 'fax', 'email', 'cashier', 'sales_person', 'bill_to', 'total_exclude_gst', 'total_gst', 'total_inclusive_gst', 'round_amount', 'payment_method', 'approval_code', 'return_policy'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Mismatch for key 'date': Generated='2019-01-15', Expected='15/01/2019'
+Mismatch for key 'address': Generated='NO2&4JALAN BAYU4, BANDAR SERI ALAM, 81750MASAI,JOHOR', Expected='NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR'
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 2
+
+Semantic Matching Details:
+Total fields in generated output: 20
+Matched fields: 4
+
+Field Matches:
+- company → company
+  Reason: Both fields contain the same company name.
+- date → date
+  Reason: The date is semantically similar, though formatted differently (ISO vs. DD/MM/YYYY).
+- address → address
+  Reason: The addresses are similar in content but have slight differences in formatting and punctuation.
+- total → total
+  Reason: Both fields represent the same total amount.
+Current Scores - Exact Match: 0.5000, Semantic Match: 0.8000, Similarity: 0.9103
+Best Scores    - Exact Match: 0.5000, Semantic Match: 0.8000, Similarity: 0.9103
+
+Action taken: 2
+Reward: 0.2238
+
+Terminated: False
+Total Return: 0.8697
+Metrics: {'exact_match': 0.5, 'similarity': 0.9102983576175464, 'semantic_match': 0.8, 'best_exact_match': 0.5, 'best_similarity': 0.9102983576175464, 'best_semantic_match': 0.8, 'improved': True, 'non_improvement_count': 0, 'steps': 3}
+
+Current State:
+Exact Match: 0.5000
+Semantic Match: 0.8000
+Similarity: 0.9103
+
+............................. ITERATION 4 BEGINS.....................................
+
+Step 4
+
+Updated Prompt:
+### Improved Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Required Fields**: Focus exclusively on extracting the following mandatory fields from the invoice:
+   - **Company Name**: Extract as `'company'`.
+   - **Invoice Number**: Extract as `'invoice_number'`.
+   - **Date**: Extract as `'date'` in the format `'DD/MM/YYYY'`.
+   - **Total Amount**: Extract as `'total'` (ensure numerical values are represented as strings if required).
+   - **Address**: Extract as `'address'`.
+
+   **Note**: Do not extract any additional fields not listed above (e.g., `roc_no`, `address`, etc.).
+
+2. **No Interpolation**: Only extract the specified fields that are present in the invoice. Do not interpolate or fabricate any data. Ensure that only the fields explicitly mentioned are included in the output.
+
+3. **Empty Invoices**: If the invoice contains no charge data or required fields, output an empty JSON object (`{}`) without inventing any data.
+
+4. **Maintain Structure**: Preserve the original order of key-value pairs as they appear in the invoice. If any field is missing, represent it with `null`.
+
+5. **Output Format**: Ensure that the output JSON uses single quotes for strings to maintain consistency with the expected format.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Company Name: Acme Corp
+   Invoice Number: 12345
+   Date: 01/10/2023
+   Total Amount: 35.00
+   Address: 123 Main St, Anytown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Acme Corp',
+       'invoice_number': '12345',
+       'date': '01/10/2023',
+       'total': '35.00',
+       'address': '123 Main St, Anytown'
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Company Name: Beta LLC
+   Invoice Number: 67890
+   Date: 02/10/2023
+   Total Amount: 20.00
+   Address: 456 Elm St, Othertown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Beta LLC',
+       'invoice_number': '67890',
+       'date': '02/10/2023',
+       'total': '20.00',
+       'address': '456 Elm St, Othertown'
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Company Name: Gamma Inc
+   Invoice Number: 11121
+   Date: 03/10/2023
+   Total Amount: 0.00
+   Address: 789 Oak St, Sometown
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Updated Output:
+ {
+    "company": "OJC MARKETING SDN BHD",
+    "invoice_number": "PEGIV-1030765",
+    "date": "15/01/2019",
+    "total": "193.00",
+    "address": "NO2&4JALAN BAYU4, BANDAR SERI ALAM, 81750MASAI,JOHOR"
+}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['company', 'invoice_number', 'date', 'total', 'address'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Mismatch for key 'address': Generated='NO2&4JALAN BAYU4, BANDAR SERI ALAM, 81750MASAI,JOHOR', Expected='NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR'
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 3
+
+Semantic Matching Details:
+Total fields in generated output: 5
+Matched fields: 4
+
+Field Matches:
+- company → company
+  Reason: Both fields contain the same company name.
+- date → date
+  Reason: Both fields have the same date format and value.
+- total → total
+  Reason: Both fields have the same total amount.
+- address → address
+  Reason: The addresses are semantically similar despite minor formatting differences.
+Current Scores - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9413
+Best Scores    - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9413
+
+Action taken: 3
+Reward: 0.2810
+
+Terminated: False
+Total Return: 1.1506
+Metrics: {'exact_match': 0.75, 'similarity': 0.9412656324875472, 'semantic_match': 0.8, 'best_exact_match': 0.75, 'best_similarity': 0.9412656324875472, 'best_semantic_match': 0.8, 'improved': True, 'non_improvement_count': 0, 'steps': 4}
+
+Current State:
+Exact Match: 0.7500
+Semantic Match: 0.8000
+Similarity: 0.9413
+
+............................. ITERATION 5 BEGINS.....................................
+
+Step 5
+
+Updated Prompt:
+### Improved Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Required Fields**: Focus exclusively on extracting the following mandatory fields from the invoice in the specified order:
+   - **Company Name**: Extract as `'company'`.
+   - **Invoice Number**: Extract as `'invoice_number'`.
+   - **Date**: Extract as `'date'` in the format `'DD/MM/YYYY'`.
+   - **Total Amount**: Extract as `'total'` (ensure numerical values are represented as strings if required).
+   - **Address**: Extract as `'address'`.
+
+   **Note**: Do not extract any additional fields not listed above (e.g., `roc_no`, `address`, etc.).
+
+2. **Address Normalization**: Standardize the address format by ensuring consistent capitalization and replacing any variations in spacing (e.g., "NO2&4" should be "NO 2 & 4"). Ensure that the address includes appropriate punctuation and spacing.
+
+3. **No Interpolation**: Only extract the specified fields that are present in the invoice. Do not interpolate or fabricate any data. Ensure that only the fields explicitly mentioned are included in the output.
+
+4. **Empty Invoices**: If the invoice contains no charge data or required fields, output an empty JSON object (`{}`) without inventing any data.
+
+5. **Maintain Structure**: Preserve the original order of key-value pairs as they appear in the specified list: `company`, `invoice_number`, `date`, `total`, `address`. If any field is missing, represent it with `null`.
+
+6. **Output Format**: Ensure that the output JSON uses single quotes for all strings, including the address, to maintain consistency with the expected format.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Company Name: Acme Corp
+   Invoice Number: 12345
+   Date: 01/10/2023
+   Total Amount: 35.00
+   Address: 123 Main St, Anytown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Acme Corp',
+       'invoice_number': '12345',
+       'date': '01/10/2023',
+       'total': '35.00',
+       'address': '123 Main St, Anytown'
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Company Name: Beta LLC
+   Invoice Number: 67890
+   Date: 02/10/2023
+   Total Amount: 20.00
+   Address: 456 Elm St, Othertown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Beta LLC',
+       'invoice_number': '67890',
+       'date': '02/10/2023',
+       'total': '20.00',
+       'address': '456 Elm St, Othertown'
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Company Name: Gamma Inc
+   Invoice Number: 11121
+   Date: 03/10/2023
+   Total Amount: 0.00
+   Address: 789 Oak St, Sometown
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Updated Output:
+ {
+    "company": "OJC MARKETING SDN BHD",
+    "invoice_number": "PEGIV-1030765",
+    "date": "15/01/2019",
+    "total": "193.00",
+    "address": "NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR"
+}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['company', 'invoice_number', 'date', 'total', 'address'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Mismatch for key 'address': Generated='NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR', Expected='NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR'
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 3
+
+Semantic Matching Details:
+Total fields in generated output: 5
+Matched fields: 4
+
+Field Matches:
+- company → company
+  Reason: Both fields contain the same company name 'OJC MARKETING SDN BHD'.
+- date → date
+  Reason: Both fields have the same date '15/01/2019'.
+- total → total
+  Reason: Both fields have the same total amount '193.00'.
+- address → address
+  Reason: The addresses are similar in content, with minor differences in formatting and a typo in the ground truth ('B1750' instead of '81750').
+Current Scores - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9437
+Best Scores    - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9437
+
+Action taken: 3
+Reward: 0.0025
+
+Terminated: False
+Total Return: 1.1531
+Metrics: {'exact_match': 0.75, 'similarity': 0.9437474720643175, 'semantic_match': 0.8, 'best_exact_match': 0.75, 'best_similarity': 0.9437474720643175, 'best_semantic_match': 0.8, 'improved': True, 'non_improvement_count': 0, 'steps': 5}
+
+Current State:
+Exact Match: 0.7500
+Semantic Match: 0.8000
+Similarity: 0.9437
+
+............................. ITERATION 6 BEGINS.....................................
+
+Step 6
+
+Updated Prompt:
+### Improved Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Required Fields**: Focus exclusively on extracting the following mandatory fields from the invoice in the specified order:
+   - **Company Name**: Extract as `'company'`.
+   - **Invoice Number**: Extract as `'invoice_number'`.
+   - **Date**: Extract as `'date'` in the format `'DD/MM/YYYY'`.
+   - **Total Amount**: Extract as `'total'` (ensure numerical values are represented as strings if required).
+   - **Address**: Extract as `'address'`.
+
+   **Note**: Do not extract any additional fields not listed above (e.g., `roc_no`, `address`, etc.).
+
+2. **Address Normalization**: Standardize the address format by ensuring consistent capitalization and replacing any variations in spacing (e.g., "NO2&4" should be "NO 2 & 4"). Ensure that the address includes appropriate punctuation and spacing.
+
+3. **No Interpolation**: Only extract the specified fields that are present in the invoice. Do not interpolate or fabricate any data. Ensure that only the fields explicitly mentioned are included in the output.
+
+4. **Empty Invoices**: If the invoice contains no charge data or required fields, output an empty JSON object (`{}`) without inventing any data.
+
+5. **Maintain Structure**: Preserve the original order of key-value pairs as they appear in the specified list: `company`, `invoice_number`, `date`, `total`, `address`. If any field is missing, represent it with `null`.
+
+6. **Output Format**: Ensure that the output JSON uses single quotes for all strings, including the address, to maintain consistency with the expected format.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Company Name: Acme Corp
+   Invoice Number: 12345
+   Date: 01/10/2023
+   Total Amount: 35.00
+   Address: 123 Main St, Anytown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Acme Corp',
+       'invoice_number': '12345',
+       'date': '01/10/2023',
+       'total': '35.00',
+       'address': '123 Main St, Anytown'
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Company Name: Beta LLC
+   Invoice Number: 67890
+   Date: 02/10/2023
+   Total Amount: 20.00
+   Address: 456 Elm St, Othertown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Beta LLC',
+       'invoice_number': '67890',
+       'date': '02/10/2023',
+       'total': '20.00',
+       'address': '456 Elm St, Othertown'
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Company Name: Gamma Inc
+   Invoice Number: 11121
+   Date: 03/10/2023
+   Total Amount: 0.00
+   Address: 789 Oak St, Sometown
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Updated Output:
+ {
+    "company": "OJC MARKETING SDN BHD",
+    "invoice_number": "PEGIV-1030765",
+    "date": "15/01/2019",
+    "total": "193.00",
+    "address": "NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR"
+}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['company', 'invoice_number', 'date', 'total', 'address'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Mismatch for key 'address': Generated='NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR', Expected='NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR'
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 3
+
+Semantic Matching Details:
+Total fields in generated output: 5
+Matched fields: 4
+
+Field Matches:
+- company → company
+  Reason: Both fields contain the same company name 'OJC MARKETING SDN BHD'.
+- date → date
+  Reason: Both fields have the same date '15/01/2019'.
+- total → total
+  Reason: Both fields have the same total amount '193.00'.
+- address → address
+  Reason: The addresses are similar, with minor differences in formatting and a typo in the ground truth ('B1750' vs '81750').
+Current Scores - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9437
+Best Scores    - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9437
+
+Action taken: 2
+Reward: 0.0000
+
+Terminated: False
+Total Return: 1.1531
+Metrics: {'exact_match': 0.75, 'similarity': 0.9437474720643175, 'semantic_match': 0.8, 'best_exact_match': 0.75, 'best_similarity': 0.9437474720643175, 'best_semantic_match': 0.8, 'improved': False, 'non_improvement_count': 1, 'steps': 6}
+
+Current State:
+Exact Match: 0.7500
+Semantic Match: 0.8000
+Similarity: 0.9437
+
+............................. ITERATION 7 BEGINS.....................................
+
+Step 7
+
+Updated Prompt:
+### Improved Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Required Fields**: Focus exclusively on extracting the following mandatory fields from the invoice in the specified order:
+   - **Company Name**: Extract as `'company'`.
+   - **Invoice Number**: Extract as `'invoice_number'`.
+   - **Date**: Extract as `'date'` in the format `'DD/MM/YYYY'`.
+   - **Total Amount**: Extract as `'total'` (ensure numerical values are represented as strings if required).
+   - **Address**: Extract as `'address'`.
+
+   **Note**: Do not extract any additional fields not listed above (e.g., `roc_no`, `address`, etc.).
+
+2. **Address Normalization**: Standardize the address format by ensuring consistent capitalization and replacing any variations in spacing (e.g., "NO2&4" should be "NO 2 & 4"). Ensure that the address includes appropriate punctuation and spacing.
+
+3. **No Interpolation**: Only extract the specified fields that are present in the invoice. Do not interpolate or fabricate any data. Ensure that only the fields explicitly mentioned are included in the output.
+
+4. **Empty Invoices**: If the invoice contains no charge data or required fields, output an empty JSON object (`{}`) without inventing any data.
+
+5. **Maintain Structure**: Preserve the original order of key-value pairs as they appear in the specified list: `company`, `invoice_number`, `date`, `total`, `address`. If any field is missing, represent it with `null`.
+
+6. **Output Format**: Ensure that the output JSON uses single quotes for all strings, including the address, to maintain consistency with the expected format.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Company Name: Acme Corp
+   Invoice Number: 12345
+   Date: 01/10/2023
+   Total Amount: 35.00
+   Address: 123 Main St, Anytown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Acme Corp',
+       'invoice_number': '12345',
+       'date': '01/10/2023',
+       'total': '35.00',
+       'address': '123 Main St, Anytown'
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Company Name: Beta LLC
+   Invoice Number: 67890
+   Date: 02/10/2023
+   Total Amount: 20.00
+   Address: 456 Elm St, Othertown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Beta LLC',
+       'invoice_number': '67890',
+       'date': '02/10/2023',
+       'total': '20.00',
+       'address': '456 Elm St, Othertown'
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Company Name: Gamma Inc
+   Invoice Number: 11121
+   Date: 03/10/2023
+   Total Amount: 0.00
+   Address: 789 Oak St, Sometown
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+
+
+### INPUT Invoice:
+
+tan chay yee
+
+
+***COPY***
+OJC MARKETING SDN BHD
+ROC NO:538358-H
+NO2&4JALAN BAYU4,
+BANDAR SERI ALAM,
+81750MASAI,JOHOR
+Tel:07-3882218Fax:07-3888218
+Emailng@ojcgroup.com
+
+TAX INVOICE
+Invoice No PEGIV-1030765
+Date                             15/01/201911:05:16AM
+Cashier               NG CHUAN MIN
+Sales PersorFATIN
+Bill To                              THE PEAK QUARRY WORKS
+Address
+Description               Qty...Price Amount
+000000111                   1193.00      193.00 SR
+KINGS SAFETY SHOES KWD805
+
+
+
+Qty:1                 Total Exclude GST 193.00
+Total GST@6%     0.00
+Total Inclusive GST 193.00
+Round Amt:        0.00
+TOTAL:         193.00
+VISA CARD           193.00
+x4318
+
+Approval Code:000
+Goods Sold Are Not Returnable & Refundable
+++Thank You.Please Corne Again.++*
+
+### OUTPUT JSON SCHEMA:
+
+{
+  "properties": {
+    "Company Name": "string",
+    "ROC No": "string",
+    "Address": "string",
+    "Telephone": "string",
+    "Fax": "string",
+    "Email": "string",
+    "Invoice No": "string",
+    "Date": "string",
+    "Cashier": "string",
+    "Sales Person": "string",
+    "Bill To": "string",
+    "Description": "string",
+    "Quantity": "integer",
+    "Price": "number",
+    "Amount": "number",
+    "Total Exclude GST": "number",
+    "Total GST": "number",
+    "Total Inclusive GST": "number",
+    "Round Amount": "number",
+    "Total": "number",
+    "Payment Method": "string",
+    "Approval Code": "string",
+    "Return Policy": "string"
+  }
+}
+
+
+Updated Output:
+ {
+    "company": "OJC MARKETING SDN BHD",
+    "invoice_number": "PEGIV-1030765",
+    "date": "15/01/2019",
+    "total": "193.00",
+    "address": "NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR"
+}
+Exact Match - Generated type: <class 'dict'>
+Exact Match - Generated fields: dict_keys(['company', 'invoice_number', 'date', 'total', 'address'])
+Exact Match - Groundtruth type: <class 'dict'>
+Exact Match - Groundtruth fields: dict_keys(['company', 'date', 'address', 'total'])
+Mismatch for key 'address': Generated='NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR', Expected='NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR'
+
+Exact Match Details:
+Total fields: 4
+Matched fields: 3
+
+Semantic Matching Details:
+Total fields in generated output: 5
+Matched fields: 4
+
+Field Matches:
+- company → company
+  Reason: Both fields contain the same company name 'OJC MARKETING SDN BHD'.
+- date → date
+  Reason: Both fields have the same date '15/01/2019'.
+- total → total
+  Reason: Both fields have the same total amount '193.00'.
+- address → address
+  Reason: The addresses are similar, with minor differences in formatting and a typo in the ground truth ('B1750' vs '81750').
+Current Scores - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9437
+Best Scores    - Exact Match: 0.7500, Semantic Match: 0.8000, Similarity: 0.9437
+
+Terminating due to no improvements in last two updates
+Best Results Achieved:
+Exact Match: 0.7500
+Semantic Match: 0.8000
+Similarity: 0.9437
+Best Prompt:
+ ### Improved Instruction Prompt:
+
+### Instructions:
+You are a data extraction tool designed to extract structured data from invoices. Please follow the steps below to ensure accurate extraction and formatting into the specified JSON schema.
+
+1. **Extract Required Fields**: Focus exclusively on extracting the following mandatory fields from the invoice in the specified order:
+   - **Company Name**: Extract as `'company'`.
+   - **Invoice Number**: Extract as `'invoice_number'`.
+   - **Date**: Extract as `'date'` in the format `'DD/MM/YYYY'`.
+   - **Total Amount**: Extract as `'total'` (ensure numerical values are represented as strings if required).
+   - **Address**: Extract as `'address'`.
+
+   **Note**: Do not extract any additional fields not listed above (e.g., `roc_no`, `address`, etc.).
+
+2. **Address Normalization**: Standardize the address format by ensuring consistent capitalization and replacing any variations in spacing (e.g., "NO2&4" should be "NO 2 & 4"). Ensure that the address includes appropriate punctuation and spacing.
+
+3. **No Interpolation**: Only extract the specified fields that are present in the invoice. Do not interpolate or fabricate any data. Ensure that only the fields explicitly mentioned are included in the output.
+
+4. **Empty Invoices**: If the invoice contains no charge data or required fields, output an empty JSON object (`{}`) without inventing any data.
+
+5. **Maintain Structure**: Preserve the original order of key-value pairs as they appear in the specified list: `company`, `invoice_number`, `date`, `total`, `address`. If any field is missing, represent it with `null`.
+
+6. **Output Format**: Ensure that the output JSON uses single quotes for all strings, including the address, to maintain consistency with the expected format.
+
+### Examples:
+1. **Example Invoice**:
+   ```
+   Company Name: Acme Corp
+   Invoice Number: 12345
+   Date: 01/10/2023
+   Total Amount: 35.00
+   Address: 123 Main St, Anytown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget A    | 2        | 10.00  |
+   | Widget B    | 1        | 15.00  |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Acme Corp',
+       'invoice_number': '12345',
+       'date': '01/10/2023',
+       'total': '35.00',
+       'address': '123 Main St, Anytown'
+   }
+   ```
+
+2. **Example Invoice with Blank Fields**:
+   ```
+   Company Name: Beta LLC
+   Invoice Number: 67890
+   Date: 02/10/2023
+   Total Amount: 20.00
+   Address: 456 Elm St, Othertown
+   Charges:
+   | Item        | Quantity | Price  |
+   |-------------|----------|--------|
+   | Widget C    |          | 20.00  |
+   |             | 3        |        |
+   ```
+   **Output JSON**:
+   ```json
+   {
+       'company': 'Beta LLC',
+       'invoice_number': '67890',
+       'date': '02/10/2023',
+       'total': '20.00',
+       'address': '456 Elm St, Othertown'
+   }
+   ```
+
+3. **Example Invoice with No Charges**:
+   ```
+   Company Name: Gamma Inc
+   Invoice Number: 11121
+   Date: 03/10/2023
+   Total Amount: 0.00
+   Address: 789 Oak St, Sometown
+   Charges: None
+   ```
+   **Output JSON**:
+   ```json
+   {}
+   ```
+
+Please perform the task as per the above instructions on the following invoice document:
+
+Best Output:
+ {
+    "company": "OJC MARKETING SDN BHD",
+    "invoice_number": "PEGIV-1030765",
+    "date": "15/01/2019",
+    "total": "193.00",
+    "address": "NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR"
+}
+
+Action taken: 2
+Reward: 0.0000
+
+Terminated: True
+Total Return: 1.1531
+Metrics: {'exact_match': 0.75, 'similarity': 0.9437474720643175, 'semantic_match': 0.8, 'best_exact_match': 0.75, 'best_similarity': 0.9437474720643175, 'best_semantic_match': 0.8, 'improved': False, 'non_improvement_count': 2, 'steps': 7}
+
+Task completed successfully!
+
+Data extraction completed
+Results saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\000_extracted.json
+Metrics updated in: output\extraction_metrics.xlsx
+
+Processing complete!
+Document Type: Invoice
+Number of Pages: 1
+Extracted Data: {
+  "company": "OJC MARKETING SDN BHD",
+  "invoice_number": "PEGIV-1030765",
+  "date": "15/01/2019",
+  "total": "193.00",
+  "address": "NO 2 & 4 JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR"
+}
