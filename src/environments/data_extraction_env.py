@@ -140,7 +140,7 @@ class DataExtractionEnvIterative(gym.Env):
     Actions represent adjustments to prompt engineering strategies.
     """
 
-    def __init__(self, baseprompt, document_type, document, schema, groundtruth):
+    def __init__(self, baseprompt, document_type, document, schema, groundtruth, max_steps=5):
         super(DataExtractionEnvIterative, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(
@@ -172,6 +172,7 @@ class DataExtractionEnvIterative(gym.Env):
         self.current_step = 0
         
         self.state = None
+        self.max_steps = max_steps
 
 
     def step(self, action):
@@ -232,7 +233,7 @@ class DataExtractionEnvIterative(gym.Env):
         reward = current_combined_score - best_combined_score
 
         # Determine if we should terminate
-        done = self.non_improvement_count >= self.max_non_improvements
+        done = (self.non_improvement_count >= self.max_non_improvements) or (self.current_step >= self.max_steps)
 
         # Create info dictionary with useful information
         info = {
@@ -253,15 +254,17 @@ class DataExtractionEnvIterative(gym.Env):
 
         
         if done:
-            print("\nTerminating due to no improvements in last two updates")
+            print("\nTerminating due to:", end=" ")
+            if self.current_step >= self.max_steps:
+                print("maximum steps reached")
+            else:
+                print("no improvements in last two updates")
             print(f"Best Results Achieved:")
             print(f"Exact Match: {self.best_exact_match:.4f}")
             print(f"Semantic Match: {self.best_semantic_match:.4f}")
             print(f"Similarity: {self.best_similarity:.4f}")
             print(f"Best Prompt:\n {self.best_prompt}")
             print(f"\nBest Output:\n {self.best_output}")
-
-
 
 
         return self.state, reward, done, info
