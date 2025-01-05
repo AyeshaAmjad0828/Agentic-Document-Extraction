@@ -4,6 +4,10 @@ An advanced document processing system that leverages Large Language Models (LLM
 
 ## Technology Stack
 
+| Gymnasium | Langchain | TogetherAI | OpenAI | PaddleOCR | OpenCV | Jinja2 |
+|:---------:|:---------:|:----------:|:-------:|:---------:|:------:|:------:|
+| <img src="https://gymnasium.farama.org/_static/img/gymnasium_black.svg" width="100"> | <img src="README assets\Langchain.png" width="100"> | <img src="README assets\togetherAi.png" width="100"> | <img src="README assets\OpenAI.png" width="100"> | <img src="README assets\PaddleOCR.png" width="100"> | <img src="README assets\opencv.png" width="100"> | <img src="README assets\jinja.png" width="100"> |
+
 ## 🌟 Features
 
 - **Multi-Format Support**: Process various document types including:
@@ -122,6 +126,7 @@ python main.py "path/to/your/documents" --output-dir "output" --schema-groundtru
    - Custom observation space
 
 6. **Base Prompts** ([src/actor_agents/Prompts](src/actor_agents/Prompts))
+   - Written as jinja2 templates ([src/utils/prompt_template.py](src/utils/prompt_template.py))
    - Base prompts for document data extraction 
    - Base prompts for schema generation 
 
