@@ -171,7 +171,7 @@ The system uses multiple evaluation approaches ([src/evaluation/scoring.py](src/
 
 4. **Data Extraction**
    - Parallel processing
-   - Iterative refinement
+   - RL-based Iterative refinement
    - Multi-metric evaluation
 
 ## ⚙️ Configuration
@@ -179,8 +179,7 @@ The system uses multiple evaluation approaches ([src/evaluation/scoring.py](src/
 Key configuration options:
 - `max_steps`: Maximum optimization iterations
 - `max_workers`: Parallel processing threads
-- `cache_enabled`: Enable/disable result caching
-- `log_level`: Logging detail level
+- `Force`: Forcing reprocessing of documents despite caching
 
 ## 📝 Logging
 
@@ -200,12 +199,12 @@ The system implements comprehensive logging ([src/utils/logging_utils.py](src/ut
 
 ## 📄 License
 
-[Add your license information here]
+[]
 
 ## 🔗 References
 
-- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction.html)
-- [OpenAI API Documentation](https://platform.openai.com/docs/introduction)
+- [LangChain Documentation](https://python.langchain.com/docs/introduction/)
+- [OpenAI API Documentation](https://platform.openai.com/docs/overview)
 - [Gymnasium Documentation](https://gymnasium.farama.org/)
 
 
