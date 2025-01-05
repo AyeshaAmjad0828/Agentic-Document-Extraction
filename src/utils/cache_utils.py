@@ -11,6 +11,10 @@ def cache_results(func):
     
     @functools.wraps(func)
     def wrapper(file_path, *args, force=False, **kwargs):
+        # Skip caching if file_path is not a string/path
+        if not isinstance(file_path, (str, bytes, os.PathLike)):
+            return func(file_path, *args, **kwargs)
+        
         # Create cache key based on file content hash
         with open(file_path, 'rb') as f:
             file_hash = hashlib.md5(f.read()).hexdigest()
