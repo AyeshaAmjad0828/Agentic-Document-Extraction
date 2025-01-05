@@ -1,0 +1,497 @@
+2025-01-05 14:00:16,010 - INFO - Log file created at: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\logs\processing_SUPA IGA Mt Cotton(3)_20250105_140016.log
+2025-01-05 14:00:16,010 - INFO - Processing: SUPA IGA Mt Cotton(3).pdf
+2025-01-05 14:00:17,229 - INFO - Processing document: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Invoices\Charmlaw Foods Pty Ltd\SUPA IGA Mt Cotton(3).pdf
+Processing as scanned PDF...Total pages detected: 1Processing page 1/1 with OCR2025-01-05 14:00:23,630 - INFO - Successfully read document with 1 pages
+2025-01-05 14:00:24,480 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+<IPython.core.display.HTML object>2025-01-05 14:00:24,484 - INFO - Document classified as: Invoice (confidence: 100.0%)
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\schema_builder_prompt.txt2025-01-05 14:00:31,198 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Initial Prompt: 
+    
+You are a JSON schema builder. You will receive an unstructured form-like document and you will perform following tasks:
+
+1. Extract only the key phrases in key-value pairs, and header names in tables from the document. 
+
+2. Arrange all keys phrases with data types in the parent region of the json and table header names in the child region.
+
+3. Ensure the order of key names and table headers aligns with the original text.
+
+4. ONLY include unique column names as they appear in the document, without duplicates or associated data. 
+
+5. ONLY Respond with the JSON schema with all key phrases and table column headers.
+
+Here is the content of the form-like document:
+
+
+                                        Charmlaw Foods Pty Ltd                                TAX INVOICE
+                                 518 Sherwood Road                                               Copy
+                                   SHERWOODQLD4075                                           Invoice No:  213443506
+                             Telephone:   0737169666      Facsimile:      0737169601
+                Charmlaw                                                                         Inv Date:    17.08.23
+                          E-Mail;                 accounts@charmlaw.com.au
+                Foods
+                                                                                                       Due Date:  31.08.23
+                          A.B.N.           79 159 830 136
+                                                                                                      Your Ref:  Donna
+                                                                                                      Page:  1
+              Bill To:                                               Ship To:
+                            Jones Mt Cotton IGA (EA125)                   Jones Mt Cotton IGA (EA125)
+                PO Box463                                             101 Valley Way
+                     CLEVELAND QLD 4165                                MT COTTON QLD4165
+                   Customer ABN No: 62 108 810816                  Transport:East Charmlaw
+                                                                                                                Total
+         Qty     Item No.EAN             Description                                 Wght      Price Disc%            GST%
+                                                                                                                ExGST
+                 FC2649                         F/Cuisine 1kg Shredded Beetroot            1kg      8.9300  0.00      8.93   0.00
+                 FC2650                         F/Cuisine 1kg Sliced Cucumber              2kg      7.8700  0.00     15.74   0.00
+                 FC2652                        F/Cuisine 1kg Sliced Tomato                 4kg      9.8100  0.00     39.24  0.00
+                     Rocciv
+                       Dole cnter
+             Signature                                                                         Total Weight (kg):     7.0000
+                                                                                              Carton Count
+              Print Name
+           Date             23                                                         GST Amt:     Sale Amt:
+                                                                                 GST Applicable:         0.00        0.00
+                                    Claims are to be made within 48 hours of delivery
+                                                                               GST Exempt:            0.00        63.91
+                    Please deposit funds to:                                  Discount:                                0.00
+               Bank Details:
+                                                                                              Invoice Total:      63.91
+            SME:      BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Initial Schema:
+{
+  "schema": {
+    "Charmlaw Foods Pty Ltd": "string",
+    "TAX INVOICE": "string",
+    "Copy": "string",
+    "Invoice No": "string",
+    "Inv Date": "string",
+    "Due Date": "string",
+    "Your Ref": "string",
+    "Page": "integer",
+    "Bill To": "string",
+    "Ship To": "string",
+    "Customer ABN No": "string",
+    "Transport": "string",
+    "Total": "string",
+    "Qty": "integer",
+    "Item No.EAN": "string",
+    "Description": "string",
+    "Wght": "string",
+    "Price": "float",
+    "Disc%": "float",
+    "GST%": "float",
+    "ExGST": "float",
+    "Total Weight (kg)": "float",
+    "Carton Count": "string",
+    "Signature": "string",
+    "Print Name": "string",
+    "Date": "string",
+    "GST Amt": "float",
+    "Sale Amt": "float",
+    "GST Applicable": "float",
+    "GST Exempt": "float",
+    "Discount": "float",
+    "Invoice Total": "float",
+    "Bank Details": "string",
+    "SME": "string",
+    "BSB": "string",
+    "Account": "string",
+    "Payment Terms": "string"
+  },
+  "table_headers": {
+    "Qty": "integer",
+    "Item No.EAN": "string",
+    "Description": "string",
+    "Wght": "string",
+    "Price": "float",
+    "Disc%": "float",
+    "GST%": "float",
+    "ExGST": "float"
+  }
+}Initial Perplexity: 1.0185
+Current State:Perplexity: 1.01852025-01-05 14:00:32,743 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. ITERATION 1 BEGINS.....................................2025-01-05 14:00:39,685 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 14:00:43,690 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 1
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to convert an unstructured form-like document into a structured JSON schema. Follow these steps:
+
+1. **Extract Key Phrases**: Identify and extract key phrases in key-value pairs and table header names from the document.
+
+2. **Organize Data**: Arrange all extracted key phrases with their corresponding data types in the parent region of the JSON schema. Place table header names in the child region.
+
+3. **Maintain Order**: Ensure that the order of key names and table headers matches their appearance in the original document.
+
+4. **Uniqueness**: Include only unique column names and key phrases as they appear in the document, avoiding duplicates or associated data.
+
+5. **Output Format**: Respond exclusively with the JSON schema containing all key phrases and table column headers.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john@example.com
+```
+JSON Schema Output:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Laptop        | 1000  | 5
+Mouse         | 20    | 50
+```
+JSON Schema Output:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema Output:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+
+                                        Charmlaw Foods Pty Ltd                                TAX INVOICE
+                                 518 Sherwood Road                                               Copy
+                                   SHERWOODQLD4075                                           Invoice No:  213443506
+                             Telephone:   0737169666      Facsimile:      0737169601
+                Charmlaw                                                                         Inv Date:    17.08.23
+                          E-Mail;                 accounts@charmlaw.com.au
+                Foods
+                                                                                                       Due Date:  31.08.23
+                          A.B.N.           79 159 830 136
+                                                                                                      Your Ref:  Donna
+                                                                                                      Page:  1
+              Bill To:                                               Ship To:
+                            Jones Mt Cotton IGA (EA125)                   Jones Mt Cotton IGA (EA125)
+                PO Box463                                             101 Valley Way
+                     CLEVELAND QLD 4165                                MT COTTON QLD4165
+                   Customer ABN No: 62 108 810816                  Transport:East Charmlaw
+                                                                                                                Total
+         Qty     Item No.EAN             Description                                 Wght      Price Disc%            GST%
+                                                                                                                ExGST
+                 FC2649                         F/Cuisine 1kg Shredded Beetroot            1kg      8.9300  0.00      8.93   0.00
+                 FC2650                         F/Cuisine 1kg Sliced Cucumber              2kg      7.8700  0.00     15.74   0.00
+                 FC2652                        F/Cuisine 1kg Sliced Tomato                 4kg      9.8100  0.00     39.24  0.00
+                     Rocciv
+                       Dole cnter
+             Signature                                                                         Total Weight (kg):     7.0000
+                                                                                              Carton Count
+              Print Name
+           Date             23                                                         GST Amt:     Sale Amt:
+                                                                                 GST Applicable:         0.00        0.00
+                                    Claims are to be made within 48 hours of delivery
+                                                                               GST Exempt:            0.00        63.91
+                    Please deposit funds to:                                  Discount:                                0.00
+               Bank Details:
+                                                                                              Invoice Total:      63.91
+            SME:      BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Updated Schema:
+{
+  "properties": {
+    "Company Name": "string",
+    "Address": "string",
+    "Invoice No": "string",
+    "Invoice Date": "string",
+    "Due Date": "string",
+    "Your Ref": "string",
+    "Page": "integer",
+    "Bill To": "string",
+    "Ship To": "string",
+    "Customer ABN No": "string",
+    "Transport": "string",
+    "Qty": "integer",
+    "Item No.EAN": "string",
+    "Description": "string",
+    "Weight": "string",
+    "Price": "number",
+    "Discount %": "number",
+    "GST %": "number",
+    "Total Weight (kg)": "number",
+    "Carton Count": "integer",
+    "Signature": "string",
+    "Print Name": "string",
+    "Date": "string",
+    "GST Amt": "number",
+    "Sale Amt": "number",
+    "GST Applicable": "number",
+    "GST Exempt": "number",
+    "Discount": "number",
+    "Invoice Total": "number",
+    "Bank Details": "string",
+    "SME": "string",
+    "BSB": "string",
+    "Account": "string",
+    "Payment Terms": "string"
+  }
+}Current Perplexity: 1.0200Best Perplexity: 1.0185Improved: FalseNon-improvement count: 1
+Action taken: 2Reward: -0.0015
+Terminated: FalseTotal Return: -0.0015Metrics:{'perplexity': 1.019988140867146, 'best_perplexity': 1.0184517544718033, 'improved': False, 'non_improvement_count': 1, 'steps': 1}
+Current State:Perplexity: 1.02002025-01-05 14:00:45,057 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. ITERATION 2 BEGINS.....................................2025-01-05 14:00:49,941 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 14:00:54,082 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 2
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+```
+You are a JSON schema builder. Your task is to convert an unstructured form-like document into a structured JSON schema. Follow these steps:
+
+1. **Extract Key Phrases**: Identify and extract key phrases in key-value pairs and table header names from the document.
+
+2. **Organize Data**: Arrange all extracted key phrases with their corresponding data types in the parent region of the JSON schema. Place table header names in the child region.
+
+3. **Maintain Order**: Ensure that the order of key names and table headers matches their appearance in the original document.
+
+4. **Uniqueness**: Include only unique column names and key phrases as they appear in the document, avoiding duplicates or associated data.
+
+5. **Output Format**: Respond exclusively with the JSON schema containing all key phrases and table column headers.
+
+### Examples:
+
+**Example 1:**
+Document:
+```
+Name: John Doe
+Age: 30
+Email: john@example.com
+```
+JSON Schema Output:
+```json
+{
+  "properties": {
+    "Name": "string",
+    "Age": "integer",
+    "Email": "string"
+  }
+}
+```
+
+**Example 2:**
+Document:
+```
+Product Name | Price | Quantity
+--------------|-------|---------
+Laptop        | 1000  | 5
+Mouse         | 20    | 50
+```
+JSON Schema Output:
+```json
+{
+  "properties": {
+    "Product Name": "string",
+    "Price": "number",
+    "Quantity": "integer"
+  }
+}
+```
+
+**Example 3:**
+Document:
+```
+First Name: Alice
+Last Name: Smith
+Phone Number: 123-456-7890
+```
+JSON Schema Output:
+```json
+{
+  "properties": {
+    "First Name": "string",
+    "Last Name": "string",
+    "Phone Number": "string"
+  }
+}
+```
+
+Here is the content of the form-like document:
+```
+```
+
+                                        Charmlaw Foods Pty Ltd                                TAX INVOICE
+                                 518 Sherwood Road                                               Copy
+                                   SHERWOODQLD4075                                           Invoice No:  213443506
+                             Telephone:   0737169666      Facsimile:      0737169601
+                Charmlaw                                                                         Inv Date:    17.08.23
+                          E-Mail;                 accounts@charmlaw.com.au
+                Foods
+                                                                                                       Due Date:  31.08.23
+                          A.B.N.           79 159 830 136
+                                                                                                      Your Ref:  Donna
+                                                                                                      Page:  1
+              Bill To:                                               Ship To:
+                            Jones Mt Cotton IGA (EA125)                   Jones Mt Cotton IGA (EA125)
+                PO Box463                                             101 Valley Way
+                     CLEVELAND QLD 4165                                MT COTTON QLD4165
+                   Customer ABN No: 62 108 810816                  Transport:East Charmlaw
+                                                                                                                Total
+         Qty     Item No.EAN             Description                                 Wght      Price Disc%            GST%
+                                                                                                                ExGST
+                 FC2649                         F/Cuisine 1kg Shredded Beetroot            1kg      8.9300  0.00      8.93   0.00
+                 FC2650                         F/Cuisine 1kg Sliced Cucumber              2kg      7.8700  0.00     15.74   0.00
+                 FC2652                        F/Cuisine 1kg Sliced Tomato                 4kg      9.8100  0.00     39.24  0.00
+                     Rocciv
+                       Dole cnter
+             Signature                                                                         Total Weight (kg):     7.0000
+                                                                                              Carton Count
+              Print Name
+           Date             23                                                         GST Amt:     Sale Amt:
+                                                                                 GST Applicable:         0.00        0.00
+                                    Claims are to be made within 48 hours of delivery
+                                                                               GST Exempt:            0.00        63.91
+                    Please deposit funds to:                                  Discount:                                0.00
+               Bank Details:
+                                                                                              Invoice Total:      63.91
+            SME:      BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Updated Schema:
+{
+  "properties": {
+    "Company Name": "string",
+    "Address": "string",
+    "Invoice No": "string",
+    "Invoice Date": "string",
+    "Due Date": "string",
+    "Your Ref": "string",
+    "Page": "integer",
+    "Bill To": "string",
+    "Ship To": "string",
+    "Customer ABN No": "string",
+    "Transport": "string",
+    "Qty": "integer",
+    "Item No.EAN": "string",
+    "Description": "string",
+    "Weight": "string",
+    "Price": "number",
+    "Discount %": "number",
+    "GST %": "number",
+    "Total Weight (kg)": "number",
+    "Carton Count": "integer",
+    "Signature": "string",
+    "Print Name": "string",
+    "Date": "string",
+    "GST Amt": "number",
+    "Sale Amt": "number",
+    "GST Applicable": "number",
+    "GST Exempt": "number",
+    "Discount": "number",
+    "Invoice Total": "number",
+    "Bank Details": "string",
+    "SME": "string",
+    "BSB": "string",
+    "Account": "string",
+    "Payment Terms": "string"
+  }
+}Current Perplexity: 1.0214Best Perplexity: 1.0185Improved: FalseNon-improvement count: 2
+Terminating due to:no improvements in last two updatesBest Results Achieved:Perplexity: 1.0185
+Best Schema:{
+  "schema": {
+    "Charmlaw Foods Pty Ltd": "string",
+    "TAX INVOICE": "string",
+    "Copy": "string",
+    "Invoice No": "string",
+    "Inv Date": "string",
+    "Due Date": "string",
+    "Your Ref": "string",
+    "Page": "integer",
+    "Bill To": "string",
+    "Ship To": "string",
+    "Customer ABN No": "string",
+    "Transport": "string",
+    "Total": "string",
+    "Qty": "integer",
+    "Item No.EAN": "string",
+    "Description": "string",
+    "Wght": "string",
+    "Price": "float",
+    "Disc%": "float",
+    "GST%": "float",
+    "ExGST": "float",
+    "Total Weight (kg)": "float",
+    "Carton Count": "string",
+    "Signature": "string",
+    "Print Name": "string",
+    "Date": "string",
+    "GST Amt": "float",
+    "Sale Amt": "float",
+    "GST Applicable": "float",
+    "GST Exempt": "float",
+    "Discount": "float",
+    "Invoice Total": "float",
+    "Bank Details": "string",
+    "SME": "string",
+    "BSB": "string",
+    "Account": "string",
+    "Payment Terms": "string"
+  },
+  "table_headers": {
+    "Qty": "integer",
+    "Item No.EAN": "string",
+    "Description": "string",
+    "Wght": "string",
+    "Price": "float",
+    "Disc%": "float",
+    "GST%": "float",
+    "ExGST": "float"
+  }
+}
+Action taken: 2Reward: -0.0029
+Terminated: TrueTotal Return: -0.0045Metrics:{'perplexity': 1.0213967015962282, 'best_perplexity': 1.0184517544718033, 'improved': False, 'non_improvement_count': 2, 'steps': 2}
+Task completed successfully!2025-01-05 14:00:54,535 - INFO - Schema created and optimized
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\invoice_prompt.txt2025-01-05 14:00:54,542 - INFO - 
+Starting parallel processing with 1 workers
+2025-01-05 14:02:30,972 - INFO - 
+Data extraction completed
+2025-01-05 14:02:30,981 - INFO - Results saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\SUPA IGA Mt Cotton(3)_extracted.json
+2025-01-05 14:02:31,020 - ERROR - Error processing SUPA IGA Mt Cotton(3).pdf: [Errno 13] Permission denied: 'output\\extraction_metrics.xlsx'

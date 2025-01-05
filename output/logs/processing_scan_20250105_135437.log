@@ -1,0 +1,966 @@
+2025-01-05 13:54:37,674 - INFO - Log file created at: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\logs\processing_scan_20250105_135437.log
+2025-01-05 13:54:37,675 - INFO - Processing: scan.pdf
+2025-01-05 13:54:38,925 - INFO - Processing document: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\Invoices\Charmlaw Foods Pty Ltd\scan.pdf
+Processing as scanned PDF...Total pages detected: 1Processing page 1/1 with OCR2025-01-05 13:54:46,211 - INFO - Successfully read document with 1 pages
+2025-01-05 13:54:46,981 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+<IPython.core.display.HTML object>2025-01-05 13:54:46,993 - INFO - Document classified as: Invoice (confidence: 100.0%)
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\schema_builder_prompt.txt2025-01-05 13:54:51,333 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Initial Prompt: 
+    
+You are a JSON schema builder. You will receive an unstructured form-like document and you will perform following tasks:
+
+1. Extract only the key phrases in key-value pairs, and header names in tables from the document. 
+
+2. Arrange all keys phrases with data types in the parent region of the json and table header names in the child region.
+
+3. Ensure the order of key names and table headers aligns with the original text.
+
+4. ONLY include unique column names as they appear in the document, without duplicates or associated data. 
+
+5. ONLY Respond with the JSON schema with all key phrases and table column headers.
+
+Here is the content of the form-like document:
+
+
+                                                                                                               TAX INVOICE
+                                          Charmlaw Foods Pty Ltd
+                                  518 Sherwood Road                                               Copy
+                                    SHERWOOD QLD4075                                            Invoice No:  213441923
+                              Telephone:   07 3716 9666      Facsimile:      07 3716 9601
+                                                                                                        Inv Date:    01.08.23
+                     Charmlaw E-Mailt          accounts@charmlaw.com.au
+                 Foods                                                                                Due Date:  15.08.23
+                            A.B.N.:          79 159 830 136
+                                                                                                        Your Ref: Rob
+                                                                                                       Page:  1
+                Bill To:                                                Ship To:
+                              Jones Thornlands IGA (EA100)                  Jones Thornlands IGA (EA100)
+                 POBox463                                                    51-55 Island Outlook Avenue
+                       CLEVELAND QLD4163                                  THORNLANDS QLD4163
+                    Customer ABN No: 68 096 101 263                 Transport:   East Charmlaw
+                                                                                                                  Total
+          Qty    Iem No.EAN            Description                                 WM      Price Disc%            GST%
+                                                                                                                  ExGST
+                  FC2650                         F/Cuisine 1kg Sliced Cucumber              1kg      7.8700  0.00      7.87   0.00
+                  FC2652                        FICuisine 1kg Siced Tomato                199     9.8100  0.00      9.81  0.00
+                  FC2689                        F/Cuisine 1kg Shredded Carrot              2g      5.2600 0.00      10.52 0.00
+              Signature                                                                         Total Weight (kg):     4.0000
+               Print Name                                                                     Carton Count              2
+            Date                                                                                      GST Amt:    Sale Amt:
+                                                                                  GST Applicable         0.00        0.00
+                                     Claims are to be made within 48 hours of delivery
+                                                                                 GST Exempt            0.00        28.20
+                     Please deposit funds to:                                 Discount:                               0.00
+                Bank Details:
+                                                                                                Invoice Total:      28.20
+            SME       BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Initial Schema:
+{
+  "schema": {
+    "TAX INVOICE": {
+      "Charmlaw Foods Pty Ltd": "string",
+      "Copy": "string",
+      "Invoice No": "string",
+      "Inv Date": "string",
+      "Due Date": "string",
+      "Your Ref": "string",
+      "Page": "integer",
+      "Bill To": {
+        "Jones Thornlands IGA (EA100)": "string",
+        "POBox": "string",
+        "CLEVELAND QLD": "string",
+        "Customer ABN No": "string"
+      },
+      "Ship To": {
+        "Jones Thornlands IGA (EA100)": "string",
+        "Address": "string",
+        "THORNLANDS QLD": "string"
+      },
+      "Transport": "string",
+      "Total": "string",
+      "Qty": "integer",
+      "Item No": "string",
+      "EAN": "string",
+      "Description": "string",
+      "WM": "string",
+      "Price": "number",
+      "Disc%": "number",
+      "GST%": "number",
+      "ExGST": "number",
+      "Signature": "string",
+      "Print Name": "string",
+      "Date": "string",
+      "Total Weight (kg)": "number",
+      "Carton Count": "integer",
+      "GST Amt": "number",
+      "Sale Amt": "number",
+      "GST Applicable": "number",
+      "GST Exempt": "number",
+      "Discount": "number",
+      "Invoice Total": "number",
+      "Bank Details": {
+        "SME": "string",
+        "BSB": "string",
+        "Account": "string",
+        "Payment Terms": "string"
+      }
+    }
+  }
+}Initial Perplexity: 1.0257
+Current State:Perplexity: 1.02572025-01-05 13:54:56,849 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. ITERATION 1 BEGINS.....................................2025-01-05 13:54:59,439 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 13:55:04,210 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 1
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+**Goal:** Create a JSON schema from an unstructured form-like document by extracting key phrases and table headers.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify and extract key phrases in key-value pairs from the document.
+   - Identify and extract header names from tables in the document.
+
+2. **Organize Data:**
+   - Place all extracted key phrases in the parent region of the JSON schema.
+   - Place all extracted table header names in the child region of the JSON schema.
+
+3. **Maintain Order:**
+   - Ensure that the order of key phrases and table headers matches their appearance in the original document.
+
+4. **Eliminate Duplicates:**
+   - Include only unique key phrases and table headers. Do not include duplicates or any associated data.
+
+5. **Respond with JSON Schema:**
+   - Provide only the JSON schema containing all extracted key phrases and table column headers.
+
+**Note:** Do not include any additional text or explanations in your response.
+
+                                                                                                               TAX INVOICE
+                                          Charmlaw Foods Pty Ltd
+                                  518 Sherwood Road                                               Copy
+                                    SHERWOOD QLD4075                                            Invoice No:  213441923
+                              Telephone:   07 3716 9666      Facsimile:      07 3716 9601
+                                                                                                        Inv Date:    01.08.23
+                     Charmlaw E-Mailt          accounts@charmlaw.com.au
+                 Foods                                                                                Due Date:  15.08.23
+                            A.B.N.:          79 159 830 136
+                                                                                                        Your Ref: Rob
+                                                                                                       Page:  1
+                Bill To:                                                Ship To:
+                              Jones Thornlands IGA (EA100)                  Jones Thornlands IGA (EA100)
+                 POBox463                                                    51-55 Island Outlook Avenue
+                       CLEVELAND QLD4163                                  THORNLANDS QLD4163
+                    Customer ABN No: 68 096 101 263                 Transport:   East Charmlaw
+                                                                                                                  Total
+          Qty    Iem No.EAN            Description                                 WM      Price Disc%            GST%
+                                                                                                                  ExGST
+                  FC2650                         F/Cuisine 1kg Sliced Cucumber              1kg      7.8700  0.00      7.87   0.00
+                  FC2652                        FICuisine 1kg Siced Tomato                199     9.8100  0.00      9.81  0.00
+                  FC2689                        F/Cuisine 1kg Shredded Carrot              2g      5.2600 0.00      10.52 0.00
+              Signature                                                                         Total Weight (kg):     4.0000
+               Print Name                                                                     Carton Count              2
+            Date                                                                                      GST Amt:    Sale Amt:
+                                                                                  GST Applicable         0.00        0.00
+                                     Claims are to be made within 48 hours of delivery
+                                                                                 GST Exempt            0.00        28.20
+                     Please deposit funds to:                                 Discount:                               0.00
+                Bank Details:
+                                                                                                Invoice Total:      28.20
+            SME       BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Updated Schema:
+{
+  "keyPhrases": [
+    "Charmlaw Foods Pty Ltd",
+    "518 Sherwood Road",
+    "SHERWOOD QLD4075",
+    "Invoice No: 213441923",
+    "Telephone: 07 3716 9666",
+    "Facsimile: 07 3716 9601",
+    "Inv Date: 01.08.23",
+    "Due Date: 15.08.23",
+    "Your Ref: Rob",
+    "Page: 1",
+    "Bill To:",
+    "Ship To:",
+    "Jones Thornlands IGA (EA100)",
+    "POBox463",
+    "CLEVELAND QLD4163",
+    "Customer ABN No: 68 096 101 263",
+    "Transport: East Charmlaw",
+    "Total",
+    "Signature",
+    "Print Name",
+    "Date",
+    "Claims are to be made within 48 hours of delivery",
+    "Please deposit funds to:",
+    "Bank Details:",
+    "SME",
+    "BSB:484-799",
+    "Account: 505058147",
+    "Payment Terms: 14 Days"
+  ],
+  "tableHeaders": [
+    "Qty",
+    "Item No.",
+    "EAN",
+    "Description",
+    "WM",
+    "Price",
+    "Disc%",
+    "GST%",
+    "ExGST",
+    "Total Weight (kg):",
+    "Carton Count",
+    "GST Amt:",
+    "Sale Amt:",
+    "GST Applicable",
+    "GST Exempt",
+    "Discount:",
+    "Invoice Total:"
+  ]
+}Current Perplexity: 1.0106Best Perplexity: 1.0106Improved: TrueNon-improvement count: 0
+Action taken: 1Reward: 0.0000
+Terminated: FalseTotal Return: 0.0000Metrics:{'perplexity': 1.010644666748401, 'best_perplexity': 1.010644666748401, 'improved': True, 'non_improvement_count': 0, 'steps': 1}
+Current State:Perplexity: 1.01062025-01-05 13:55:05,458 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. ITERATION 2 BEGINS.....................................2025-01-05 13:55:16,019 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 13:55:19,420 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 2
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+**Goal:** Create a JSON schema from an unstructured form-like document by extracting key phrases and table headers.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify and extract key phrases in key-value pairs from the document.
+   - Identify and extract header names from tables in the document.
+
+2. **Organize Data:**
+   - Place all extracted key phrases in the parent region of the JSON schema.
+   - Place all extracted table header names in the child region of the JSON schema.
+
+3. **Maintain Order:**
+   - Ensure that the order of key phrases and table headers matches their appearance in the original document.
+
+4. **Eliminate Duplicates:**
+   - Include only unique key phrases and table headers. Do not include duplicates or any associated data.
+
+5. **Respond with JSON Schema:**
+   - Provide only the JSON schema containing all extracted key phrases and table column headers.
+
+**Examples:**
+
+1. **Input Document:**
+   ```
+   Name: John Doe
+   Age: 30
+   Address: 123 Main St
+   | Product Name | Price | Quantity |
+   |--------------|-------|----------|
+   | Apples       | $1   | 10       |
+   | Bananas      | $0.5 | 20       |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Name": "John Doe",
+       "Age": "30",
+       "Address": "123 Main St"
+     },
+     "tableHeaders": {
+       "Product Name": "",
+       "Price": "",
+       "Quantity": ""
+     }
+   }
+   ```
+
+2. **Input Document:**
+   ```
+   Employee ID: 12345
+   Department: Sales
+   | Item        | Cost | Stock |
+   |-------------|------|-------|
+   | Laptops     | $800 | 5     |
+   | Desktops    | $600 | 10    |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Employee ID": "12345",
+       "Department": "Sales"
+     },
+     "tableHeaders": {
+       "Item": "",
+       "Cost": "",
+       "Stock": ""
+     }
+   }
+   ```
+
+3. **Input Document:**
+   ```
+   Course: Mathematics
+   Instructor: Dr. Smith
+   | Student Name | Grade |
+   |--------------|-------|
+   | Alice        | A     |
+   | Bob          | B     |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Course": "Mathematics",
+       "Instructor": "Dr. Smith"
+     },
+     "tableHeaders": {
+       "Student Name": "",
+       "Grade": ""
+     }
+   }
+   ```
+
+**Note:** Do not include any additional text or explanations in your response.
+
+                                                                                                               TAX INVOICE
+                                          Charmlaw Foods Pty Ltd
+                                  518 Sherwood Road                                               Copy
+                                    SHERWOOD QLD4075                                            Invoice No:  213441923
+                              Telephone:   07 3716 9666      Facsimile:      07 3716 9601
+                                                                                                        Inv Date:    01.08.23
+                     Charmlaw E-Mailt          accounts@charmlaw.com.au
+                 Foods                                                                                Due Date:  15.08.23
+                            A.B.N.:          79 159 830 136
+                                                                                                        Your Ref: Rob
+                                                                                                       Page:  1
+                Bill To:                                                Ship To:
+                              Jones Thornlands IGA (EA100)                  Jones Thornlands IGA (EA100)
+                 POBox463                                                    51-55 Island Outlook Avenue
+                       CLEVELAND QLD4163                                  THORNLANDS QLD4163
+                    Customer ABN No: 68 096 101 263                 Transport:   East Charmlaw
+                                                                                                                  Total
+          Qty    Iem No.EAN            Description                                 WM      Price Disc%            GST%
+                                                                                                                  ExGST
+                  FC2650                         F/Cuisine 1kg Sliced Cucumber              1kg      7.8700  0.00      7.87   0.00
+                  FC2652                        FICuisine 1kg Siced Tomato                199     9.8100  0.00      9.81  0.00
+                  FC2689                        F/Cuisine 1kg Shredded Carrot              2g      5.2600 0.00      10.52 0.00
+              Signature                                                                         Total Weight (kg):     4.0000
+               Print Name                                                                     Carton Count              2
+            Date                                                                                      GST Amt:    Sale Amt:
+                                                                                  GST Applicable         0.00        0.00
+                                     Claims are to be made within 48 hours of delivery
+                                                                                 GST Exempt            0.00        28.20
+                     Please deposit funds to:                                 Discount:                               0.00
+                Bank Details:
+                                                                                                Invoice Total:      28.20
+            SME       BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Updated Schema:
+{
+  "keyPhrases": {
+    "Invoice No": "213441923",
+    "Inv Date": "01.08.23",
+    "Due Date": "15.08.23",
+    "Your Ref": "Rob",
+    "Customer ABN No": "68 096 101 263",
+    "Transport": "East Charmlaw",
+    "Total ExGST": "28.20",
+    "Total Weight (kg)": "4.0000",
+    "Carton Count": "2",
+    "GST Amt": "0.00",
+    "Sale Amt": "0.00",
+    "GST Applicable": "0.00",
+    "GST Exempt": "0.00",
+    "Discount": "0.00",
+    "Invoice Total": "28.20",
+    "Payment Terms": "14 Days"
+  },
+  "tableHeaders": {
+    "Qty": "",
+    "Item No.EAN": "",
+    "Description": "",
+    "WM": "",
+    "Price": "",
+    "Disc%": "",
+    "GST%": ""
+  }
+}Current Perplexity: 1.0137Best Perplexity: 1.0106Improved: FalseNon-improvement count: 1
+Action taken: 2Reward: -0.0031
+Terminated: FalseTotal Return: -0.0031Metrics:{'perplexity': 1.0137367156310766, 'best_perplexity': 1.010644666748401, 'improved': False, 'non_improvement_count': 1, 'steps': 2}
+Current State:Perplexity: 1.01372025-01-05 13:55:20,641 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. ITERATION 3 BEGINS.....................................2025-01-05 13:55:29,479 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 13:55:32,829 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 3
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+**Goal:** Create a JSON schema from an unstructured form-like document by extracting key phrases and table headers.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify and extract key phrases in key-value pairs from the document.
+   - Identify and extract header names from tables in the document.
+
+2. **Organize Data:**
+   - Place all extracted key phrases in the parent region of the JSON schema.
+   - Place all extracted table header names in the child region of the JSON schema.
+
+3. **Maintain Order:**
+   - Ensure that the order of key phrases and table headers matches their appearance in the original document.
+
+4. **Eliminate Duplicates:**
+   - Include only unique key phrases and table headers. Do not include duplicates or any associated data.
+
+5. **Respond with JSON Schema:**
+   - Provide only the JSON schema containing all extracted key phrases and table column headers.
+
+**Examples:**
+
+1. **Input Document:**
+   ```
+   Name: John Doe
+   Age: 30
+   Address: 123 Main St
+   | Product Name | Price | Quantity |
+   |--------------|-------|----------|
+   | Apples       | $1   | 10       |
+   | Bananas      | $0.5 | 20       |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Name": "John Doe",
+       "Age": "30",
+       "Address": "123 Main St"
+     },
+     "tableHeaders": {
+       "Product Name": "",
+       "Price": "",
+       "Quantity": ""
+     }
+   }
+   ```
+
+2. **Input Document:**
+   ```
+   Employee ID: 12345
+   Department: Sales
+   | Item        | Cost | Stock |
+   |-------------|------|-------|
+   | Laptops     | $800 | 5     |
+   | Desktops    | $600 | 10    |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Employee ID": "12345",
+       "Department": "Sales"
+     },
+     "tableHeaders": {
+       "Item": "",
+       "Cost": "",
+       "Stock": ""
+     }
+   }
+   ```
+
+3. **Input Document:**
+   ```
+   Course: Mathematics
+   Instructor: Dr. Smith
+   | Student Name | Grade |
+   |--------------|-------|
+   | Alice        | A     |
+   | Bob          | B     |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Course": "Mathematics",
+       "Instructor": "Dr. Smith"
+     },
+     "tableHeaders": {
+       "Student Name": "",
+       "Grade": ""
+     }
+   }
+   ```
+
+**Note:** Do not include any additional text or explanations in your response.
+
+                                                                                                               TAX INVOICE
+                                          Charmlaw Foods Pty Ltd
+                                  518 Sherwood Road                                               Copy
+                                    SHERWOOD QLD4075                                            Invoice No:  213441923
+                              Telephone:   07 3716 9666      Facsimile:      07 3716 9601
+                                                                                                        Inv Date:    01.08.23
+                     Charmlaw E-Mailt          accounts@charmlaw.com.au
+                 Foods                                                                                Due Date:  15.08.23
+                            A.B.N.:          79 159 830 136
+                                                                                                        Your Ref: Rob
+                                                                                                       Page:  1
+                Bill To:                                                Ship To:
+                              Jones Thornlands IGA (EA100)                  Jones Thornlands IGA (EA100)
+                 POBox463                                                    51-55 Island Outlook Avenue
+                       CLEVELAND QLD4163                                  THORNLANDS QLD4163
+                    Customer ABN No: 68 096 101 263                 Transport:   East Charmlaw
+                                                                                                                  Total
+          Qty    Iem No.EAN            Description                                 WM      Price Disc%            GST%
+                                                                                                                  ExGST
+                  FC2650                         F/Cuisine 1kg Sliced Cucumber              1kg      7.8700  0.00      7.87   0.00
+                  FC2652                        FICuisine 1kg Siced Tomato                199     9.8100  0.00      9.81  0.00
+                  FC2689                        F/Cuisine 1kg Shredded Carrot              2g      5.2600 0.00      10.52 0.00
+              Signature                                                                         Total Weight (kg):     4.0000
+               Print Name                                                                     Carton Count              2
+            Date                                                                                      GST Amt:    Sale Amt:
+                                                                                  GST Applicable         0.00        0.00
+                                     Claims are to be made within 48 hours of delivery
+                                                                                 GST Exempt            0.00        28.20
+                     Please deposit funds to:                                 Discount:                               0.00
+                Bank Details:
+                                                                                                Invoice Total:      28.20
+            SME       BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Updated Schema:
+{
+  "keyPhrases": {
+    "Invoice No": "213441923",
+    "Inv Date": "01.08.23",
+    "Due Date": "15.08.23",
+    "Your Ref": "Rob",
+    "Customer ABN No": "68 096 101 263",
+    "Transport": "East Charmlaw",
+    "Total ExGST": "28.20",
+    "Total Weight (kg)": "4.0000",
+    "Carton Count": "2",
+    "GST Amt": "0.00",
+    "Sale Amt": "0.00",
+    "GST Applicable": "0.00",
+    "GST Exempt": "0.00",
+    "Discount": "0.00",
+    "Invoice Total": "28.20",
+    "Payment Terms": "14 Days"
+  },
+  "tableHeaders": {
+    "Qty": "",
+    "Item No.EAN": "",
+    "Description": "",
+    "WM": "",
+    "Price": "",
+    "Disc%": "",
+    "GST%": ""
+  }
+}Current Perplexity: 1.0105Best Perplexity: 1.0105Improved: TrueNon-improvement count: 0
+Action taken: 2Reward: 0.0000
+Terminated: FalseTotal Return: -0.0031Metrics:{'perplexity': 1.0105166063822044, 'best_perplexity': 1.0105166063822044, 'improved': True, 'non_improvement_count': 0, 'steps': 3}
+Current State:Perplexity: 1.01052025-01-05 13:55:34,037 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. ITERATION 4 BEGINS.....................................2025-01-05 13:55:45,095 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 13:55:47,817 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 4
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+**Goal:** Create a JSON schema from an unstructured document by extracting key phrases and table headers.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify key phrases in key-value pairs from the document.
+   - Extract header names from any tables present in the document.
+
+2. **Organize Data:**
+   - Place all extracted key phrases in the "keyPhrases" section of the JSON schema.
+   - Place all extracted table header names in the "tableHeaders" section of the JSON schema.
+
+3. **Maintain Order:**
+   - Ensure the order of key phrases and table headers matches their appearance in the original document.
+
+4. **Eliminate Duplicates:**
+   - Include only unique key phrases and table headers. Do not include duplicates.
+
+5. **Respond with JSON Schema:**
+   - Provide only the JSON schema containing all extracted key phrases and table headers.
+
+**Examples:**
+
+1. **Input Document:**
+   ```
+   Name: John Doe
+   Age: 30
+   Address: 123 Main St
+   | Product Name | Price | Quantity |
+   |--------------|-------|----------|
+   | Apples       | $1   | 10       |
+   | Bananas      | $0.5 | 20       |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Name": "John Doe",
+       "Age": "30",
+       "Address": "123 Main St"
+     },
+     "tableHeaders": {
+       "Product Name": "",
+       "Price": "",
+       "Quantity": ""
+     }
+   }
+   ```
+
+2. **Input Document:**
+   ```
+   Employee ID: 12345
+   Department: Sales
+   | Item        | Cost | Stock |
+   |-------------|------|-------|
+   | Laptops     | $800 | 5     |
+   | Desktops    | $600 | 10    |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Employee ID": "12345",
+       "Department": "Sales"
+     },
+     "tableHeaders": {
+       "Item": "",
+       "Cost": "",
+       "Stock": ""
+     }
+   }
+   ```
+
+3. **Input Document:**
+   ```
+   Course: Mathematics
+   Instructor: Dr. Smith
+   | Student Name | Grade |
+   |--------------|-------|
+   | Alice        | A     |
+   | Bob          | B     |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Course": "Mathematics",
+       "Instructor": "Dr. Smith"
+     },
+     "tableHeaders": {
+       "Student Name": "",
+       "Grade": ""
+     }
+   }
+   ```
+
+**Note:** Do not include any additional text or explanations in your response.
+
+                                                                                                               TAX INVOICE
+                                          Charmlaw Foods Pty Ltd
+                                  518 Sherwood Road                                               Copy
+                                    SHERWOOD QLD4075                                            Invoice No:  213441923
+                              Telephone:   07 3716 9666      Facsimile:      07 3716 9601
+                                                                                                        Inv Date:    01.08.23
+                     Charmlaw E-Mailt          accounts@charmlaw.com.au
+                 Foods                                                                                Due Date:  15.08.23
+                            A.B.N.:          79 159 830 136
+                                                                                                        Your Ref: Rob
+                                                                                                       Page:  1
+                Bill To:                                                Ship To:
+                              Jones Thornlands IGA (EA100)                  Jones Thornlands IGA (EA100)
+                 POBox463                                                    51-55 Island Outlook Avenue
+                       CLEVELAND QLD4163                                  THORNLANDS QLD4163
+                    Customer ABN No: 68 096 101 263                 Transport:   East Charmlaw
+                                                                                                                  Total
+          Qty    Iem No.EAN            Description                                 WM      Price Disc%            GST%
+                                                                                                                  ExGST
+                  FC2650                         F/Cuisine 1kg Sliced Cucumber              1kg      7.8700  0.00      7.87   0.00
+                  FC2652                        FICuisine 1kg Siced Tomato                199     9.8100  0.00      9.81  0.00
+                  FC2689                        F/Cuisine 1kg Shredded Carrot              2g      5.2600 0.00      10.52 0.00
+              Signature                                                                         Total Weight (kg):     4.0000
+               Print Name                                                                     Carton Count              2
+            Date                                                                                      GST Amt:    Sale Amt:
+                                                                                  GST Applicable         0.00        0.00
+                                     Claims are to be made within 48 hours of delivery
+                                                                                 GST Exempt            0.00        28.20
+                     Please deposit funds to:                                 Discount:                               0.00
+                Bank Details:
+                                                                                                Invoice Total:      28.20
+            SME       BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Updated Schema:
+{
+  "keyPhrases": {
+    "Invoice No": "213441923",
+    "Inv Date": "01.08.23",
+    "Due Date": "15.08.23",
+    "Your Ref": "Rob",
+    "Customer ABN No": "68 096 101 263",
+    "Transport": "East Charmlaw",
+    "Total ExGST": "28.20",
+    "Payment Terms": "14 Days"
+  },
+  "tableHeaders": {
+    "Qty": "",
+    "Item No.EAN": "",
+    "Description": "",
+    "WM": "",
+    "Price": "",
+    "Disc%": "",
+    "GST%": "",
+    "Total Weight (kg)": "",
+    "Carton Count": "",
+    "GST Amt": "",
+    "Sale Amt": "",
+    "GST Applicable": "",
+    "GST Exempt": "",
+    "Discount": "",
+    "Invoice Total": ""
+  }
+}Current Perplexity: 1.0130Best Perplexity: 1.0105Improved: FalseNon-improvement count: 1
+Action taken: 1Reward: -0.0025
+Terminated: FalseTotal Return: -0.0056Metrics:{'perplexity': 1.0130284209102982, 'best_perplexity': 1.0105166063822044, 'improved': False, 'non_improvement_count': 1, 'steps': 4}
+Current State:Perplexity: 1.01302025-01-05 13:55:49,140 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+............................. ITERATION 5 BEGINS.....................................2025-01-05 13:55:56,020 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 13:55:58,695 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Step 5
+Updated Prompt: 
+    
+### Improved Instruction Prompt:
+
+**Goal:** Create a JSON schema from an unstructured document by extracting key phrases and table headers.
+
+**Instructions:**
+
+1. **Extract Key Phrases:**
+   - Identify and extract key phrases in key-value pairs from the document.
+   - Identify and extract header names from any tables present in the document.
+
+2. **Organize Data:**
+   - Add all extracted key phrases to the "keyPhrases" section of the JSON schema.
+   - Add all extracted table header names to the "tableHeaders" section of the JSON schema.
+
+3. **Maintain Order:**
+   - Ensure the order of key phrases and table headers matches their appearance in the original document.
+
+4. **Eliminate Duplicates:**
+   - Include only unique key phrases and table headers. Do not include duplicates.
+
+5. **Respond with JSON Schema:**
+   - Provide only the JSON schema containing all extracted key phrases and table headers.
+
+**Examples:**
+
+1. **Input Document:**
+   ```
+   Name: John Doe
+   Age: 30
+   Address: 123 Main St
+   | Product Name | Price | Quantity |
+   |--------------|-------|----------|
+   | Apples       | $1   | 10       |
+   | Bananas      | $0.5 | 20       |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Name": "John Doe",
+       "Age": "30",
+       "Address": "123 Main St"
+     },
+     "tableHeaders": {
+       "Product Name": "",
+       "Price": "",
+       "Quantity": ""
+     }
+   }
+   ```
+
+2. **Input Document:**
+   ```
+   Employee ID: 12345
+   Department: Sales
+   | Item        | Cost | Stock |
+   |-------------|------|-------|
+   | Laptops     | $800 | 5     |
+   | Desktops    | $600 | 10    |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Employee ID": "12345",
+       "Department": "Sales"
+     },
+     "tableHeaders": {
+       "Item": "",
+       "Cost": "",
+       "Stock": ""
+     }
+   }
+   ```
+
+3. **Input Document:**
+   ```
+   Course: Mathematics
+   Instructor: Dr. Smith
+   | Student Name | Grade |
+   |--------------|-------|
+   | Alice        | A     |
+   | Bob          | B     |
+   ```
+   **Output JSON Schema:**
+   ```json
+   {
+     "keyPhrases": {
+       "Course": "Mathematics",
+       "Instructor": "Dr. Smith"
+     },
+     "tableHeaders": {
+       "Student Name": "",
+       "Grade": ""
+     }
+   }
+   ```
+
+**Note:** Do not include any additional text or explanations in your response.
+
+                                                                                                               TAX INVOICE
+                                          Charmlaw Foods Pty Ltd
+                                  518 Sherwood Road                                               Copy
+                                    SHERWOOD QLD4075                                            Invoice No:  213441923
+                              Telephone:   07 3716 9666      Facsimile:      07 3716 9601
+                                                                                                        Inv Date:    01.08.23
+                     Charmlaw E-Mailt          accounts@charmlaw.com.au
+                 Foods                                                                                Due Date:  15.08.23
+                            A.B.N.:          79 159 830 136
+                                                                                                        Your Ref: Rob
+                                                                                                       Page:  1
+                Bill To:                                                Ship To:
+                              Jones Thornlands IGA (EA100)                  Jones Thornlands IGA (EA100)
+                 POBox463                                                    51-55 Island Outlook Avenue
+                       CLEVELAND QLD4163                                  THORNLANDS QLD4163
+                    Customer ABN No: 68 096 101 263                 Transport:   East Charmlaw
+                                                                                                                  Total
+          Qty    Iem No.EAN            Description                                 WM      Price Disc%            GST%
+                                                                                                                  ExGST
+                  FC2650                         F/Cuisine 1kg Sliced Cucumber              1kg      7.8700  0.00      7.87   0.00
+                  FC2652                        FICuisine 1kg Siced Tomato                199     9.8100  0.00      9.81  0.00
+                  FC2689                        F/Cuisine 1kg Shredded Carrot              2g      5.2600 0.00      10.52 0.00
+              Signature                                                                         Total Weight (kg):     4.0000
+               Print Name                                                                     Carton Count              2
+            Date                                                                                      GST Amt:    Sale Amt:
+                                                                                  GST Applicable         0.00        0.00
+                                     Claims are to be made within 48 hours of delivery
+                                                                                 GST Exempt            0.00        28.20
+                     Please deposit funds to:                                 Discount:                               0.00
+                Bank Details:
+                                                                                                Invoice Total:      28.20
+            SME       BSB:484-799
+          Account: 505058147                   Payment Terms: 14 Days
+
+    Updated Schema:
+{
+  "keyPhrases": {
+    "Invoice No": "213441923",
+    "Inv Date": "01.08.23",
+    "Due Date": "15.08.23",
+    "Your Ref": "Rob",
+    "Customer ABN No": "68 096 101 263",
+    "Transport": "East Charmlaw",
+    "Total ExGST": "28.20",
+    "Payment Terms": "14 Days"
+  },
+  "tableHeaders": {
+    "Qty": "",
+    "Iem No.EAN": "",
+    "Description": "",
+    "WM": "",
+    "Price": "",
+    "Disc%": "",
+    "GST%": "",
+    "Total Weight (kg)": "",
+    "Carton Count": "",
+    "GST Amt": "",
+    "Sale Amt": "",
+    "GST Applicable": "",
+    "GST Exempt": "",
+    "Discount": "",
+    "Invoice Total": ""
+  }
+}Current Perplexity: 1.0106Best Perplexity: 1.0105Improved: FalseNon-improvement count: 2
+Terminating due to:maximum steps reachedBest Results Achieved:Perplexity: 1.0105
+Best Schema:{
+  "keyPhrases": {
+    "Invoice No": "213441923",
+    "Inv Date": "01.08.23",
+    "Due Date": "15.08.23",
+    "Your Ref": "Rob",
+    "Customer ABN No": "68 096 101 263",
+    "Transport": "East Charmlaw",
+    "Total ExGST": "28.20",
+    "Total Weight (kg)": "4.0000",
+    "Carton Count": "2",
+    "GST Amt": "0.00",
+    "Sale Amt": "0.00",
+    "GST Applicable": "0.00",
+    "GST Exempt": "0.00",
+    "Discount": "0.00",
+    "Invoice Total": "28.20",
+    "Payment Terms": "14 Days"
+  },
+  "tableHeaders": {
+    "Qty": "",
+    "Item No.EAN": "",
+    "Description": "",
+    "WM": "",
+    "Price": "",
+    "Disc%": "",
+    "GST%": ""
+  }
+}
+Action taken: 1Reward: -0.0001
+Terminated: TrueTotal Return: -0.0057Metrics:{'perplexity': 1.010645178082237, 'best_perplexity': 1.0105166063822044, 'improved': False, 'non_improvement_count': 2, 'steps': 5}
+Task completed successfully!2025-01-05 13:55:59,056 - INFO - Schema created and optimized
+Loading prompt from: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\src\actor_agents\Prompts\invoice_prompt.txt2025-01-05 13:55:59,059 - INFO - 
+Starting parallel processing with 1 workers
+2025-01-05 13:56:42,795 - INFO - 
+Data extraction completed
+2025-01-05 13:56:42,802 - INFO - Results saved to: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\scan_extracted.json
+2025-01-05 13:56:42,838 - ERROR - Error processing scan.pdf: [Errno 13] Permission denied: 'output\\extraction_metrics.xlsx'
