@@ -157,6 +157,28 @@ Only return the improved instruction prompt.
     response_text = response.choices[0].message.content
     return response_text
 
+
+def no_change_strategy(actor_prompt):
+    no_change_prompt = PromptTemplate(
+        template="""
+DO NOT make any changes to the following instruction prompt. 
+
+### Instruction Prompt:
+'''
+
+{{prompt}}
+
+'''
+Just return the instruction prompt as it is.
+    """,
+    input_variables=["prompt"]
+    )
+    response = get_completion_gpt4([{"role": "user", "content": no_change_prompt.format(prompt=actor_prompt)}],
+                                )
+
+    response_text = response.choices[0].message.content
+    return response_text
+
 def adjust_prompt(actor_prompt, task_type, state, action, generated_output, groundtruth):
     """
     Adjusts the prompt based on the selected action.
@@ -176,12 +198,9 @@ def adjust_prompt(actor_prompt, task_type, state, action, generated_output, grou
     elif action == 2:
         updated_prompt = fewshot_strategy(actor_prompt=actor_prompt, task_type=task_type)
     elif action == 3:
-        updated_prompt = LLm_feedback_strategy(actor_prompt=actor_prompt, generated_output=generated_output, ground_truth=groundtruth)
+        updated_prompt = no_change_strategy(actor_prompt=actor_prompt)
     elif action == 4:
-        updated_prompt = (
-            "Please extract the required fields with utmost clarity. "
-            "Ensure no fields are missed and maintain the output structure."
-        )
+        updated_prompt = LLm_feedback_strategy(actor_prompt=actor_prompt, generated_output=generated_output, ground_truth=groundtruth)
     else:
         raise ValueError("Invalid action ID. Must be between 0 and 4.")
 
