@@ -2,6 +2,8 @@
 
 An advanced document processing system that leverages Large Language Models (LLMs) and Reinforcement Learning to extract structured data from various document formats. The system features intelligent document classification, dynamic schema generation, and adaptive data extraction capabilities.
 
+## Technology Stack
+
 ## 🌟 Features
 
 - **Multi-Format Support**: Process various document types including:
@@ -133,16 +135,18 @@ python main.py "path/to/your/documents" --output-dir "output" --schema-groundtru
 
 ## 📊 Output Structure
 
+   ```lua
 output/
 ├── extracted_data/
-│ ├── document1.json
-│ └── document2.json
+│   ├── document1.json
+│   └── document2.json
 ├── logs/
-│ └── processing_YYYYMMDD_HHMMSS.log
+│   └── processing_YYYYMMDD_HHMMSS.log
 ├── metrics/
-│ └── extraction_metrics.xlsx
+│   └── extraction_metrics.xlsx
 └── unknown_docs/
-└── unclassified_doc.pdf
+    └── unclassified_doc.pdf
+   ```
 
 ## 🔍 Evaluation Metrics
 
