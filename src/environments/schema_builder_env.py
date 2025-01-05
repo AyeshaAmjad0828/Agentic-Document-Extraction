@@ -18,7 +18,7 @@ from src.action_space.meta_prompting_agent import adjust_prompt
 
 
 class SchemaBuilderEnv(gym.Env):
-    def __init__(self, baseprompt, document_text, groundtruth, max_steps=5):
+    def __init__(self, baseprompt, document_text, groundtruth, max_steps=3):
         super(SchemaBuilderEnv, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(
