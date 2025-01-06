@@ -1,0 +1,51 @@
+2025-01-06 15:32:45,628 - INFO - Log file created at: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output\logs\processing_AmazonWebServices_20250106_153245.log
+2025-01-06 15:32:45,628 - INFO - Starting document processing pipeline
+2025-01-06 15:32:45,628 - INFO - Input path: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\compare\AmazonWebServices.png
+2025-01-06 15:32:45,628 - INFO - Output directory: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\output
+2025-01-06 15:32:45,649 - INFO - Loaded extraction groundtruth
+2025-01-06 15:32:45,649 - INFO - Processing single file: C:\Users\ayesha.amjad\OneDrive - Astera Software\Documents\GitHub\Unstructured-Data-Extraction\data\compare\AmazonWebServices.png
+2025-01-06 15:32:45,658 - INFO - Loading cached results for AmazonWebServices.png
+2025-01-06 15:32:45,664 - INFO - 
+Processing complete!
+2025-01-06 15:32:45,674 - INFO - Document Type: Invoice
+2025-01-06 15:32:45,674 - INFO - Number of Pages: 1
+Extracted Data:{
+  "keyPhrases": {
+    "Account number": "296664039561",
+    "Invoice Number": "42183017",
+    "Bill to Address": "93B Sai Yu Chung Yuen Long, N.T., oooo, HK.",
+    "Invoice Date": "August 3 , 2014",
+    "TOTAL AMOUNT DUE ON August 3 , 2014": "$4.11",
+    "Billing period": "July 1 - July 31 , 2014",
+    "Service Provider": "Amazon Web Services, Inc.",
+    "Address": "410 Terry Ave North, Seattle, WA 98109-5210, US"
+  },
+  "charges": [
+    {
+      "AWS Service Charges": "$4.11",
+      "Charges": "$4.11",
+      "Credits": "$0.00",
+      "Total for this invoice": "$4.11"
+    },
+    {
+      "Detail": "AWS Data Transfer.",
+      "Charges": "$0.01",
+      "VAT": "$0.00"
+    },
+    {
+      "Detail": "Amazon Elastic Compute Cloud.",
+      "Charges": "$1.87",
+      "VAT": "$0.00"
+    },
+    {
+      "Detail": "Amazon Glacier",
+      "Charges": "$2.22",
+      "VAT": "$0.00"
+    },
+    {
+      "Detail": "Amazon Simple Storage Service",
+      "Charges": "$0.01",
+      "VAT": "$0.00"
+    }
+  ]
+}
