@@ -10,10 +10,13 @@ def cache_results(func):
     os.makedirs(cache_dir, exist_ok=True)
     
     @functools.wraps(func)
-    def wrapper(file_path, *args, force=False, **kwargs):
+    def wrapper(*args, force=False, **kwargs):
+        # Extract file_path from args (it's the first argument in process_document)
+        file_path = args[0] if args else None
+        
         # Skip caching if file_path is not a string/path
         if not isinstance(file_path, (str, bytes, os.PathLike)):
-            return func(file_path, *args, **kwargs)
+            return func(*args, **kwargs)
         
         # Create cache key based on file content hash
         with open(file_path, 'rb') as f:
@@ -29,7 +32,7 @@ def cache_results(func):
         
         # Process and cache result
         logging.info(f"Processing new document: {os.path.basename(file_path)}")
-        result = func(file_path, *args, **kwargs)
+        result = func(*args, **kwargs)  # Pass all arguments including force
         with open(cache_file, 'w') as f:
             json.dump(result, f)
         
