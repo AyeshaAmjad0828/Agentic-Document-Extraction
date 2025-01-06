@@ -23,7 +23,7 @@ from src.utils.cache_utils import cache_results
 
 
 
-@cache_results
+
 def update_metrics_excel(metrics_dict: dict, excel_path: str = "output\metrics\extraction_metrics.xlsx"):
     """
     Update or create Excel file with document processing metrics
@@ -41,9 +41,10 @@ def update_metrics_excel(metrics_dict: dict, excel_path: str = "output\metrics\e
     df_updated.to_excel(excel_path, index=False)
     logging.info(f"Metrics updated in: {excel_path}")
 
-
+@cache_results
 def process_document(file_path: str, extraction_groundtruth: dict, output_dir: str = None, 
-                    schema_groundtruth: dict = None, max_workers: int = None, max_steps: int = 5) -> dict:
+                    schema_groundtruth: dict = None, max_workers: int = None, max_steps: int = 5,
+                    force: bool = False) -> dict:
     """
     Process a document through the complete pipeline with parallel page processing
     
@@ -53,6 +54,8 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         output_dir: Directory to save results
         schema_groundtruth: Groundtruth for schema building
         max_workers: Maximum number of parallel workers (default: number of CPU cores)
+        max_steps: Maximum number of steps before terminating
+        force: Force reprocessing even if cache exists (default: False)
     """
     # Create required output directory structure
     if output_dir:
@@ -339,6 +342,8 @@ if __name__ == "__main__":
                        help='Maximum number of steps before terminating (default: 3)')
     parser.add_argument('--max-workers', type=int, default=None,
                        help='Maximum number of parallel workers (default: number of CPU cores)')
+    parser.add_argument('--force', default=False,
+                   help='Force reprocessing even if cache exists')
     args = parser.parse_args()
 
     try:
@@ -397,7 +402,8 @@ if __name__ == "__main__":
                     args.output_dir,
                     schema_groundtruth,
                     args.max_workers,
-                    args.max_steps
+                    args.max_steps,
+                    args.force
                 )
                 logging.info("\nProcessing complete!")
                 logging.info(f"Document Type: {result['document_type']}")
@@ -430,7 +436,8 @@ if __name__ == "__main__":
                             args.output_dir,         # output directory
                             schema_groundtruth,      # schema groundtruth
                             args.max_workers,         # max workers
-                            args.max_steps           # max steps
+                            args.max_steps,           # max steps
+                            args.force
                         )
                         logging.info(f"Successfully processed {file}")
                     except Exception as e:
