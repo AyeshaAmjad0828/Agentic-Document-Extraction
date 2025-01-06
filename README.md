@@ -163,6 +163,8 @@ The system uses multiple evaluation approaches ([src/evaluation/scoring.py](src/
 
 ## 🔄 Processing Pipeline
 
+<img src="README assets\AgenticDataExtraction-Main-Latest.jpg" >
+
 1. **Document Ingestion**
    - Format detection
    - Text extraction
