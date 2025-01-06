@@ -190,7 +190,9 @@ The system uses multiple evaluation approaches ([src/evaluation/scoring.py](src/
 Key configuration options:
 - `max_steps`: Maximum optimization iterations
 - `max_workers`: Parallel processing threads
-- `Force`: Forcing reprocessing of documents despite caching
+- `force`: Forcing reprocessing of documents despite caching
+
+***Note***: *Since all enviornments are based on iterative improvement of scores, no scoring threshold needs to be configured.* 
 
 ## 📝 Logging
 
