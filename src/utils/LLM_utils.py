@@ -1,4 +1,5 @@
 from openai import OpenAI
+from together import Together
 import os
 import json
 from dotenv import load_dotenv
@@ -51,3 +52,24 @@ def openai_embedding(text):
     except Exception as e:
         print(f"Error getting embedding: {e}")
         return None
+    
+
+
+
+
+client2 = Together(api_key=os.getenv("TOGETHER_API_KEY"))
+
+def get_completion_llama(
+    messages: list[dict[str, str]],
+    response_format=None,
+    model: str = "meta-llama/Llama-3.3-70B-Instruct-Turbo",) -> str:
+    params = {
+        "model": model,
+        "messages": messages,
+        "response_format": response_format,}
+    completion = client2.chat.completions.create(**params)
+    return completion
+
+   
+
+    #print(completion.choices[0].message.content)
