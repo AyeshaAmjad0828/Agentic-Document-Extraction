@@ -14,7 +14,7 @@ sys.path.append(project_root)
 import json
 from src.evaluation.exactmatchscore import calculate_match_score
 from src.evaluation.cosinesimilarityscore import compute_cosine_similarity
-from src.evaluation.intelligentmatch import semantic_match_score
+from src.evaluation.intelligentmatch import semantic_match_score, semantic_match_score_v2
 
 import re
 
