@@ -23,7 +23,6 @@ from src.utils.cache_utils import cache_results
 
 
 
-
 def update_metrics_excel(metrics_dict: dict, excel_path: str = "output\metrics\extraction_metrics.xlsx"):
     """
     Update or create Excel file with document processing metrics
@@ -73,6 +72,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         'Document_Type': None,
         'Classification_Confidence': 0,
         'Best_Perplexity_Score': None,
+        'Best_Complexity_Score': None,
         'Schema_Steps': 0,
         'Best_Exact_Match': None,
         'Best_Semantic_Match': None,
@@ -91,7 +91,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
 
     # Initialize components
     reader = DocumentReader()
-    chat_model = ChatOpenAI(model="gpt-4o-mini")
+    chat_model = ChatOpenAI(model="gpt-4o-mini", temperature=0.6)
     
     logging.info(f"Processing document: {file_path}")
     
@@ -181,6 +181,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         schema_results = schema_env.get_best_results()
         best_schema = schema_results['best_schema']
         metrics['Best_Perplexity_Score'] = schema_results['best_perplexity']
+        metrics['Best_Complexity_Score'] = schema_results['best_complexity']
         metrics['Schema_Steps'] = schema_env.current_step
 
         if schema_groundtruth:
@@ -329,6 +330,39 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         logging.error(f"Error in data extraction: {str(e)}")
         raise
 
+def get_matching_groundtruth(input_file: str, groundtruth_dir: str) -> dict:
+    """
+    Find and load matching groundtruth file for a given input file
+    """
+    # Return None if groundtruth_dir is None or not a directory
+    if not groundtruth_dir or not isinstance(groundtruth_dir, str) or not os.path.isdir(groundtruth_dir):
+        return None
+        
+    input_basename = os.path.splitext(os.path.basename(input_file))[0]
+    
+    # Try different possible extensions
+    for ext in ['.json', '.txt']:
+        groundtruth_path = os.path.join(groundtruth_dir, input_basename + ext)
+        if os.path.exists(groundtruth_path):
+            try:
+                file_ext = os.path.splitext(groundtruth_path)[1].lower()
+                with open(groundtruth_path, 'r') as f:
+                    if file_ext == '.json':
+                        return json.load(f)
+                    else:  # .txt or other
+                        content = f.read().strip()
+                        try:
+                            return json.loads(content)
+                        except json.JSONDecodeError:
+                            return content  # Keep as string if not JSON
+                logging.info(f"Loaded groundtruth from {groundtruth_path}")
+            except Exception as e:
+                logging.warning(f"Error loading groundtruth file {groundtruth_path}: {str(e)}")
+                return None
+    
+    logging.warning(f"No matching groundtruth file found for {input_basename}")
+    return None
+
 if __name__ == "__main__":
     import argparse
     import json
@@ -357,43 +391,12 @@ if __name__ == "__main__":
         schema_groundtruth = None
         extraction_groundtruth = None
         
-        # Load groundtruth files if provided
-        if args.schema_groundtruth:
-            try:
-                file_ext = os.path.splitext(args.schema_groundtruth)[1].lower()
-                with open(args.schema_groundtruth, 'r') as f:
-                    if file_ext == '.json':
-                        schema_groundtruth = json.load(f)
-                    else:  # .txt or other
-                        schema_groundtruth = f.read().strip()
-                        # Try to parse as JSON if it's in JSON format
-                        try:
-                            schema_groundtruth = json.loads(schema_groundtruth)
-                        except json.JSONDecodeError:
-                            pass  # Keep as string if not JSON
-                logging.info("Loaded schema groundtruth")
-            except Exception as e:
-                logging.error(f"Error loading schema groundtruth: {str(e)}")
-        
-        if args.extraction_groundtruth:
-            try:
-                file_ext = os.path.splitext(args.extraction_groundtruth)[1].lower()
-                with open(args.extraction_groundtruth, 'r') as f:
-                    if file_ext == '.json':
-                        extraction_groundtruth = json.load(f)
-                    else:  # .txt or other
-                        extraction_groundtruth = f.read().strip()
-                        # Try to parse as JSON if it's in JSON format
-                        try:
-                            extraction_groundtruth = json.loads(extraction_groundtruth)
-                        except json.JSONDecodeError:
-                            pass  # Keep as string if not JSON
-                logging.info("Loaded extraction groundtruth")
-            except Exception as e:
-                logging.error(f"Error loading extraction groundtruth: {e}")
         
         if os.path.isfile(args.input_path):
             # Process single file
+            schema_groundtruth = get_matching_groundtruth(args.input_path, args.schema_groundtruth) if args.schema_groundtruth else None
+            extraction_groundtruth = get_matching_groundtruth(args.input_path, args.extraction_groundtruth) if args.extraction_groundtruth else None
+    
             try: 
                 logging.info(f"Processing single file: {args.input_path}")
                 result = process_document(
@@ -430,19 +433,25 @@ if __name__ == "__main__":
                         # Setup new log file for each input file
                         log_file = setup_logging(args.output_dir, file_path)
                         logging.info(f"Processing: {file}")
+                
+                        # Get matching groundtruth files if directories were provided
+                        current_schema_groundtruth = get_matching_groundtruth(file_path, args.schema_groundtruth) if args.schema_groundtruth else None
+                        current_extraction_groundtruth = get_matching_groundtruth(file_path, args.extraction_groundtruth) if args.extraction_groundtruth else None
+                
                         result = process_document(
-                            file_path,                # input file path
-                            extraction_groundtruth,   # extraction groundtruth
-                            args.output_dir,         # output directory
-                            schema_groundtruth,      # schema groundtruth
-                            args.max_workers,         # max workers
-                            args.max_steps,           # max steps
+                            file_path,
+                            current_extraction_groundtruth,
+                            args.output_dir,
+                            current_schema_groundtruth,
+                            args.max_workers,
+                            args.max_steps,
                             args.force
                         )
                         logging.info(f"Successfully processed {file}")
                     except Exception as e:
                         logging.error(f"Error processing {file}: {str(e)}")
                     finally:
+
                         # Clean up logging for this file
                         for handler in logging.root.handlers[:]:
                             handler.close()
