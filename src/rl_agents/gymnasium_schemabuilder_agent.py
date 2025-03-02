@@ -60,7 +60,8 @@ where you replace <action> with your actual action.
         while not terminated:
             # Format observation for better readability
             obs_dict = {
-                'Perplexity': observation[0]
+                'Perplexity': observation[0],
+                'Schema Complexity': observation[1]
             }
             print("\nCurrent State:")
             for metric, value in obs_dict.items():
