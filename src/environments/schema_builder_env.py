@@ -14,6 +14,7 @@ import gymnasium as gym
 import numpy as np
 from src.actor_agents.schema_builder import schema_building_with_llm
 from src.action_space.meta_prompting_agent import adjust_prompt
+from src.evaluation.schema_complexity import calculate_schema_complexity
 
 
 
@@ -22,9 +23,9 @@ class SchemaBuilderEnv(gym.Env):
         super(SchemaBuilderEnv, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(
-            low=0, 
-            high=float('inf'),  # Perplexity can be any positive number
-            shape=(1,),  # [Perplexity]
+            low=np.array([0.0, 0.0]), 
+            high=np.array([float('inf'), 1.0]),  # Perplexity unbounded, Complexity 0-1
+            shape=(2,),  # [Perplexity, Schema Complexity]
             dtype=np.float32
         )
         
@@ -37,6 +38,7 @@ class SchemaBuilderEnv(gym.Env):
         
         # Track best scores and results
         self.best_perplexity = float('inf')
+        self.best_complexity = 0.0
         self.best_schema = None
         self.best_prompt = None
         
@@ -68,18 +70,20 @@ class SchemaBuilderEnv(gym.Env):
         # Generate new schema and get scores
         _, self.last_output, perplexity_score = schema_building_with_llm(updated_prompt, self.document_text)
 
+        # Calculate schema complexity (lower is better)
+        schema_complexity = calculate_schema_complexity(self.last_output)
         
         print(f"\nStep {self.current_step}")
         print(f"\nUpdated Prompt: {_}")
         print("Updated Schema:\n", self.last_output)
 
-        # Update state (lower perplexity is better)
-        self.state = np.array([perplexity_score], dtype=np.float32)
+        # Update state to include both metrics
+        self.state = np.array([perplexity_score, schema_complexity], dtype=np.float32)
         
-        # Check if current scores are better
-        # Check if current score is better than best score
-        if perplexity_score < self.best_perplexity:
+        # Check if current scores are better (lower is better for both metrics)
+        if perplexity_score < self.best_perplexity and schema_complexity < self.best_complexity:
             self.best_perplexity = perplexity_score
+            self.best_complexity = schema_complexity
             self.best_schema = self.last_output
             self.best_prompt = self.current_prompt
             self.non_improvement_count = 0
@@ -88,8 +92,9 @@ class SchemaBuilderEnv(gym.Env):
             self.non_improvement_count += 1
             improved = False
 
-        # Calculate reward (negative because we want to minimize perplexity)
-        reward = self.best_perplexity - perplexity_score
+        # Calculate reward (negative because we want to minimize both metrics)
+        reward = (self.best_perplexity - perplexity_score) + (self.best_complexity - schema_complexity)
+
 
         # Determine if we should terminate
         done = (self.non_improvement_count >= self.max_non_improvements) or (self.current_step >= self.max_steps)
@@ -98,13 +103,17 @@ class SchemaBuilderEnv(gym.Env):
         info = {
             'perplexity': perplexity_score,
             'best_perplexity': self.best_perplexity,
+            'complexity': schema_complexity,
+            'best_complexity': self.best_complexity,
             'improved': improved,
             'non_improvement_count': self.non_improvement_count,
             'steps': self.current_step
         }
 
         print(f"Current Perplexity: {perplexity_score:.4f}")
+        print(f"Current Complexity: {schema_complexity:.4f}")
         print(f"Best Perplexity: {self.best_perplexity:.4f}")
+        print(f"Best Complexity: {self.best_complexity:.4f}")
         print(f"Improved: {improved}")
         print(f"Non-improvement count: {self.non_improvement_count}")
         
@@ -115,7 +124,7 @@ class SchemaBuilderEnv(gym.Env):
             else:
                 print("no improvements in last two updates")
             print(f"Best Results Achieved:")
-            print(f"Perplexity: {self.best_perplexity:.4f}")
+            print(f"Perplexity: {self.best_perplexity:.4f}, Complexity: {self.best_complexity:.4f}")
             print("\nBest Schema:")
             print(self.best_schema)
 
@@ -129,23 +138,28 @@ class SchemaBuilderEnv(gym.Env):
         
         # Generate initial schema and calculate scores
         _, self.last_output, perplexity_score = schema_building_with_llm(self.current_prompt, self.document_text)
-        
+        schema_complexity = calculate_schema_complexity(self.last_output)
+
+
         print(f"\nInitial Prompt: {_}")
         print("Initial Schema:\n", self.last_output)
         print(f"Initial Perplexity: {perplexity_score:.4f}")
+        print(f"Initial Schema Complexity: {schema_complexity:.4f}")
 
         # Initialize best scores
         self.best_perplexity = perplexity_score
+        self.best_complexity = schema_complexity
         self.best_schema = self.last_output
         self.best_prompt = self.current_prompt
         
-        self.state = np.array([perplexity_score], dtype=np.float32)
+        self.state = np.array([perplexity_score, schema_complexity], dtype=np.float32)
         return self.state, {}
     
     def get_best_results(self):
         """Return the best results achieved during the episode"""
         return {
             'best_perplexity': self.best_perplexity,
+            'best_complexity': self.best_complexity,
             'best_schema': self.best_schema,
             'best_prompt': self.best_prompt
         }
