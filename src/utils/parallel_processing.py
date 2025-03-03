@@ -29,7 +29,7 @@ def process_single_page(args: Tuple[str, str, str, dict, dict, int, int, int]) -
     print(f"\nProcessing page {page_num + 1}/{total_pages}")
     
     # Initialize new chat model for this process
-    chat_model = ChatOpenAI(model="gpt-4o-mini")
+    chat_model = ChatOpenAI(model="gpt-4o-mini", temperature=0.6)
     
     # Create extraction environment
     extraction_env = DataExtractionEnvIterative(
