@@ -270,38 +270,68 @@ class DocumentReader:
             raise Exception(f"OCR processing failed: {e}")
 
     def read_document_file(self, file_path: str) -> Dict[str, Union[str, List[str]]]:
-        """Extract text from DOC/DOCX files while preserving sections"""
+        """
+        Read DOC/DOCX file while preserving layout and formatting
+        
+        Args:
+            file_path (str): Path to the document file
+            
+        Returns:
+            dict: Contains 'text' (full document text), 'pages' (list of page texts),
+                 and additional formatting information
+        """
+        file_extension = Path(file_path).suffix.lower()
+        if file_extension not in ['.doc', '.docx']:
+            raise ValueError(f"Unsupported file format: {file_extension}. Only .doc and .docx files are supported.")
+
         try:
             doc = Document(file_path)
-            pages_text = []
-            current_page = []
-            paragraph_count = 0
-            paragraphs_per_page = 10  # Adjust this value based on your needs
-            
-            # Process paragraphs
+            sections = []
+            current_section = []
+
+            # Process paragraphs with formatting
             for para in doc.paragraphs:
                 if para.text.strip():
-                    current_page.append(para.text)
-                    paragraph_count += 1
+                    # Preserve paragraph alignment
+                    alignment = para.alignment
+                    indent = para.paragraph_format.first_line_indent or 0
                     
-                    # Start new page after certain number of paragraphs
-                    if paragraph_count >= paragraphs_per_page:
-                        pages_text.append('\n'.join(current_page))
-                        current_page = []
-                        paragraph_count = 0
-            
-            # Add remaining paragraphs as last page
-            if current_page:
-                pages_text.append('\n'.join(current_page))
-            
+                    # Add appropriate indentation
+                    formatted_text = " " * int(indent/10) if indent else ""
+                    formatted_text += para.text
+                    
+                    # Add extra newlines for spacing
+                    if para.paragraph_format.space_after:
+                        formatted_text += "\n"
+                    
+                    current_section.append(formatted_text)
+
+            # Process tables
+            for table in doc.tables:
+                table_text = []
+                for row in table.rows:
+                    # Get cell text and align within a fixed width
+                    row_text = [cell.text.strip() for cell in row.cells]
+                    # Create aligned row with padding
+                    formatted_row = " | ".join(f"{cell:<20}" for cell in row_text)
+                    table_text.append(formatted_row)
+                    table_text.append("-" * len(formatted_row))  # Add separator line
+                
+                current_section.extend(table_text)
+                current_section.append("\n")  # Add space after table
+
+            # Join all sections
+            formatted_text = "\n".join(current_section)
+
             return {
-                'text': '\n'.join(pages_text),
-                'pages': pages_text,
-                'num_pages': len(pages_text)
+                'text': formatted_text,
+                'sections': current_section,
+                'num_sections': len(current_section),
+                'layout_preserved': True
             }
-            
+
         except Exception as e:
-            raise Exception(f"Document processing failed: {e}")
+            raise Exception(f"Error processing document {file_path}: {str(e)}")
         
         
     
@@ -505,3 +535,36 @@ class DocumentReader:
             
         except Exception as e:
             raise Exception(f"Error processing image as PDF: {str(e)}")
+        
+
+
+#Example Usage:
+
+# reader = DocumentReader()
+# file_path = "\path\to\your\file"
+# try:
+#     file_extension = os.path.splitext(file_path)[1].lower()
+    
+#     if file_extension == '.txt':
+#         # Handle text files
+#         with open(file_path, 'r', encoding='utf-8') as f:
+#             document_text = f.read()
+#             pages_text = [document_text]  # Single page for text files
+
+#     elif reader.is_image_file(file_path):
+#         # Handle image files
+#         result = reader.read_image(file_path)
+#         document_text = result['text']
+#         pages_text = [document_text]  # Single page for images
+#         print(f"Image processed with confidence: {sum(result['confidence_scores'])/len(result['confidence_scores']):.2f}")
+#     else:
+#         # Handle PDFs and other document types
+#         result = reader.read_document(file_path)
+#         document_text = result['text']
+#         pages_text = result['pages']
+    
+#     print(f"Successfully read document")
+
+# except Exception as e:
+#     print(f"Error reading document: {str(e)}")
+#     raise
