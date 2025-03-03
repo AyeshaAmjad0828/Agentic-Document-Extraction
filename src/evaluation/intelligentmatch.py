@@ -24,7 +24,8 @@ Compare the generated output with the ground truth and:
 1. Identify semantically matching fields (even if they have different key names)
 2. Count total fields in generated output
 3. Count how many fields and respective values from generated output match with ground truth (considering semantic similarity)
-4. Provide a score between 0 and 1
+4. Compute score = (matched_fields / total_fields)
+5. ALL SCORES ARE BETWEEN 0 AND 1.
 
 Generated Output:
 {{generated_output}}
@@ -87,6 +88,7 @@ You are an expert evaluator for information extraction systems. Compare the extr
 2. Value Accuracy: Check if the values of the extracted fields align correctly with the ground truth.
 3. Completeness: Identify any missing fields in the extracted output compared to the ground truth.
 4. Relevance: Ensure that no irrelevant fields or extra data are included in the extracted output.
+5. Confidence Score: Compute a confidence score = (matched_fields / total_fields)
 5. ALL SCORES ARE BETWEEN 0 AND 1.
 
 For tabular structures:
