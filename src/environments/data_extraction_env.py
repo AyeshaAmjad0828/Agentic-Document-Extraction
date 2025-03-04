@@ -12,7 +12,7 @@ import gymnasium as gym
 import json
 import numpy as np
 
-from src.utils.LLM_utils import get_completion_gpt4
+from src.utils.LLM_utils import get_llm_completion
 from src.utils.jsonparser_utils import clean_llm_output
 from src.actor_agents.document_extractor import document_extractor_agent 
 from src.action_space.meta_prompting_agent import adjust_prompt
@@ -26,7 +26,7 @@ class DataExtractionEnvBase(gym.Env):
     Observations include Exact Match Score and Similarity Score.
     Actions represent adjustments to prompt engineering strategies.
     """
-    def __init__(self, baseprompt, document_type, document, schema, groundtruth):
+    def __init__(self, baseprompt, document_type, document, schema, groundtruth, llm_choice):
         super(DataExtractionEnvBase, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(low=0, high=1, shape=(3,), dtype=np.float32)  # [Exact Match, Semantic Match, Similarity]
@@ -37,6 +37,7 @@ class DataExtractionEnvBase(gym.Env):
         self.document = document
         self.schema = schema
         self.groundtruth = groundtruth
+        self.llm_choice = llm_choice
         self.task_type = "form-like document data extraction"
         self.state = None
         self.current_step = 0
@@ -66,7 +67,7 @@ class DataExtractionEnvBase(gym.Env):
 
 
         # Generate new output using the updated prompt
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],
+        self.last_output = clean_llm_output(get_llm_completion([{"role": "user", "content": resolved_updated_prompt}], llm_choice=self.llm_choice,
                                                                 response_format={ "type": "json_object" },).choices[0].message.content)
         
         print(f"\nUpdated Prompt: {resolved_updated_prompt}")
@@ -75,7 +76,7 @@ class DataExtractionEnvBase(gym.Env):
 
         # Calculate scores (you'll need to implement these scoring functions)
         exact_match_score = calculate_exact_match(self.last_output, self.groundtruth)
-        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth)
+        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth, self.llm_choice)
         similarity_score = calculate_similarity(self.last_output, self.groundtruth)
 
         # Update state
@@ -117,14 +118,14 @@ class DataExtractionEnvBase(gym.Env):
         self.current_prompt = self.baseprompt
         self.resolved_current_prompt = document_extractor_agent(self.current_prompt, self.document_type, self.document, self.schema)
 
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],
+        self.last_output = clean_llm_output(get_llm_completion([{"role": "user", "content": self.resolved_current_prompt}], llm_choice=self.llm_choice,
                                                                 response_format={ "type": "json_object" },).choices[0].message.content)
         print(f"Initial Prompt:\n {self.resolved_current_prompt}")
         print(f"Initial Output:\n {self.last_output}")
         
         # Initialize all metrics
         exact_match_score = calculate_exact_match(self.last_output, self.groundtruth)
-        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth)
+        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth, self.llm_choice)
         similarity_score = calculate_similarity(self.last_output, self.groundtruth)
 
         self.state = np.array([exact_match_score, semantic_match_score, similarity_score], dtype=np.float32)  # Initial values for all metrics
@@ -140,7 +141,7 @@ class DataExtractionEnvIterative(gym.Env):
     Actions represent adjustments to prompt engineering strategies.
     """
 
-    def __init__(self, baseprompt, document_type, document, schema, groundtruth, max_steps=5):
+    def __init__(self, baseprompt, document_type, document, schema, groundtruth, llm_choice, max_steps=5):
         super(DataExtractionEnvIterative, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(
@@ -156,6 +157,7 @@ class DataExtractionEnvIterative(gym.Env):
         self.document = document
         self.schema = schema
         self.groundtruth = groundtruth
+        self.llm_choice = llm_choice
         self.current_prompt = baseprompt
         self.task_type = "form-like document data extraction"
         
@@ -196,7 +198,7 @@ class DataExtractionEnvIterative(gym.Env):
                                                            self.document, self.schema)
 
         # Generate new output
-        self.last_output = get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],
+        self.last_output = get_llm_completion([{"role": "user", "content": resolved_updated_prompt}], llm_choice=self.llm_choice,
                                                                 response_format={ "type": "json_object" },).choices[0].message.content
 
         print(f"\nStep {self.current_step}")
@@ -206,7 +208,7 @@ class DataExtractionEnvIterative(gym.Env):
 
         # Calculate scores
         exact_match_score = calculate_exact_match(self.last_output, self.groundtruth)
-        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth)
+        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth, self.llm_choice)
         similarity_score = calculate_similarity(self.last_output, self.groundtruth)
         
         # Update state
@@ -277,7 +279,7 @@ class DataExtractionEnvIterative(gym.Env):
         self.resolved_current_prompt = document_extractor_agent(self.current_prompt, self.document_type, self.document, self.schema)
         
         # Generate initial output
-        self.last_output = get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],
+        self.last_output = get_llm_completion([{"role": "user", "content": self.resolved_current_prompt}], llm_choice=self.llm_choice,
                                                                 response_format={ "type": "json_object" },).choices[0].message.content
 
         print(f"Start Prompt:\n {self.resolved_current_prompt}")
@@ -289,7 +291,7 @@ class DataExtractionEnvIterative(gym.Env):
             
         # Calculate initial scores
         exact_match_score = calculate_exact_match(self.last_output, self.groundtruth)
-        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth)
+        semantic_match_score = calculate_semantic_match_score(self.last_output, self.groundtruth, self.llm_choice)
         similarity_score = calculate_similarity(self.last_output, self.groundtruth)
 
 
@@ -321,7 +323,7 @@ class DataExtractionEnvStepCount(gym.Env):
     Observations include Exact Match Score and Similarity Score.
     Actions represent adjustments to prompt engineering strategies.
     """
-    def __init__(self, baseprompt, document_type, document, schema, groundtruth):
+    def __init__(self, baseprompt, document_type, document, schema, groundtruth, llm_choice):
         super(DataExtractionEnvStepCount, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(low=0, high=1, shape=(2,), dtype=np.float32)  # [Exact Match, Similarity]
@@ -332,6 +334,7 @@ class DataExtractionEnvStepCount(gym.Env):
         self.document = document
         self.schema = schema
         self.groundtruth = groundtruth
+        self.llm_choice = llm_choice
         self.current_prompt = baseprompt  # Initial prompt
         self.task_type = "form-like document data extraction"
         self.state = None
@@ -368,7 +371,7 @@ class DataExtractionEnvStepCount(gym.Env):
 
 
         # Generate new output using the updated prompt
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": resolved_updated_prompt}],
+        self.last_output = clean_llm_output(get_llm_completion([{"role": "user", "content": resolved_updated_prompt}], llm_choice=self.llm_choice,
                                                                 response_format={ "type": "json_object" },).choices[0].message.content)
 
         print(f"\nStep {self.current_step}/{self.max_steps}")
@@ -419,7 +422,7 @@ class DataExtractionEnvStepCount(gym.Env):
         self.current_prompt = self.baseprompt
         self.resolved_current_prompt = document_extractor_agent(self.current_prompt, self.document_type, self.document, self.schema)
 
-        self.last_output = clean_llm_output(get_completion_gpt4([{"role": "user", "content": self.resolved_current_prompt}],
+        self.last_output = clean_llm_output(get_llm_completion([{"role": "user", "content": self.resolved_current_prompt}], llm_choice=self.llm_choice,
                                                                 response_format={ "type": "json_object" },).choices[0].message.content)
         print(f"Start Prompt:\n {self.resolved_current_prompt}")
         print(f"Start Output:\n {self.last_output}")
