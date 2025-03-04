@@ -64,6 +64,7 @@ sniffio==1.3.1
 SQLAlchemy==2.0.36
 sympy==1.13.1
 tenacity==9.0.0
+together
 torch==2.5.1
 tqdm==4.67.0
 typing==3.7.4.3
@@ -93,3 +94,8 @@ Pillow
 opencv-python
 paddleocr
 paddlepaddle
+
+flask
+flask-socketio
+werkzeug
+eventlet
