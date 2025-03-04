@@ -19,7 +19,7 @@ from src.evaluation.schema_complexity import calculate_schema_complexity
 
 
 class SchemaBuilderEnv(gym.Env):
-    def __init__(self, baseprompt, document_text, groundtruth, max_steps=5):
+    def __init__(self, baseprompt, document_text, groundtruth, llm_choice, max_steps=5):
         super(SchemaBuilderEnv, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(
@@ -33,6 +33,7 @@ class SchemaBuilderEnv(gym.Env):
         self.baseprompt = baseprompt
         self.document_text = document_text
         self.groundtruth = groundtruth
+        self.llm_choice = llm_choice
         self.current_prompt = baseprompt
         self.task_type = "json schema-building"
         
@@ -68,7 +69,7 @@ class SchemaBuilderEnv(gym.Env):
         self.current_prompt = updated_prompt
 
         # Generate new schema and get scores
-        _, self.last_output, perplexity_score = schema_building_with_llm(updated_prompt, self.document_text)
+        _, self.last_output, perplexity_score = schema_building_with_llm(updated_prompt, self.document_text, self.llm_choice)
 
         # Calculate schema complexity (lower is better)
         schema_complexity = calculate_schema_complexity(self.last_output)
@@ -137,7 +138,7 @@ class SchemaBuilderEnv(gym.Env):
         self.current_prompt = self.baseprompt
         
         # Generate initial schema and calculate scores
-        _, self.last_output, perplexity_score = schema_building_with_llm(self.current_prompt, self.document_text)
+        _, self.last_output, perplexity_score = schema_building_with_llm(self.current_prompt, self.document_text, self.llm_choice)
         schema_complexity = calculate_schema_complexity(self.last_output)
 
 
@@ -167,7 +168,7 @@ class SchemaBuilderEnv(gym.Env):
 
 
 class SchemaBuilderEnvSemantic(gym.Env):
-    def __init__(self, baseprompt, document_text, groundtruth, max_steps=5):
+    def __init__(self, baseprompt, document_text, groundtruth, llm_choice, max_steps=5):
         super(SchemaBuilderEnvSemantic, self).__init__()
         self.action_space = gym.spaces.Discrete(5)  # 5 possible prompt adjustments
         self.observation_space = gym.spaces.Box(
