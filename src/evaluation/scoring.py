@@ -63,7 +63,7 @@ def calculate_similarity(generated, original):
     
 
 
-def calculate_semantic_match_score(generated_output, groundtruth):
+def calculate_semantic_match_score(generated_output, groundtruth, llm_choice):
     """Calculate exact match score between generated output and groundtruth"""
 
     # Convert inputs to appropriate format
@@ -78,7 +78,7 @@ def calculate_semantic_match_score(generated_output, groundtruth):
         groundtruth = str(groundtruth)
 
     # Use LLM-based semantic matching
-    return semantic_match_score(generated_output, groundtruth)
+    return semantic_match_score(generated_output, groundtruth, llm_choice)
 
 
 
