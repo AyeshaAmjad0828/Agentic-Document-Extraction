@@ -10,11 +10,11 @@ sys.path.append(project_root)
 
 
 
-from src.utils.LLM_utils import get_completion_gpt4
+from src.utils.LLM_utils import get_llm_completion
 from src.utils.prompt_template import PromptTemplate
 import json
 
-def semantic_match_score(generated_output, groundtruth):
+def semantic_match_score(generated_output, groundtruth, llm_choice):
     """Use LLM to semantically compare generated output with groundtruth"""
     
     semantic_match_prompt = PromptTemplate(
@@ -55,8 +55,9 @@ Respond in JSON format:
     )
 
     try:
-        response = get_completion_gpt4(
+        response = get_llm_completion(
             [{"role": "user", "content": prompt}],
+            llm_choice=llm_choice,
             response_format={ "type": "json_object" }
         )
         result = json.loads(response.choices[0].message.content)
@@ -77,7 +78,7 @@ Respond in JSON format:
         return 0.0
     
 
-def semantic_match_score_v2(generated_output, groundtruth):
+def semantic_match_score_v2(generated_output, groundtruth, llm_choice):
     """Use LLM to semantically compare generated output with groundtruth"""
     
     semantic_match_prompt = PromptTemplate(
@@ -135,8 +136,9 @@ Respond in JSON format:
     )
 
     try:
-        response = get_completion_gpt4(
+        response = get_llm_completion(
             [{"role": "user", "content": prompt}],
+            llm_choice=llm_choice,
             response_format={ "type": "json_object" }
         )
         result = json.loads(response.choices[0].message.content)
