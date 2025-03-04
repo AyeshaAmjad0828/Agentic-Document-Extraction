@@ -42,8 +42,8 @@ def update_metrics_excel(metrics_dict: dict, excel_path: str = "output\metrics\e
 
 @cache_results
 def process_document(file_path: str, extraction_groundtruth: dict, output_dir: str = None, 
-                    schema_groundtruth: dict = None, max_workers: int = None, max_steps: int = 5,
-                    force: bool = False) -> dict:
+                    schema_groundtruth: dict = None, max_workers: int = None, max_steps: int = 5, 
+                    llm_choice: str ="gpt", force: bool = False) -> dict:
     """
     Process a document through the complete pipeline with parallel page processing
     
@@ -54,6 +54,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         schema_groundtruth: Groundtruth for schema building
         max_workers: Maximum number of parallel workers (default: number of CPU cores)
         max_steps: Maximum number of steps before terminating
+        llm_choice: llama or gpt
         force: Force reprocessing even if cache exists (default: False)
     """
     # Create required output directory structure
@@ -85,7 +86,8 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         'Reading_Time': None,
         'Classification_Time': None,
         'Schema_Building_Time': None,
-        'Extraction_Time': None
+        'Extraction_Time': None,
+        'llm_choice': llm_choice
     }    
 
 
@@ -132,7 +134,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
     # 2. Classify document using first page
     classification_start = time.time()
     try:
-        doc_type, confidence = classify_document_with_llm(pages_text[0])  # Unpack only two values
+        doc_type, confidence = classify_document_with_llm(pages_text[0], llm_choice)  # Unpack only two values
         metrics['Document_Type'] = doc_type
         metrics['Classification_Confidence'] = confidence
         logging.info(f"Document classified as: {doc_type} (confidence: {confidence}%)")
@@ -173,7 +175,8 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
             baseprompt=schema_prompt,
             document_text=pages_text[0],  # Use first page for schema building
             groundtruth=schema_groundtruth,  # Pass optional groundtruth
-            max_steps=args.max_steps  # Pass max_steps to environment
+            llm_choice=llm_choice,   # Pass llm_choice to environment
+            max_steps=max_steps,  # Pass max_steps to environment
         )
         schema_agent = SchemaAgent(chat_model, schema_env)
         schema_agent.interact()
@@ -203,7 +206,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         # Prepare arguments for parallel processing
         process_args = [
             (page_text, doc_type, extraction_prompt, best_schema, extraction_groundtruth, 
-             idx, len(pages_text), max_steps) 
+             idx, len(pages_text), max_steps, llm_choice) 
             for idx, page_text in enumerate(pages_text)
         ]
         
@@ -372,12 +375,14 @@ if __name__ == "__main__":
     parser.add_argument('--output-dir', help='Directory to save results', default='output')
     parser.add_argument('--schema-groundtruth', help='Path to schema groundtruth JSON file')
     parser.add_argument('--extraction-groundtruth', help='Path to extraction groundtruth JSON file')
-    parser.add_argument('--max-steps', type=int, default=3,
-                       help='Maximum number of steps before terminating (default: 3)')
     parser.add_argument('--max-workers', type=int, default=None,
                        help='Maximum number of parallel workers (default: number of CPU cores)')
-    parser.add_argument('--force', default=False,
-                   help='Force reprocessing even if cache exists')
+    parser.add_argument('--max-steps', type=int, default=3,
+                       help='Maximum number of steps before terminating (default: 5)')
+    parser.add_argument('--llm-choice', type=str, default="gpt",
+                    help='Selects an llm (default: gpt, otherwise llama)')
+    parser.add_argument('--force', type=bool, default=False,
+                    help='Force reprocessing even if cache exists')
     args = parser.parse_args()
 
     try:
@@ -406,6 +411,7 @@ if __name__ == "__main__":
                     schema_groundtruth,
                     args.max_workers,
                     args.max_steps,
+                    args.llm_choice,
                     args.force
                 )
                 logging.info("\nProcessing complete!")
@@ -445,6 +451,7 @@ if __name__ == "__main__":
                             current_schema_groundtruth,
                             args.max_workers,
                             args.max_steps,
+                            args.llm_choice,
                             args.force
                         )
                         logging.info(f"Successfully processed {file}")
