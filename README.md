@@ -87,11 +87,21 @@ An advanced document processing system that leverages Large Language Models (LLM
 
 ### Advanced Usage
    ```bash
+#Full Command
+python main.py input_path \
+    --output-dir output \
+    --schema-groundtruth path/to/schema/groundtruth \
+    --extraction-groundtruth path/to/extraction/groundtruth \
+    --max-workers 4 \
+    --max-steps 5 \
+    --llm-choice llama \
+    --force True
+
 #Single Document Processing
 python main.py "path/to/your/document.pdf" --output-dir "output" --schema-groundtruth "path/to/schema.json" --extraction-groundtruth "path/to/groundtruth.json" --max-workers 2 --max-steps 5
 
 #Multiple Document Processing
-python main.py "path/to/your/documents" --output-dir "output" --schema-groundtruth "path/to/schema.json" --extraction-groundtruth "path/to/groundtruth.json" --max-workers 4 --max-steps 5
+python main.py "path/to/your/documents" --output-dir "output" --schema-groundtruth "path/to/schema" --extraction-groundtruth "path/to/groundtruth" --max-workers 4 --max-steps 5
 
    ```
 ## 🏗️ Architecture
@@ -190,6 +200,7 @@ The system uses multiple evaluation approaches ([src/evaluation/scoring.py](src/
 Key configuration options:
 - `max_steps`: Maximum optimization iterations
 - `max_workers`: Parallel processing threads
+- `llm-choice` : llama or gpt for extraction
 - `force`: Force reprocessing of documents despite caching
 
 ***Note***: *Since all enviornments are based on iterative improvement of scores, no scoring threshold needs to be configured.* 
@@ -288,12 +299,12 @@ docker run -v $(pwd)/data:/app/data unstructured-data-extraction
 - **Minimum Requirements**:
   - RAM: 8GB
   - CPU: 4 cores
-  - Storage: 10GB free space
+  - Storage: 100GB free space
 
 - **Recommended Requirements**:
   - RAM: 24GB
   - CPU: 8 cores
-  - Storage: 20GB free space
+  - Storage: 500GB free space
   - GPU: NVIDIA GPU with CUDA support (optional)
 
 ### Need Help?
