@@ -213,13 +213,28 @@ The system implements comprehensive logging ([src/utils/logging_utils.py](src/ut
 - Performance metrics
 - Extraction results
 
-## 🤝 Contributing
+## 📊 Benchmarking
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+The project includes a benchmarking suite ([Benchmark_Testing.ipynb](Benchmark_Testing.ipynb)) to evaluate extraction accuracy against ground truth data.
+
+### Key Metrics
+- Text Similarity (using fuzzy matching)
+- Precision, Recall, and F1 Score per field
+- Overall system performance
+
+### Quick Start
+1. Place ground truth files in `output/groundtruth/`
+2. Place extraction results in `output/extracted/`
+3. Run `Benchmark_Testing.ipynb`
+
+### Benchmark Configuration
+
+The benchmark suite supports:
+- Custom similarity thresholds (default: 0.8)
+- Field-by-field comparison
+- Detailed error analysis
+- Batch processing of multiple documents
+- Export of results to Excel
 
 ## 📄 License
 
