@@ -243,6 +243,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
             # Parse and add page results
             if isinstance(page_data['best_output'], str):
                 try:
+                    cleaned_output = clean_llm_output(page_data['best_output'])
                     parsed_data = json.loads(page_data['best_output'].strip())
                     combined_results.append(parsed_data)
                 except json.JSONDecodeError:
@@ -291,7 +292,7 @@ def process_document(file_path: str, extraction_groundtruth: dict, output_dir: s
         if output_dir:
             extracted_data_dir = os.path.join(output_dir, "extracted_data")
             os.makedirs(extracted_data_dir, exist_ok=True)
-            output_file = os.path.join(extracted_data_dir, f"{os.path.splitext(os.path.basename(file_path))[0]}_extracted.json")
+            output_file = os.path.join(extracted_data_dir, f"{os.path.splitext(os.path.basename(file_path))[0]}_{llm_choice}_extracted.json")
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(final_results, f, indent=2)
             logging.info(f"Results saved to: {output_file}")
