@@ -62,7 +62,7 @@ def get_completion_llama(
     temperature=0.1,
     #max_tokens = 8000,
     logprobs=None,
-    model: str = "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",) -> str:
+    model: str = "meta-llama/Llama-3.3-70B-Instruct-Turbo",) -> str:
     params = {
         "messages": messages,
         "response_format": response_format,
@@ -78,7 +78,7 @@ def get_completion_llama(
 def get_llm_completion(
     messages: list[dict[str, str]],
     llm_choice: str = "gpt",  # "gpt" or "llama"
-    response_format=None,
+    response_format=None,  #{'text', 'Json'}
     temperature=0.1,
     model: str = None,
     max_tokens=16000,
