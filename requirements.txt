@@ -75,6 +75,8 @@ usaddress==0.5.11
 virtualenv==20.28.0
 wget==3.2
 yarl==1.18.3
+langchain_experimental
+vowpal_wabbit_next
 
 # Jupyter/IPython
 ipython
