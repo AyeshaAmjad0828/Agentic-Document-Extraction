@@ -23,6 +23,7 @@ An advanced document processing system that leverages Large Language Models (LLM
   - Layout-preserving text extraction
   - Table structure preservation
   - Reinforcement learning for optimization
+  - Learned prompt optimization with contextual bandits
 
 - **Performance Features**:
   - Results caching
@@ -103,6 +104,8 @@ python main.py "path/to/your/document.pdf" --output-dir "output" --schema-ground
 #Multiple Document Processing
 python main.py "path/to/your/documents" --output-dir "output" --schema-groundtruth "path/to/schema" --extraction-groundtruth "path/to/groundtruth" --max-workers 4 --max-steps 5
 
+# Process with Learned Prompt Optimization
+python main_lr_op.py "path/to/your/document.pdf" --output-dir "output" --extraction-groundtruth "path/to/groundtruth.json" --max-workers 2 --max-steps 3
    ```
 ## 🏗️ Architecture
 
@@ -132,6 +135,13 @@ python main.py "path/to/your/documents" --output-dir "output" --schema-groundtru
    - Gymnasium environment data extraction ([src/rl_agents/gymnasium_extraction_agent.py](src/rl_agents/gymnasium_extraction_agent.py))
    - Gymnasium environment schema generation ([src/rl_agents/gymnasium_schemabuilder_agent.py](src/rl_agents/gymnasium_schemabuilder_agent.py))
    - Action space with meta-prompting-agent ([src/action_space/meta_prompting_agent.py](src/action_space/meta_prompting_agent.py))
+   - Learned prompt optimization using LangChain and contextual bandits ([src/rl_agents/langchain_learned_prompt_optimization_openai.py](src/rl_agents/langchain_learned_prompt_optimization_openai.py))
+     - Dynamically selects from multiple meta-prompting strategies:
+       - Clarity strategy: Improves prompt clarity and readability
+       - Best practice strategy: Applies domain-specific extraction best practices
+       - Few-shot strategy: Adds relevant examples for better context
+       - LLM feedback strategy: Incorporates feedback from previous extractions
+       - No-change strategy: Maintains the original prompt when effective
    - Custom reward function
    - Custom observation space
 
@@ -158,7 +168,10 @@ output/
 ├── logs/
 │   └── processing_YYYYMMDD_HHMMSS.log
 ├── metrics/
-│   └── extraction_metrics.xlsx
+│   ├── extraction_metrics.xlsx
+│   └── learned_prompt_metrics.xlsx
+├── optimized_prompts/
+│   └── document1_prompts.json
 └── unknown_docs/
     └── unclassified_doc.pdf
    ```
@@ -194,6 +207,12 @@ The system uses multiple evaluation approaches ([src/evaluation/scoring.py](src/
    - Parallel processing
    - RL-based Iterative refinement
    - Multi-metric evaluation
+   - Learned prompt optimization with reinforcement learning
+     - Uses contextual bandits algorithm (VowpalWabbit)
+     - Selects from multiple meta-prompting strategies
+     - Improves extraction accuracy with each iteration
+     - Persists learned model for future document processing
+     - Auto-generates optimal extraction prompts per document type
 
 ## ⚙️ Configuration
 
@@ -202,6 +221,11 @@ Key configuration options:
 - `max_workers`: Parallel processing threads
 - `llm-choice` : llama or gpt for extraction
 - `force`: Force reprocessing of documents despite caching
+
+For learned prompt optimization:
+- `main_lr_op.py`: Uses the learned prompt optimization pipeline
+- `extraction-groundtruth`: Providing ground truth data improves optimization
+- `model_save_dir`: Location to save learned prompt models (defaults to "models/prompt_optimizer/{doc_type}")
 
 ***Note***: *Since all enviornments are based on iterative improvement of scores, no scoring threshold needs to be configured.* 
 
@@ -221,6 +245,12 @@ The project includes a benchmarking suite ([Benchmark_Testing.ipynb](Benchmark_T
 - Text Similarity (using fuzzy matching)
 - Precision, Recall, and F1 Score per field
 - Overall system performance
+
+For learned prompt optimization:
+- Exact Match Score: Measures field-level exact matches
+- Semantic Match Score: Evaluates semantic similarity between extracted fields
+- Combined Similarity Score: Weighted combination of exact and semantic matches
+- Steps to Convergence: Number of iterations required to reach optimal extraction
 
 ### Quick Start
 1. Place ground truth files in `output/groundtruth/`
@@ -243,9 +273,10 @@ The benchmark suite supports:
 ## 🔗 References
 
 - [LangChain Documentation](https://python.langchain.com/docs/introduction/)
+- [LangChain Experimental - RL Chain](https://python.langchain.com/docs/integrations/providers/langchain-experimental)
 - [OpenAI API Documentation](https://platform.openai.com/docs/overview)
 - [Gymnasium Documentation](https://gymnasium.farama.org/)
-
+- [VowpalWabbit](https://vowpalwabbit.org/) - Contextual Bandits Implementation
 
 ## Miscellaneous
 
@@ -279,6 +310,12 @@ The benchmark suite supports:
    ```bash
    # Install CUDA toolkit if using NVIDIA GPU
    pip install paddlepaddle-gpu
+   ```
+
+2. **Learned Prompt Optimization Dependencies**
+   ```bash
+   # Install additional dependencies for learned prompt optimization
+   pip install langchain_experimental vowpal_wabbit_next
    ```
 
 ### Development Setup
