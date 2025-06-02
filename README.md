@@ -1,4 +1,6 @@
-# Intelligent Document Processing Pipeline
+# Agentic Document Processing Pipeline
+
+> This repository contains the implementation for the paper [An agentic system with reinforcement-learned subsystem improvements for parsing form-like documents](https://arxiv.org/abs/2505.13504) (arXiv, 2025).
 
 An advanced document processing system that leverages Large Language Models (LLMs) and Reinforcement Learning to extract structured data from various document formats. The system features intelligent document classification, dynamic schema generation, and adaptive data extraction capabilities.
 
