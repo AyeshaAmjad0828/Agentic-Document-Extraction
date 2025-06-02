@@ -13,9 +13,9 @@ from src.action_space.meta_prompting_agent import (
     clarity_strategy,
     best_practice_strategy,
     fewshot_strategy,
+    no_change_strategy,    
     LLm_feedback_strategy
 )
-
 class LearnedPromptOptimizer:
     """
     Optimizes prompts by learning from different meta-prompting strategies using RL.
@@ -37,14 +37,17 @@ With groundtruth: {groundtruth}
 
 Select and combine the most effective parts of these prompt strategies:
 
-Strategy 1 (Clarity):
+Strategy 0 (Clarity):
 {clarity_prompt}
 
-Strategy 2 (Best Practices):
+Strategy 1 (Best Practices):
 {best_practice_prompt}
 
-Strategy 3 (Few-Shot):
+Strategy 2 (Few-Shot):
 {fewshot_prompt}
+
+Strategy 3 (No Change):
+{no_change_prompt}
 
 Strategy 4 (LLM Feedback):
 {feedback_prompt}
@@ -55,7 +58,7 @@ Focus on maximizing extraction accuracy and maintaining consistent formatting.
             input_variables=[
                 "doc_type", "current_output", "groundtruth",
                 "clarity_prompt", "best_practice_prompt", 
-                "fewshot_prompt", "feedback_prompt"
+                "fewshot_prompt", "no_change_prompt", "feedback_prompt"
             ]
         )
         
@@ -81,6 +84,7 @@ Focus on maximizing extraction accuracy and maintaining consistent formatting.
         variations.append(clarity_strategy(base_prompt))
         variations.append(best_practice_strategy(base_prompt, doc_type))
         variations.append(fewshot_strategy(base_prompt, doc_type))
+        variations.append(no_change_strategy(base_prompt))
         variations.append(LLm_feedback_strategy(base_prompt, current_output, groundtruth))
         
         return variations
